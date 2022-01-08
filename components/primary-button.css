@@ -31,6 +31,18 @@
   margin-left: var(--dl-space-space-tripleunit);
 }
 
+.rootClassName3 {
+  align-self: flex-start;
+  margin-left: var(--dl-space-space-tripleunit);
+}
+.rootClassName5 {
+  align-self: flex-start;
+  margin-left: var(--dl-space-space-tripleunit);
+}
+.rootClassName6 {
+  align-self: flex-start;
+  margin-left: var(--dl-space-space-tripleunit);
+}
 @media(max-width: 991px) {
   .rootClassName {
     align-self: flex-start;
@@ -39,6 +51,15 @@
     align-self: flex-start;
   }
   .rootClassName2 {
+    align-self: flex-start;
+  }
+  .rootClassName3 {
+    align-self: flex-start;
+  }
+  .rootClassName5 {
+    align-self: flex-start;
+  }
+  .rootClassName6 {
     align-self: flex-start;
   }
 }

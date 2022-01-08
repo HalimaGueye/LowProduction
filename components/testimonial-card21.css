@@ -36,10 +36,16 @@
   flex-shrink: 0;
   border-radius: var(--dl-radius-radius-round);
 }
+.rootClassName {
+  align-self: flex-start;
+}
 .rootClassName1 {
   align-self: flex-start;
 }
 .rootClassName2 {
+  align-self: flex-start;
+}
+.rootClassName3 {
   align-self: flex-start;
 }
 @media(max-width: 767px) {
