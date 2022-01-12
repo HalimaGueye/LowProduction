@@ -85,10 +85,10 @@
                       <a class="nav-link page-scroll" href="./equipe.html">L'EQUIPE</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link page-scroll active" href="./films.html">FILMS</a>
+                      <a class="nav-link page-scroll" href="./films.html">FILMS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link page-scroll" href="./actualite.html">ACTUALITE</a>
+                    <a class="nav-link page-scroll active" href="./actualite.html">ACTUALITE</a>
                 </li>
 
                   <li class="nav-item">
@@ -106,22 +106,23 @@
       <div class="header-content">
           <div class="container">
               <div class="row">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="image-container" style="background-color: #5DA4B3; width: 100%; border-radius: 30px; width: 50vw">
+                        <div class="img-wrapper header__img" 
+                        >
+                            <img class="img-fluid" src="images/actualite.png" style="width: 70%" alt="alternative">
+                        </div> <!-- end of img-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
                   <div class="col-lg-6 col-xl-5">
                       <div class="text-container">
-                          <h1 style="font-size: 5vw; margin-top: 8vw;" >NOS FILMS</h1>
+                          <h1 style="font-size: 5vw; margin-top: 8vw;" >ACTUALITE</h1>
                           <p class="p-large">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis deleniti, odio facere nulla corrupti officia cum possimus beatae, dolor ut optio nesciunt voluptatum necessitatibus obcaecati.
                           </p>
                       </div> <!-- end of text-container -->
                   </div> <!-- end of col -->
-                  <div class="col-lg-6 col-xl-7">
-                      <div class="image-container" style="background-color: #5DA4B3; width: 100%; border-radius: 30px;">
-                          <div class="img-wrapper header__img" 
-                          >
-                              <img class="img-fluid" src="images/film.png" style="width: 70%" alt="alternative">
-                          </div> <!-- end of img-wrapper -->
-                      </div> <!-- end of image-container -->
-                  </div> <!-- end of col -->
+                  
               </div> <!-- end of row -->
           </div> <!-- end of container -->
       </div> <!-- end of header-content -->
@@ -131,26 +132,43 @@
 
 
     
-    <section class="light" style="margin: 10vw; margin-right: 8vw; margin-right: 8vw">
+    <section class="light" style="margin: 8vw; margin-right: 8vw; margin-right: 8vw;">
       <div class="container">
-        <h1 class="text-center">REALISATIONS</h1>
+        <h1 class="text-center">QUOI DE NEUF</h1>
         <p class="text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, error sequi, reiciendis eaque illo facere rerum ab quia numquam vero consequuntur velit dolores fugit consequatur beatae nesciunt suscipit enim fuga.
         </p>
 
-        <select class="form-select form-select-sm mb-4 pr-5 pl-5" style="border-radius: 130px;" aria-label=".form-select-sm example">
-          <option selected >Filtre</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        
+        <div class="row mb-4">
+            <div class="col-sm-4">
+              <select class="form-select form-select-sm mb-4 pr-5 pl-5" style="border-radius: 130px;" aria-label=".form-select-sm example">
+              <option selected >Filtre</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select></div>
+            <div class="col-sm-3">
+              
+            </div>
+            <div class="col-sm-4">
+                <ul class="list-group list-group-horizontal d-none d-md-flex">
+                  <div class="input-group rounded">
+                      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                      aria-describedby="search-addon" />
+                      <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </div>
+                </ul>
+              </div>
+          </div> 
+          
         <div id="film1">
           <div class="row">
             <div class="col-sm">
             <div class="card-columns mx-auto d-flex justify-content-start col-12">
-              <div class="card" style="width: 100% ; border-width: 0;">
-                <article class="postcard" style="background-color: #B0C0D5;border-width: 0;">
+              <div class="card" style="width: 100%; border-width: 0;">
+                <article class="postcard" style="background-color: #ffffff; border-color: b0c0d5; color: black;">
                   <a class="postcard__img_link" href="#">
                       <div class="embed-responsive embed-responsive-16by9">
                           <iframe class="embed-responsive-item" src="./images/video.mp4" allowfullscreen></iframe>
@@ -160,7 +178,7 @@
                       <h1 class="postcard__title black"><a href="#">TITRE</a></h1>
                       <div class="postcard__subtitle small">
                           <time datetime="2020-05-25 12:00:00">
-                              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                              <i class="fas fa-user-alt mr-2"></i>Par John Doe
                           </time>
                       </div>
                       <div class="postcard__bar"></div>
