@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Hello BlogController!
+
+
+{% endblock %}
+
+{% block head %}
+	<style>
+		.logo-list {
+			padding: 20px 0;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+		}
+		.logo-list img {
+			display: inline-block;
+			max-width: 85%;
+			padding: 15px 0;
+			transition: all 0.3s ease-in-out;
+			-webkit-filter: grayscale(100);
+			-moz-filter: grayscale(100);
+			filter: grayscale(100);
+		}
+		.logo-list img:hover {
+			filter: none;
+			transform: scale(1.2);
+			-webkit-filter: none;
+			-moz-filter: none;
+		}
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			transition: 0.3s;
+			width: 40%;
+		}
+
+		.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.container {
+			padding: 2px 16px;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<section
+		class="m-5 ">
+
+		<!-- Page content-->
+
+		<div class="container">
+			<div
+				class="row">
+				<!-- Blog entries-->
+				<div class="col-lg-8">
+					<h2 class="text-center font-weight-bold">Nos Actualités</h2>
+					<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, doloribus adipisci fugit laboriosam, placeat ipsum</p>
+
+					<!-- Featured blog post-->
+					{% for actuality in actuality %}
+						{{ dump(actuality) }}
+						<div class="card mb-4">
+							<img class="card-img-top" width="100" src="/uploads/images/{{actuality.actualityPicture.image}}" alt="..."/>
+							<div class="card-body">
+								<div class="small text-muted">Ecrit le
+									{{ actuality.publication | date('d-m-Y')}}
+								</div>
+								<h2 class="card-title">{{ actuality.name }}</h2>
+								<p class="card-text">
+									{{actuality.article | raw}}
+								</p>
+								<a class="btn btn-primary" href="#!">Read more →</a>
+							</div>
+						</div>
+					{% endfor %}
+					<!-- Nested row for non-featured blog posts-->
+					<h2 class="text-center font-weight-bold">Nos Articles</h2>
+					<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, doloribus adipisci fugit laboriosam, placeat ipsum</p>
+					<div class="row">
+						{% for article in article %}
+							{{ dump(article) }}
+							<!-- Blog post-->
+							<div class="card mb-4">
+								<img class="card-img-top" width="300" height="200" src="/uploads/images/{{article.articlePicture.image}}" alt="..."/>
+								<div class="card-body">
+									<h2 class="card-title h4">{{article.title}}</h2>
+									<p class="card-text">{{article.abstract | raw}}</p>
+									<a class="btn btn-primary" href="#!">Read more →</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Logo List Section -->
+
+<div class="container m-5">
+	<div class="row">
+		<h2 class="text-center font-weight-bold">Nos partenaires</h2>
+		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, doloribus adipisci fugit laboriosam, placeat ipsum</p>
+
+		{% for partner in partner %}
+			<div class="col-sm">
+				{% if partner.picture is not null %}
+					<img src="/uploads/images/{{partner.picture.image}}" class="img-fluid" alt="{{ partner.picture.name }}">
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
+	</div>
+</footer>
+{% endblock %}
