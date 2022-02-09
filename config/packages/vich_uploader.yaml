@@ -1,0 +1,16 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        LP_images:
+            uri_prefix: '%app.path.LP_images%'
+            upload_destination: '%kernel.project_dir%/public/uploads/images'
+            namer : Vich\UploaderBundle\Naming\SmartUniqueNamer
+        LP_icones:
+                    uri_prefix: '%app.path.LP_images%'
+                    upload_destination: '%kernel.project_dir%/public/uploads/images'
+                    namer : Vich\UploaderBundle\Naming\SmartUniqueNamer
+        LP_partner:
+                    uri_prefix: '%app.path.LP_images%'
+                    upload_destination: '%kernel.project_dir%/public/uploads/images'
+                    namer : Vich\UploaderBundle\Naming\SmartUniqueNamer
