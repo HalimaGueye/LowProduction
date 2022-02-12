@@ -7,17 +7,101 @@
 {% block movies %}<li class="active">{% endblock %}
 
 {% block body %}
-	<p>Movies view !</p>
+
+<!-- Start Films -->
+<section id="films" class="p-top-40 p-bottom-80">
+		<div class="container">
+
+			<div class="row p-bottom-40">
+					<div class="col-md-8 col-md-offset-2">
+							<div class="section-title text-center m-bottom-40">
+									<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s"><strong>Nos projets</strong></h2>
+									<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+									<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+										Retrouvez l'ensemble des projets documentaires <b>produits, réalisés et diffusés</b> par Low Production.</p>
+									</p>
+							</div>
+					</div>
+			</div>
+
+				<!-- Portfolio-filter -->
+				<ul class="pf-filter pf-filter-gray text-center list-inline">
+						<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
+						<li><a href="#" data-filter=".done" class="iso-button">Réalisés</a></li>
+						<li><a href="#" data-filter=".doing" class="iso-button">En cours</a></li>
+						<li><a href="#" data-filter=".todo" class="iso-button">À venir</a></li>
+				</ul>
+
+				<!-- Portfolio -->
+				<div class="portfolio portfolio-isotope col-3">
+
+						<!-- Portfolio Item -->
+						<div class="pf-item doing">
+								<a href="{{url('movie')}}" class="pf-style">
+										<div class="pf-image">
+												<img src="{{asset('bundles/web/')}}img/portfolio/1.jpg" alt="">
+												<div class="overlay">
+														<div class="overlay-caption">
+																<div class="overlay-content">
+																		<div class="pf-info white-color">
+																				<h4 class="pf-title">Koméla</h4>
+																				<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</a>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="pf-item done">
+								<a href="{{url('movie')}}" class="pf-style">
+										<div class="pf-image">
+												<img src="{{asset('bundles/web/')}}img/portfolio/2.jpg" alt="">
+												<div class="overlay">
+														<div class="overlay-caption">
+																<div class="overlay-content">
+																		<div class="pf-info white-color">
+																				<h4 class="pf-title">Berr(k)e</h4>
+																				<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</a>
+						</div>
+
+				</div> <!-- Portfolio -->
+
+		</div> <!-- /.container -->
+</section>
+<!-- End Films -->
+
+<!-- Start Call to Action -->
+<section class="light-bg p-top-60 p-bottom-60">
+		<div class="container">
+				<div class="row">
+
+						<div class="col-xs-12 c2a-content text-center">
+								<!-- Text -->
+								<h2 class="wow fadeInDown" data-wow-delay="0.3s">Vous aimeriez contribuer à ces projets ? </h2>
+								<p class="m-bottom-30 wow fadeInDown" data-wow-delay="0.4s">Il y a plusieurs moyens de s'investir dans l'association.</p>
+								<!-- Button -->
+								<a href="{{url('support')}}" class="btn btn-main btn-theme wow fadeInUp" data-wow-delay="0.5s">En savoir plus</a>
+						</div> <!-- /.col -->
+
+				</div>  <!-- /.row -->
+		</div> <!-- /.container -->
+</section>
+<!-- End Call to Action -->
+
 {% endblock %}
 
 {% block js %}
 	{{parent()}}
-
-	<!-- Components Plugin -->
-	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/isotope.pkgd.min.js"></script>
 
 {% endblock %}

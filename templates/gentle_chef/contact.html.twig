@@ -7,17 +7,129 @@
 {% block contact %}<li class="active">{% endblock %}
 
 {% block body %}
-	<p>Contact view !</p>
+<!-- Start Contact -->
+<section id="contact" class="p-top-50 p-bottom-30">
+		<div class="container">
+				<div class="section-title text-center m-bottom-50">
+						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Nous contacter</h2>
+						<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+						<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">Pour toute question, n'hésitez pas à nous contacter !</p>
+				</div>
+				<div class="row">
+						<!-- === Contact Form === -->
+						<div class="col-md-7 col-sm-7 p-bottom-30">
+								<div class="contact-form row">
+										<form name="ajax-form" id="ajax-form" action="contact.php" method="post">
+												<div class="col-sm-6 contact-form-item wow zoomIn">
+														<input name="name" id="name" type="text"   placeholder="Prénom NOM"/>
+														<span class="error" id="err-name">Merci de saisir votre nom !</span>
+												</div>
+												<div class="col-sm-6 contact-form-item wow zoomIn">
+														<input name="email" id="email" type="text"  placeholder="Courriel"/>
+														<span class="error" id="err-email">Merci de saisir votre courriel !</span>
+														<span class="error" id="err-emailvld">Votre courriel n'est pas valide !</span>
+												</div>
+												<div class="col-sm-12 contact-form-item wow zoomIn">
+														<textarea style="resize: none;" name="message" id="message" placeholder="Message"></textarea>
+												</div>
+												<div class="col-sm-12 contact-form-item">
+														<button class="send_message btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Envoyer</button>
+												</div>
+												<div class="clear"></div>
+												<div class="error text-align-center" id="err-form">Il y a eu un problème avec la validation du formulaire !</div>
+												<div class="error text-align-center" id="err-timedout">La connexion avec le serveur a échoué !</div>
+												<div class="error" id="err-state"></div>
+										</form>
+
+										<div class="clearfix"></div>
+										<div id="ajaxsuccess">Message envoyé !</div>
+										<div class="clear"></div>
+
+								</div>
+						</div>
+
+						<!-- === Contact Information === -->
+						<div class="col-md-5 col-sm-5 p-bottom-30">
+								<address class="contact-info">
+
+										<p class="m-bottom-30 wow slideInRight">Vous pouvez également nous contacter à partir des éléments suivants.</p>
+
+										<!-- === Phone === -->
+										<div class="m-top-20 wow slideInRight">
+												<div class="contact-info-icon">
+														<i class="fa fa-phone"></i>
+												</div>
+												<div class="contact-info-title">
+														Téléphone
+												</div>
+												<div class="contact-info-text">
+														+262 &#54; 93 &#52;&#54; 47 46
+												</div>
+										</div>
+
+										<!-- === Mail === -->
+										<div class="m-top-20 wow slideInRight">
+												<div class="contact-info-icon">
+														<i class="fa fa-envelope"></i>
+												</div>
+												<div class="contact-info-title">
+														Courriel
+												</div>
+												<div class="contact-info-text">
+														co<!-- anti-spam -->ntact<!-- @spam.org --><span class="aro"></span>&#108;&#111;&#119;-production<span class="pt"></span>rg
+												</div>
+										</div>
+
+										<!-- === LinkedIn === -->
+										<div class="m-top-20 wow slideInRight">
+												<div class="contact-info-icon">
+														<i class="fa fa-linkedin"></i>
+												</div>
+												<div class="contact-info-title">
+														LinkedIn
+												</div>
+												<div class="contact-info-text">
+														<a href="">www.linkedin.com/low-production/</a>
+												</div>
+										</div>
+
+										<!-- === Facebook === -->
+										<div class="m-top-20 wow slideInRight">
+												<div class="contact-info-icon">
+														<i class="fa fa-facebook"></i>
+												</div>
+												<div class="contact-info-title">
+														Facebook
+												</div>
+												<div class="contact-info-text">
+														<a href="">www.facebook.com/low-production/</a>
+												</div>
+										</div>
+
+										<!-- === Facebook === -->
+										<div class="m-top-20 wow slideInRight">
+												<div class="contact-info-icon">
+														<i class="fa fa-instagram"></i>
+												</div>
+												<div class="contact-info-title">
+														Instagram
+												</div>
+												<div class="contact-info-text">
+														<a href="">www.instagram.com/low-production/</a>
+												</div>
+										</div>
+
+								</address>
+						</div>
+
+				</div>
+		</div>
+</section>
+<!-- End Contact -->
 {% endblock %}
 
 {% block js %}
 	{{parent()}}
-
-	<!-- Components Plugin -->
-	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
-
+	<!-- Contact Form -->
+	<script src="js/contact.js"></script>
 {% endblock %}

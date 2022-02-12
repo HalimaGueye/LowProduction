@@ -110,7 +110,111 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
-        echo "\t<p>Movies view !</p>
+        echo "
+<!-- Start Portfolio -->
+<section id=\"films\" class=\"p-top-40 p-bottom-80\">
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row p-bottom-40\">
+\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
+\t\t\t\t\t\t\t<div class=\"section-title text-center m-bottom-40\">
+\t\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Nos projets</strong></h2>
+\t\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\t\tRetrouvez l'ensemble des projets documentaires <b>produits, réalisés et diffusés</b> par Low Production.</p>
+\t\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t\t<!-- Portfolio-filter -->
+\t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
+\t\t\t\t</ul>
+
+\t\t\t\t<!-- Portfolio -->
+\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
+
+\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t<div class=\"pf-item doing\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 40
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+        echo "\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/portfolio/1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t<div class=\"pf-item done\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 59
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+        echo "\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 61
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/portfolio/2.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t</div> <!-- Portfolio -->
+
+\t\t</div> <!-- /.container -->
+</section>
+<!-- End Portfolio -->
+
+<!-- Start Call to Action -->
+<section class=\"light-bg p-top-60 p-bottom-60\">
+\t\t<div class=\"container\">
+\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<div class=\"col-xs-12 c2a-content text-center\">
+\t\t\t\t\t\t\t\t<!-- Text -->
+\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-delay=\"0.3s\">Vous aimeriez contribuer à ces projets ? </h2>
+\t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
+\t\t\t\t\t\t\t\t<!-- Button -->
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 92
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
+        echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
+\t\t\t\t\t\t</div> <!-- /.col -->
+
+\t\t\t\t</div>  <!-- /.row -->
+\t\t</div> <!-- /.container -->
+</section>
+<!-- End Call to Action -->
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -120,7 +224,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     }
 
-    // line 13
+    // line 102
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,32 +234,18 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 14
+        // line 103
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
-
-\t<!-- Components Plugin -->
 \t<script src=\"";
-        // line 17
+        // line 104
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/smooth-scroll.js\"></script>
+        echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 18
+        // line 105
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.appear.js\"></script>
-\t<script src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.stellar.min.js\"></script>
-\t<script src=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/wow.min.js\"></script>
-\t<script src=\"";
-        // line 21
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
+        echo "js/isotope.pkgd.min.js\"></script>
 
 ";
         
@@ -178,7 +268,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     public function getDebugInfo()
     {
-        return array (  157 => 21,  153 => 20,  149 => 19,  145 => 18,  141 => 17,  134 => 14,  124 => 13,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  247 => 105,  243 => 104,  238 => 103,  228 => 102,  209 => 92,  175 => 61,  170 => 59,  150 => 42,  145 => 40,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -192,18 +282,102 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 {% block movies %}<li class=\"active\">{% endblock %}
 
 {% block body %}
-\t<p>Movies view !</p>
+
+<!-- Start Portfolio -->
+<section id=\"films\" class=\"p-top-40 p-bottom-80\">
+\t\t<div class=\"container\">
+
+\t\t\t<div class=\"row p-bottom-40\">
+\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
+\t\t\t\t\t\t\t<div class=\"section-title text-center m-bottom-40\">
+\t\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Nos projets</strong></h2>
+\t\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\t\tRetrouvez l'ensemble des projets documentaires <b>produits, réalisés et diffusés</b> par Low Production.</p>
+\t\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t\t<!-- Portfolio-filter -->
+\t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
+\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
+\t\t\t\t</ul>
+
+\t\t\t\t<!-- Portfolio -->
+\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
+
+\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t<div class=\"pf-item doing\">
+\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/portfolio/1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t<div class=\"pf-item done\">
+\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/portfolio/2.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t</div> <!-- Portfolio -->
+
+\t\t</div> <!-- /.container -->
+</section>
+<!-- End Portfolio -->
+
+<!-- Start Call to Action -->
+<section class=\"light-bg p-top-60 p-bottom-60\">
+\t\t<div class=\"container\">
+\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<div class=\"col-xs-12 c2a-content text-center\">
+\t\t\t\t\t\t\t\t<!-- Text -->
+\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-delay=\"0.3s\">Vous aimeriez contribuer à ces projets ? </h2>
+\t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
+\t\t\t\t\t\t\t\t<!-- Button -->
+\t\t\t\t\t\t\t\t<a href=\"{{url('support')}}\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
+\t\t\t\t\t\t</div> <!-- /.col -->
+
+\t\t\t\t</div>  <!-- /.row -->
+\t\t</div> <!-- /.container -->
+</section>
+<!-- End Call to Action -->
+
 {% endblock %}
 
 {% block js %}
 \t{{parent()}}
-
-\t<!-- Components Plugin -->
-\t<script src=\"{{ asset('bundles/web/')}}js/smooth-scroll.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.appear.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.stellar.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/wow.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
+\t<script src=\"{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
+\t<script src=\"{{asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
 
 {% endblock %}
 ", "gentle_chef/movies.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\movies.html.twig");

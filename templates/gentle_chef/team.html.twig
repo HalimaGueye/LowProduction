@@ -7,17 +7,409 @@
 {% block team %}<li class="active">{% endblock %}
 
 {% block body %}
-	<p>Team view !</p>
+
+<!-- Start Portfolio -->
+<section id="portfolio" class="p-top-40 p-bottom-80">
+		<div class="container">
+
+				<div class="row p-bottom-40">
+						<div class="col-md-8 col-md-offset-2">
+								<div class="section-title text-center m-bottom-40">
+										<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s"><strong>L'équipe</strong></h2>
+										<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+										<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+											Pour certains de nos <b>bénévoles</b>, l'association a véritablement joué un rôle de <b>tremplin</b>. Pour d'autres, il s'agissait simplement d'une parenthèse. Quelque soit la place de l'audiovisuel dans leur vie actuelle, leurs divers talents <b>ont participé à la construction</b> et au <b>rayonnement</b> de Low Production.
+											<br><br>Retrouvez ci-dessous tous les bénévoles qui sont passés par l'association et n'hésitez pas <b>à suivre</b> leurs travaux !
+										</p>
+								</div>
+						</div>
+				</div>
+
+				<!-- Portfolio-filter -->
+				<ul class="pf-filter pf-filter-gray text-center list-inline">
+						<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
+						<li><a href="#" data-filter=".bureau" class="iso-button">Bureau</a></li>
+						<li>
+							<div class="dropdown">
+								<a data-filter=".p" class="iso-button">Projets documentaires</a>
+								<div class="dropdown-content">
+									<a data-filter=".p1" class="iso-button">Berr(k)e</a>
+									<a data-filter=".p2" class="iso-button">Koméla</a>
+								</div>
+							</div>
+						</li>
+				</ul>
+
+				<!-- Portfolio -->
+				<div class="portfolio portfolio-isotope col-4 gutter">
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/8.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Romane Jeunemaître
+												</div>
+												<div class="team-item-position">
+														Vidéaste indépendante
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.linkedin.com/in/claire-monchauzou-866088198/"><i class="fa fa-linkedin"></i></a>
+																<a target="_blank" href="https://www.facebook.com/claire.mcz"><i class="fa fa-facebook"></i></a>
+																<a target="_blank" href="https://www.instagram.com/claire_oz/"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/2.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Claire Monchauzou
+												</div>
+												<div class="team-item-position">
+														Chargée de projet (vice-présidente et trésorière)
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.linkedin.com/in/franckmithieux/"><i class="fa fa-linkedin"></i></a>
+																<a target="_blank" href="https://www.facebook.com/franck.mthx"><i class="fa fa-facebook"></i></a>
+																<a target="_blank" href="https://instagram.com/_franckm"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/3.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Franck Mithieux
+												</div>
+												<div class="team-item-position">
+														Chargé de communication
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/15.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Gaëtan Richard
+												</div>
+												<div class="team-item-position">
+														Dessinateur
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.linkedin.com/in/william-boffy-2994a3ba/"><i class="fa fa-linkedin"></i></a>
+																<a target="_blank" href="https://www.facebook.com/william.boffy/"><i class="fa fa-facebook"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/1.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														William Boffy
+												</div>
+												<div class="team-item-position">
+														Ingénieur et vidéaste (fondateur et président)
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/13.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Chloé Marzin
+												</div>
+												<div class="team-item-position">
+														Ingénieure
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.linkedin.com/in/william-boffy-2994a3ba/"><i class="fa fa-linkedin"></i></a>
+																<a target="_blank" href="https://www.facebook.com/laura.bernard.9469"><i class="fa fa-facebook"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/5.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Laura Bernard
+												</div>
+												<div class="team-item-position">
+														Étudiante à Science Po
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://wlo.link/@damajira"><i class="fa fa-globe"></i></a>
+																<a target="_blank" href="https://open.spotify.com/artist/5pbB3XwWGUKvwqAhaqcxoP"><i class="fa fa-spotify"></i></a>
+																<a target="_blank" href="https://www.facebook.com/Damajira"><i class="fa fa-facebook"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/12.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Damajira
+												</div>
+												<div class="team-item-position">
+														Producteur et auteur-compositeur-interprète.
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://manonpoinsot.webador.fr/"><i class="fa fa-globe"></i></a>
+																<a target="_blank" href="https://www.instagram.com/manonpsnt"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/11.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Manon Poinsot
+												</div>
+												<div class="team-item-position">
+														Photographe
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.halima-gueye.online/"><i class="fa fa-globe"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/14.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Halima Gueye
+												</div>
+												<div class="team-item-position">
+														Développeuse
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+														<a target="_blank" href="https://www.instagram.com/thomasbousquet_/"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/6.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Thomas Bousquet
+												</div>
+												<div class="team-item-position">
+														Vidéaste indépendant
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://victorjanjic8.wixsite.com/victorjanjic"><i class="fa fa-globe"></i></a>
+																<a target="_blank" href="https://www.instagram.com/victor.janjic"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/7.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Victor Janjic
+												</div>
+												<div class="team-item-position">
+														Vidéaste indépendant
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://ginkio.com/mathilde-oudot"><i class="fa fa-globe"></i></a>
+																<a target="_blank" href="https://www.instagram.com/mathilde_udt"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/9.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Mathilde Oudot
+												</div>
+												<div class="team-item-position">
+														Journaliste et vidéaste
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+																<a target="_blank" href="https://www.linkedin.com/in/margaux-regnier-92a67331/"><i class="fa fa-linkedin"></i></a>
+																<a target="_blank" href="https://www.facebook.com/margaux.regnier.5"><i class="fa fa-facebook"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/4.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Margaux Regnier
+												</div>
+												<div class="team-item-position">
+														Chargée d'études environnementales
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<!-- === Item === -->
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1">
+								<div class="team-item">
+										<div class="team-item-image">
+												<div class="team-item-image-overlay">
+														<div class="team-item-icons">
+														<a target="_blank" href="https://www.instagram.com/loic.franzini"><i class="fa fa-instagram"></i></a>
+														</div>
+												</div>
+												<img src="{{asset('bundles/web/')}}img/team/10.jpg" alt="" />
+										</div>
+										<div class="team-item-info">
+												<div class="team-item-name">
+														Loïc Franzini
+												</div>
+												<div class="team-item-position">
+														Ingénieur du son
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+
+		</div>
+</section>
+<!-- End Portfolio -->
+
+<!-- Start Call to Action -->
+<section class="light-bg p-top-60 p-bottom-60">
+		<div class="container">
+				<div class="row">
+
+						<div class="col-xs-12 c2a-content text-center">
+								<!-- Text -->
+								<h2 class="wow fadeInDown" data-wow-delay="0.3s">Vous aimeriez en faire partie ?</h2>
+								<p class="m-bottom-30 wow fadeInDown" data-wow-delay="0.4s">Il y a plusieurs moyens de s'investir dans l'association.</p>
+								<!-- Button -->
+								<a href="{{url("support")}}" class="btn btn-main btn-theme wow fadeInUp" data-wow-delay="0.5s">En savoir plus</a>
+						</div> <!-- /.col -->
+
+				</div>  <!-- /.row -->
+		</div> <!-- /.container -->
+</section>
+<!-- End Call to Action -->
+
+
 {% endblock %}
 
 {% block js %}
 	{{parent()}}
-
-	<!-- Components Plugin -->
-	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
-
+	<script src="{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/isotope.pkgd.min.js"></script>
 {% endblock %}

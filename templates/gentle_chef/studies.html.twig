@@ -7,17 +7,94 @@
 {% block studies %}<li class="active">{% endblock %}
 
 {% block body %}
-	<p>Studies view !</p>
+<!-- Section Title Portfolio -->
+<div class="section-title-bg text-center">
+		<h2 class="wow fadeInDown no-margin" data-wow-duration="1s" data-wow-delay="0.6s"><strong>Nos études</strong></h2>
+		<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+		<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">Consultez l'ensemble de nos études environnementales sur cette page.</p>
+</div>
+
+
+<!-- Start Studies -->
+<section id="portfolio" class="p-top-40 p-bottom-80">
+		<div class="container">
+
+				<!-- Portfolio-filter -->
+				<ul class="pf-filter pf-filter-gray text-center list-inline">
+						<li><a href="#" data-filter="*" class="iso-active iso-button">Toutes</a></li>
+						<li><a href="#" data-filter=".acv" class="iso-button">Analyse</a></li>
+						<li><a href="#" data-filter=".general" class="iso-button">Bilan</a></li>
+				</ul>
+
+				<!-- Portfolio -->
+				<div class="portfolio portfolio-isotope col-2 gutter">
+
+						<!-- Portfolio Item -->
+						<div class="pf-item acv">
+								<a href="{{url('study')}}" class="pf-style">
+										<div class="pf-image">
+												<img src="{{asset('bundles/web/')}}img/studies/1.jpg" alt="">
+												<div class="overlay">
+														<div class="overlay-caption">
+																<div class="overlay-content">
+																		<div class="pf-info white-color">
+																				<h4 class="pf-title">Analyse de cycle de vie #1</h4>
+																				<p>Lorem ipsum.</p>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</a>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="pf-item general">
+								<a href="{{url('study')}}" class="pf-style">
+										<div class="pf-image">
+												<img src="{{asset('bundles/web/')}}img/studies/2.jpg" alt="">
+												<div class="overlay">
+														<div class="overlay-caption">
+																<div class="overlay-content">
+																		<div class="pf-info white-color">
+																				<h4 class="pf-title">BILAN #1</h4>
+																				<p>Lorem ipsum.</p>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</a>
+						</div>
+
+				</div> <!-- Portfolio -->
+
+		</div> <!-- /.container -->
+</section>
+<!-- End Studies -->
+
+<!-- Start Call to Action -->
+<section class="light-bg p-top-60 p-bottom-60">
+		<div class="container">
+				<div class="row">
+
+						<div class="col-xs-12 c2a-content text-center">
+								<!-- Text -->
+								<h2 class="wow fadeInDown" data-wow-delay="0.3s">Vous aimeriez contribuer à ces études ? </h2>
+								<p class="m-bottom-30 wow fadeInDown" data-wow-delay="0.4s">Il y a plusieurs moyens de s'investir dans l'association.</p>
+								<!-- Button -->
+								<a href="{{url('support')}}" class="btn btn-main btn-theme wow fadeInUp" data-wow-delay="0.5s">En savoir plus</a>
+						</div> <!-- /.col -->
+
+				</div>  <!-- /.row -->
+		</div> <!-- /.container -->
+</section>
+<!-- End Call to Action -->
 {% endblock %}
 
 {% block js %}
 	{{parent()}}
-
-	<!-- Components Plugin -->
-	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
-	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/isotope.pkgd.min.js"></script>
 
 {% endblock %}

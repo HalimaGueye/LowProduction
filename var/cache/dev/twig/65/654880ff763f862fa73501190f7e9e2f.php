@@ -1040,37 +1040,17 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t<script src=\"";
         // line 772
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/smooth-scroll.js\"></script>
+        echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 773
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.appear.js\"></script>
+        echo "js/isotope.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 774
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.stellar.min.js\"></script>
-\t<script src=\"";
-        // line 775
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/imagesloaded.pkgd.min.js\"></script>
-\t<script src=\"";
-        // line 776
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/isotope.pkgd.min.js\"></script>
-\t<script src=\"";
-        // line 777
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/wow.min.js\"></script>
-\t<script src=\"";
-        // line 778
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
-\t<script src=\"";
-        // line 779
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"";
-        // line 780
+        // line 775
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
@@ -1179,7 +1159,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     public function getDebugInfo()
     {
-        return array (  1074 => 780,  1070 => 779,  1066 => 778,  1062 => 777,  1058 => 776,  1054 => 775,  1050 => 774,  1046 => 773,  1042 => 772,  1036 => 769,  1032 => 768,  1028 => 767,  1024 => 766,  1020 => 765,  1016 => 764,  1009 => 761,  999 => 760,  980 => 750,  972 => 745,  964 => 740,  956 => 735,  948 => 730,  940 => 725,  932 => 720,  924 => 715,  900 => 694,  895 => 692,  883 => 685,  873 => 678,  868 => 676,  856 => 669,  846 => 662,  841 => 660,  829 => 653,  819 => 646,  814 => 644,  802 => 637,  769 => 607,  756 => 597,  743 => 587,  730 => 577,  717 => 567,  704 => 557,  691 => 547,  678 => 537,  662 => 524,  638 => 503,  633 => 501,  613 => 484,  608 => 482,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  1054 => 775,  1050 => 774,  1046 => 773,  1042 => 772,  1036 => 769,  1032 => 768,  1028 => 767,  1024 => 766,  1020 => 765,  1016 => 764,  1009 => 761,  999 => 760,  980 => 750,  972 => 745,  964 => 740,  956 => 735,  948 => 730,  940 => 725,  932 => 720,  924 => 715,  900 => 694,  895 => 692,  883 => 685,  873 => 678,  868 => 676,  856 => 669,  846 => 662,  841 => 660,  829 => 653,  819 => 646,  814 => 644,  802 => 637,  769 => 607,  756 => 597,  743 => 587,  730 => 577,  717 => 567,  704 => 557,  691 => 547,  678 => 537,  662 => 524,  638 => 503,  633 => 501,  613 => 484,  608 => 482,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -1955,13 +1935,8 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t<script src=\"{{ asset('bundles/web/js/video-bg.js')}}\"></script>
 
 \t<!-- Components Plugin -->
-\t<script src=\"{{ asset('bundles/web/')}}js/smooth-scroll.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.appear.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.stellar.min.js\"></script>
 \t<script src=\"{{ asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"{{ asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/wow.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
 \t<script src=\"{{ asset('bundles/web/')}}inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"{{ asset('bundles/web/')}}inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 

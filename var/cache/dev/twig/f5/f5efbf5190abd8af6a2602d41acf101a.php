@@ -308,7 +308,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 \t\t";
         // line 209
         $this->displayBlock('js', $context, $blocks);
-        // line 220
+        // line 227
         echo "  </body>
 </html>
 ";
@@ -606,6 +606,28 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/custom.js"), "html", null, true);
         echo "\"></script>
 
+\t\t\t<!-- Components Plugin -->
+\t\t\t<script src=\"";
+        // line 220
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "js/smooth-scroll.js\"></script>
+\t\t\t<script src=\"";
+        // line 221
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "js/jquery.appear.js\"></script>
+\t\t\t<script src=\"";
+        // line 222
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "js/jquery.stellar.min.js\"></script>
+\t\t\t<script src=\"";
+        // line 223
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "js/wow.min.js\"></script>
+\t\t\t<script src=\"";
+        // line 224
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
+
 \t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -627,7 +649,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     public function getDebugInfo()
     {
-        return array (  606 => 217,  600 => 214,  594 => 211,  591 => 210,  581 => 209,  563 => 97,  544 => 85,  525 => 84,  506 => 83,  487 => 82,  468 => 81,  449 => 80,  430 => 79,  411 => 78,  392 => 34,  386 => 31,  382 => 30,  378 => 29,  374 => 28,  370 => 27,  366 => 26,  362 => 25,  356 => 22,  353 => 21,  343 => 20,  324 => 8,  312 => 220,  310 => 209,  197 => 98,  195 => 97,  178 => 85,  172 => 84,  166 => 83,  160 => 82,  154 => 81,  148 => 80,  142 => 79,  136 => 78,  125 => 70,  121 => 69,  93 => 43,  91 => 20,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  64 => 8,  55 => 1,);
+        return array (  628 => 224,  624 => 223,  620 => 222,  616 => 221,  612 => 220,  606 => 217,  600 => 214,  594 => 211,  591 => 210,  581 => 209,  563 => 97,  544 => 85,  525 => 84,  506 => 83,  487 => 82,  468 => 81,  449 => 80,  430 => 79,  411 => 78,  392 => 34,  386 => 31,  382 => 30,  378 => 29,  374 => 28,  370 => 27,  366 => 26,  362 => 25,  356 => 22,  353 => 21,  343 => 20,  324 => 8,  312 => 227,  310 => 209,  197 => 98,  195 => 97,  178 => 85,  172 => 84,  166 => 83,  160 => 82,  154 => 81,  148 => 80,  142 => 79,  136 => 78,  125 => 70,  121 => 69,  93 => 43,  91 => 20,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  64 => 8,  55 => 1,);
     }
 
     public function getSourceContext()
@@ -849,6 +871,13 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
 \t    <!-- Custom Plugin -->
 \t    <script src=\"{{ asset('bundles/web/js/custom.js')}}\"></script>
+
+\t\t\t<!-- Components Plugin -->
+\t\t\t<script src=\"{{ asset('bundles/web/')}}js/smooth-scroll.js\"></script>
+\t\t\t<script src=\"{{ asset('bundles/web/')}}js/jquery.appear.js\"></script>
+\t\t\t<script src=\"{{ asset('bundles/web/')}}js/jquery.stellar.min.js\"></script>
+\t\t\t<script src=\"{{ asset('bundles/web/')}}js/wow.min.js\"></script>
+\t\t\t<script src=\"{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
 \t\t{% endblock %}
   </body>

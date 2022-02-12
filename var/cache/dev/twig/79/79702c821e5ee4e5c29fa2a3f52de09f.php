@@ -110,7 +110,161 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
-        echo "\t<p>News view !</p>
+        echo "<!-- Section Title Blog -->
+<div class=\"section-title-bg text-center m-bottom-40\">
+\t\t<h2 class=\"wow fadeInDown no-margin\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Actualités</strong></h2>
+\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Nous vous tenons informés des actions de l'association sur cette page.</p>
+</div>
+
+<!--BLog single section-->
+<section class=\"blog-index\">
+\t\t<div class=\"container clearfix\">
+\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<!-- === Blog item 1 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/news/b1.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 35
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 2 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+        // line 44
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/news/b2.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
+        // line 51
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 53
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 3 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+        // line 62
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/news/b3.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
+        // line 69
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 71
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 4 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+        // line 80
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/news/b4.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
+        // line 87
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 89
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+        echo "\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-xs-12 blog-pagination\">
+\t\t\t\t\t\t\t\t<nav aria-label=\"Page navigation\">
+\t\t\t\t\t\t\t\t\t\t<ul class=\"pagination\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"disabled\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\"><i class=\"fa fa-arrow-left\"></i></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span>1 <span class=\"sr-only\">(current)</span></span>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">2</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">3</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">4</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">5</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" aria-label=\"Next\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\"><i class=\"fa fa-arrow-right\"></i></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</nav>
+\t\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t</div>
+</section>
+<!--End News -->
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -120,7 +274,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     }
 
-    // line 13
+    // line 123
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,30 +284,30 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 14
+        // line 124
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<!-- Components Plugin -->
 \t<script src=\"";
-        // line 17
+        // line 127
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/smooth-scroll.js\"></script>
 \t<script src=\"";
-        // line 18
+        // line 128
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/jquery.appear.js\"></script>
 \t<script src=\"";
-        // line 19
+        // line 129
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/jquery.stellar.min.js\"></script>
 \t<script src=\"";
-        // line 20
+        // line 130
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/wow.min.js\"></script>
 \t<script src=\"";
-        // line 21
+        // line 131
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
@@ -178,7 +332,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     public function getDebugInfo()
     {
-        return array (  157 => 21,  153 => 20,  149 => 19,  145 => 18,  141 => 17,  134 => 14,  124 => 13,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  311 => 131,  307 => 130,  303 => 129,  299 => 128,  295 => 127,  288 => 124,  278 => 123,  235 => 89,  230 => 87,  218 => 80,  206 => 71,  201 => 69,  189 => 62,  177 => 53,  172 => 51,  160 => 44,  148 => 35,  143 => 33,  131 => 26,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -192,7 +346,117 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 {% block news %}<li class=\"active\">{% endblock %}
 
 {% block body %}
-\t<p>News view !</p>
+<!-- Section Title Blog -->
+<div class=\"section-title-bg text-center m-bottom-40\">
+\t\t<h2 class=\"wow fadeInDown no-margin\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Actualités</strong></h2>
+\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Nous vous tenons informés des actions de l'association sur cette page.</p>
+</div>
+
+<!--BLog single section-->
+<section class=\"blog-index\">
+\t\t<div class=\"container clearfix\">
+\t\t\t\t<div class=\"row\">
+
+\t\t\t\t\t\t<!-- === Blog item 1 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url('new')}}\"><img src=\"{{asset('bundles/web/')}}img/news/b1.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url('new')}}\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('new')}}\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 2 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url('new')}}\"><img src=\"{{asset('bundles/web/')}}img/news/b2.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url('new')}}\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('new')}}\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 3 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url('new')}}\"><img src=\"{{asset('bundles/web/')}}img/news/b3.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url('new')}}\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('new')}}\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<!-- === Blog item 4 === -->
+\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-40\">
+\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url('new')}}\"><img src=\"{{asset('bundles/web/')}}img/news/b4.jpg\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 janvier 2022</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url('new')}}\">Working in Cool Head</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('new')}}\" class=\"read-more\">Read More >></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"col-xs-12 blog-pagination\">
+\t\t\t\t\t\t\t\t<nav aria-label=\"Page navigation\">
+\t\t\t\t\t\t\t\t\t\t<ul class=\"pagination\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"disabled\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\"><i class=\"fa fa-arrow-left\"></i></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span>1 <span class=\"sr-only\">(current)</span></span>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">2</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">3</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">4</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">5</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" aria-label=\"Next\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\"><i class=\"fa fa-arrow-right\"></i></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</nav>
+\t\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t</div>
+</section>
+<!--End News -->
 {% endblock %}
 
 {% block js %}
