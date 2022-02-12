@@ -1,40 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Hello BlogController!
-
-
+	{{parent()}} | L'équipe
 {% endblock %}
 
-{% block head %}
-	<style></style>
-{% endblock %}
+{% block team %}<li class="active">{% endblock %}
 
 {% block body %}
-{{ dump(portfolio) }}
-{% for portfolio in portfolio %}
+	<p>Team view !</p>
+{% endblock %}
 
+{% block js %}
+	{{parent()}}
 
-	<div class="card mb-3" style="margin : 40px;margin-right: 50%; marging-left: 50%" bis_skin_checked="1">
+	<!-- Components Plugin -->
+	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
+	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
 
-		{% if portfolio.member.memberPicture is not null %}
-			<img src="/uploads/images/{{portfolio.member.memberPicture.image}}" class="img-fluid" alt="{{ portfolio.member.name }}">
-		{% endif %}
-		<div class="card-body" bis_skin_checked="1">
-			<h3>{{portfolio.member.name}}</h3>
-			<h6 class="mb-3">
-		<i class="fas fa-envelope"></i>
-		{{portfolio.member.courriel}}</h6>
-			<a href="#"><h6 class="card-subtitle text-muted">
-				<img width="30" src="/uploads/images/icones/{{portfolio.portfolioType.icone}}" class="img-thumbnail" alt="...">
-
-				{{portfolio.portfolioType.name}}</h6></a>
-
-			<p class="card-text">{{portfolio.member.description | raw}}</p>
-		</div>
-		<div class="card-body" bis_skin_checked="1">
-			<a href="{{portfolio.url}}" class="card-link">{{portfolio.url}}</a>
-		</div>
-	</div>
-
-</div>{% endfor %}{% endblock %}
+{% endblock %}

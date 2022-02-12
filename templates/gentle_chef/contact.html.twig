@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}} | Contact
+{% endblock %}
+
+{% block contact %}<li class="active">{% endblock %}
+
+{% block body %}
+	<p>Contact view !</p>
+{% endblock %}
+
+{% block js %}
+	{{parent()}}
+
+	<!-- Components Plugin -->
+	<script src="{{ asset('bundles/web/')}}js/smooth-scroll.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/jquery.appear.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/jquery.stellar.min.js"></script>
+	<script src="{{ asset('bundles/web/')}}js/wow.min.js"></script>
+	<script src="{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js"></script>
+
+{% endblock %}

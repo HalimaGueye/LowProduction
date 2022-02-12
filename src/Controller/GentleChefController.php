@@ -17,89 +17,115 @@ use App\Entity\PortfolioType;
 use App\Entity\Member;
 use App\Entity\Video;
 use Symfony\Component\HttpFoundation\Request;
-use Knp\Component\Pager\PaginatorInterface; 
+use Knp\Component\Pager\PaginatorInterface;
 use Doctrine\ORM\EntityManager;
 
 class GentleChefController extends AbstractController
 {
-    #[Route('/equipe', name: 'equipe')]
-    public function showTeam(EntityManagerInterface $em)
-    {
-        $repo1 = $em->getRepository(Portfolio::class);
-        $repo2 = $em->getRepository(PortfolioType::class);
-        $repo3 = $em->getRepository(Member::class);
 
-        $portfolio = $repo1-> findAll();
-        $portfolioType = $repo2-> findAll();
-        $member = $repo3-> findAll();
+  #[Route('/', name: 'home')]
+  public function index(EntityManagerInterface $em): Response
+  {
+      $repo1 = $em->getRepository(Article::class);
+      $repo2 = $em->getRepository(Picture::class);
+      $repo3 = $em->getRepository(NewActuality::class);
+      $repo4 = $em->getRepository(Partner::class);
+      $repo5 = $em->getRepository(Category::class);
 
-        return $this->render('gentle_chef/team.html.twig', [
-            'controller_name' => 'GentleChefController',
-            'portfolio' => $portfolio,
-            'portfolioType' => $portfolioType,
-            'member' => $member,
-            
-        ]);
+      $article = $repo1-> findAll();
+      $picture = $repo2-> findAll();
+      $actuality = $repo3-> findAll();
+      $partner = $repo4-> findAll();
+      $category = $repo5-> findAll();
 
+      return $this->render('gentle_chef/home.html.twig', [
+          'controller_name' => 'GentleChefController',
+          'article' => $article,
+          'picture' => $picture,
+          'actuality' => $actuality,
+          'partner' => $partner,
+          'category' => $category,
+      ]);
+  }
 
-    }
+  #[Route('/histoire', name: 'story')]
+  public function showStory(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/story.html.twig');
+  }
 
-    #[Route('/films', name: 'films')]
-    public function showMovies(Request $request,  EntityManagerInterface $em)
-    {
-        // Méthode findBy qui permet de récupérer les données avec des critères de filtre et de tri
-        $repo1 = $em->getRepository(Video::class);
-        $video = $repo1->findBy([],['project' => 'desc']);
+  #[Route('/equipe', name: 'team')]
+  public function showTeam(EntityManagerInterface $em)
+  {
+      $repo1 = $em->getRepository(Portfolio::class);
+      $repo2 = $em->getRepository(PortfolioType::class);
+      $repo3 = $em->getRepository(Member::class);
 
+      $portfolio = $repo1-> findAll();
+      $portfolioType = $repo2-> findAll();
+      $member = $repo3-> findAll();
 
-        // $video = $paginator->paginate(
-        //     $video, // Requête contenant les données à paginer (ici nos articles)
-        //     $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
-        //     6 // Nombre de résultats par page
-        // );
-        
-        return $this->render('gentle_chef/movies.html.twig', [
-            'controller_name' => 'GentleChefController',
-            'video' => $video,
-        ]);
-    
-        // $repo1 = $em->getRepository(Video::class);
-        
-        // $video = $repo1-> findAll();
+      return $this->render('gentle_chef/team.html.twig', [
+          'controller_name' => 'GentleChefController',
+          'portfolio' => $portfolio,
+          'portfolioType' => $portfolioType,
+          'member' => $member,
+      ]);
+  }
 
-        // return $this->render('gentle_chef/movies.html.twig', [
-        //     'controller_name' => 'GentleChefController',
-        //     'video' => $video,
-            
-        // ]);
+  #[Route('/films', name: 'movies')]
+  public function showMovies(Request $request,  EntityManagerInterface $em)
+  {
+      // Méthode findBy qui permet de récupérer les données avec des critères de filtre et de tri
+      $repo1 = $em->getRepository(Video::class);
+      $video = $repo1->findBy([],['project' => 'desc']);
 
+      return $this->render('gentle_chef/movies.html.twig', [
+          'controller_name' => 'GentleChefController',
+          'video' => $video,
+      ]);
+  }
 
-    }
+  #[Route('/film', name: 'movie')]
+  public function showMovie(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/movie.html.twig');
+  }
 
-    #[Route('/', name: 'gentle_chef')]
-    public function index(EntityManagerInterface $em): Response
-    {
-        $repo1 = $em->getRepository(Article::class);
-        $repo2 = $em->getRepository(Picture::class);
-        $repo3 = $em->getRepository(NewActuality::class);
-        $repo4 = $em->getRepository(Partner::class);
-        $repo5 = $em->getRepository(Category::class);
-                        
+  #[Route('/etudes', name: 'studies')]
+  public function showStudies(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/studies.html.twig');
+  }
 
-        $article = $repo1-> findAll();
-        $picture = $repo2-> findAll();
-        $actuality = $repo3-> findAll();
-        $partner = $repo4-> findAll();
-        $category = $repo5-> findAll();
+  #[Route('/etude', name: 'study')]
+  public function showStudy(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/study.html.twig');
+  }
 
-        return $this->render('gentle_chef/index.html.twig', [
-            'controller_name' => 'GentleChefController',
-            'article' => $article,
-            'picture' => $picture,
-            'actuality' => $actuality,
-            'partner' => $partner,
-            'category' => $category,
-            
-        ]);
-    }
+  #[Route('/actualites', name: 'news')]
+  public function showNews(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/news.html.twig');
+  }
+
+  #[Route('/actualite', name: 'new')]
+  public function showNew(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/new.html.twig');
+  }
+
+  #[Route('/soutenir', name: 'support')]
+  public function showSupport(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/support.html.twig');
+  }
+
+  #[Route('/contact', name: 'contact')]
+  public function showContact(EntityManagerInterface $em)
+  {
+    return $this->render('gentle_chef/contact.html.twig');
+  }
+
 }
