@@ -7,6 +7,7 @@ use App\Entity\Category;
 use App\Entity\User;
 use App\Entity\NewActuality;
 use App\Entity\Partner;
+use App\Entity\Supporters;
 use App\Entity\Portfolio;
 use App\Entity\PortfolioType;
 use App\Entity\Project;
@@ -40,7 +41,7 @@ class DashboardController extends AbstractDashboardController
         return $this->redirect($url);
     }
 
-    
+
 
     public function configureDashboard(): Dashboard
     {
@@ -103,7 +104,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Project', 'far fa-folder', Project::class);
         yield MenuItem::linkToCrud('Article', 'fa fa-file-text-o', Article::class);
         yield MenuItem::linkToCrud('Category', 'fas fa-grip-vertical', Category::class);
-        
+
 
 
         yield MenuItem::section('Medias');
@@ -117,7 +118,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('User', 'fa fa-users', User::class);
         yield MenuItem::linkToCrud('Member', 'far fa-smile', Member::class);
         yield MenuItem::linkToCrud('Partner', 'fa fa-hands-helping', Partner::class);
-    
+        yield MenuItem::linkToCrud('Supporters', 'fa fa-star', Supporters::class);
+
         yield MenuItem::section('Portfolio');
         yield MenuItem::linkToCrud('Portfolio', 'fas fa-id-card-alt', Portfolio::class);
         yield MenuItem::linkToCrud('Portfolio Type', 'fas fa-grip-horizontal', PortfolioType::class);
@@ -125,5 +127,5 @@ class DashboardController extends AbstractDashboardController
     }
 
 
-    
+
 }

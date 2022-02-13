@@ -285,7 +285,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "img/bd/19.png\" alt=\"\">
 \t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">Pas tant pour filmer mais plutôt pour avoir un métier<p>
-\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">qui consiste à s'émerveiller.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">qui consiste à s'émerveiller et être dehors.</p>
 \t\t\t\t\t\t\t</img>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
@@ -734,8 +734,89 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
         // line 423
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "img/bd/70.png\" alt=\"\">
-\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">À La Réunion, le soleil tape fort. Les fenêtres éblouissent de lumière</p>
-\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">pour former des toiles blanches.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">À La Réunion, le soleil tape fort et éblouit les fenêtres de lumière.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">J'y projetais tout ce qui me faisait vibrer...</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 429
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/71.png\" alt=\"\">
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">Le bateau... la vidéo... les rencontres...</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">Les idées s'alignaient...</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 435
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/72.png\" alt=\"\">
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">EUREKA ! J’avais l’impression de prendre</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">une revanche sur mon rêve d’enfant oublié.</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-5 col-md-5 col-sm-5 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 441
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/73.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-7 col-md-7 col-sm-7 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 445
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/74.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 449
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/75.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 453
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/76.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 457
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/77.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 461
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/78.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-3 col-md-3 col-sm-3 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 465
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/79.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 469
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/80.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-5 col-md-5 col-sm-5 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"";
+        // line 473
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo "img/bd/81.png\" alt=\"\">
 \t\t\t\t\t\t\t</img>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -752,7 +833,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     }
 
-    // line 435
+    // line 483
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -762,13 +843,13 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 436
+        // line 484
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<script src=\"";
-        // line 438
+        // line 486
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/lazyload.min.js\"></script>
 
@@ -802,7 +883,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     public function getDebugInfo()
     {
-        return array (  772 => 438,  766 => 436,  756 => 435,  735 => 423,  726 => 417,  717 => 411,  708 => 405,  699 => 399,  691 => 394,  682 => 388,  673 => 382,  664 => 376,  655 => 370,  647 => 365,  638 => 359,  629 => 353,  620 => 347,  611 => 341,  602 => 335,  593 => 329,  584 => 323,  575 => 317,  567 => 312,  558 => 306,  550 => 301,  541 => 295,  532 => 289,  523 => 283,  514 => 277,  505 => 271,  496 => 265,  487 => 259,  478 => 253,  469 => 247,  460 => 241,  451 => 235,  442 => 229,  433 => 223,  425 => 218,  414 => 210,  405 => 204,  396 => 198,  387 => 192,  378 => 186,  369 => 180,  360 => 174,  352 => 169,  344 => 164,  335 => 158,  327 => 153,  319 => 148,  311 => 143,  303 => 138,  294 => 132,  285 => 126,  276 => 120,  268 => 115,  259 => 109,  251 => 104,  242 => 98,  233 => 92,  224 => 86,  216 => 81,  207 => 75,  198 => 69,  189 => 63,  180 => 57,  171 => 51,  162 => 45,  154 => 40,  146 => 35,  137 => 29,  129 => 24,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  853 => 486,  847 => 484,  837 => 483,  818 => 473,  811 => 469,  804 => 465,  797 => 461,  790 => 457,  783 => 453,  776 => 449,  769 => 445,  762 => 441,  753 => 435,  744 => 429,  735 => 423,  726 => 417,  717 => 411,  708 => 405,  699 => 399,  691 => 394,  682 => 388,  673 => 382,  664 => 376,  655 => 370,  647 => 365,  638 => 359,  629 => 353,  620 => 347,  611 => 341,  602 => 335,  593 => 329,  584 => 323,  575 => 317,  567 => 312,  558 => 306,  550 => 301,  541 => 295,  532 => 289,  523 => 283,  514 => 277,  505 => 271,  496 => 265,  487 => 259,  478 => 253,  469 => 247,  460 => 241,  451 => 235,  442 => 229,  433 => 223,  425 => 218,  414 => 210,  405 => 204,  396 => 198,  387 => 192,  378 => 186,  369 => 180,  360 => 174,  352 => 169,  344 => 164,  335 => 158,  327 => 153,  319 => 148,  311 => 143,  303 => 138,  294 => 132,  285 => 126,  276 => 120,  268 => 115,  259 => 109,  251 => 104,  242 => 98,  233 => 92,  224 => 86,  216 => 81,  207 => 75,  198 => 69,  189 => 63,  180 => 57,  171 => 51,  162 => 45,  154 => 40,  146 => 35,  137 => 29,  129 => 24,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -934,7 +1015,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 \t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
 \t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/19.png\" alt=\"\">
 \t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">Pas tant pour filmer mais plutôt pour avoir un métier<p>
-\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">qui consiste à s'émerveiller.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">qui consiste à s'émerveiller et être dehors.</p>
 \t\t\t\t\t\t\t</img>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
@@ -1230,8 +1311,56 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
 \t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/70.png\" alt=\"\">
-\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">À La Réunion, le soleil tape fort. Les fenêtres éblouissent de lumière</p>
-\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">pour former des toiles blanches.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">À La Réunion, le soleil tape fort et éblouit les fenêtres de lumière.</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">J'y projetais tout ce qui me faisait vibrer...</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/71.png\" alt=\"\">
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">Le bateau... la vidéo... les rencontres...</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">Les idées s'alignaient...</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/72.png\" alt=\"\">
+\t\t\t\t\t\t\t\t<p class=\"bd-text top-left\">EUREKA ! J’avais l’impression de prendre</p>
+\t\t\t\t\t\t\t\t<p class=\"bd-text bottom-right\">une revanche sur mon rêve d’enfant oublié.</p>
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-5 col-md-5 col-sm-5 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/73.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-7 col-md-7 col-sm-7 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/74.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/75.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/76.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/77.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-6 col-md-6 col-sm-6 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/78.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-3 col-md-3 col-sm-3 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/79.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-4 col-md-4 col-sm-4 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/80.png\" alt=\"\">
+\t\t\t\t\t\t\t</img>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"bd-case col-lg-5 col-md-5 col-sm-5 col-xs-12 col-equal\">
+\t\t\t\t\t\t\t<img class=\"lazy\" data-original=\"{{asset('bundles/web/')}}img/bd/81.png\" alt=\"\">
 \t\t\t\t\t\t\t</img>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>

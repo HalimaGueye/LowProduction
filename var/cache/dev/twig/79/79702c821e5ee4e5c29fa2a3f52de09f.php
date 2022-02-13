@@ -288,29 +288,6 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
-
-\t<!-- Components Plugin -->
-\t<script src=\"";
-        // line 127
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/smooth-scroll.js\"></script>
-\t<script src=\"";
-        // line 128
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.appear.js\"></script>
-\t<script src=\"";
-        // line 129
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/jquery.stellar.min.js\"></script>
-\t<script src=\"";
-        // line 130
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "js/wow.min.js\"></script>
-\t<script src=\"";
-        // line 131
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
-
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -332,7 +309,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     public function getDebugInfo()
     {
-        return array (  311 => 131,  307 => 130,  303 => 129,  299 => 128,  295 => 127,  288 => 124,  278 => 123,  235 => 89,  230 => 87,  218 => 80,  206 => 71,  201 => 69,  189 => 62,  177 => 53,  172 => 51,  160 => 44,  148 => 35,  143 => 33,  131 => 26,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  288 => 124,  278 => 123,  235 => 89,  230 => 87,  218 => 80,  206 => 71,  201 => 69,  189 => 62,  177 => 53,  172 => 51,  160 => 44,  148 => 35,  143 => 33,  131 => 26,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -461,14 +438,6 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
 {% block js %}
 \t{{parent()}}
-
-\t<!-- Components Plugin -->
-\t<script src=\"{{ asset('bundles/web/')}}js/smooth-scroll.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.appear.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/jquery.stellar.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/wow.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
-
 {% endblock %}
 ", "gentle_chef/news.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\news.html.twig");
     }

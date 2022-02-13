@@ -588,7 +588,6 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         // line 414
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
-
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1029,7 +1028,6 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t{{parent()}}
 \t<script src=\"{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"{{asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
-
 {% endblock %}
 ", "gentle_chef/team.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\team.html.twig");
     }

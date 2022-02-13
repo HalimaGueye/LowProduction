@@ -11,6 +11,7 @@ use App\Entity\Article;
 use App\Entity\Picture;
 use App\Entity\NewActuality;
 use App\Entity\Partner;
+use App\Entity\Supporters;
 use App\Entity\Category;
 use App\Entity\Portfolio;
 use App\Entity\PortfolioType;
@@ -43,7 +44,8 @@ class GentleChefController extends AbstractController
           'article' => $article,
           'picture' => $picture,
           'actuality' => $actuality,
-          'partner' => $partner,
+          'partners' => $em->getRepository(Partner::class)->findAll(),
+          'supporters' => $em->getRepository(Supporters::class)->findAll(),
           'category' => $category,
       ]);
   }

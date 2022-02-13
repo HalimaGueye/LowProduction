@@ -292,7 +292,7 @@
 										<div class="service-icon">
 												<i class="fa fa-unlock" aria-hidden="true"></i>
 										</div>
-										<h4>La libération</h4>
+										<h4>La diffusion libre</h4>
 										<div class="service-text">
 												<p><b>Créer</b> et <b>diffuser librement</b> nos oeuvres aux fins de les rendre <b>accessibles</b> au plus grand nombre.</p>
 										</div>
@@ -371,7 +371,7 @@
 										</ul>
 								</div>
 								<div class="collapse" id="myGroup3">
-										<h5>Diffuser</h5>
+										<h5>Diffuser librement</h5>
 										<p>Les projets réalisés chez Low Production sont diffusés sous la <b>licence libre</b> Creative Commons <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
 										<h5 class="m-top-20">Le fonctionnement</h5>
 										<ul class="timeline">
@@ -529,86 +529,16 @@
 		</div>
 		<!-- === Testimonials === -->
 		<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
-
-				<!-- === Testimonial item 1 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Residence you satisfied and rapturous certainty two. Procured outweigh as outlived so so. On in bringing graceful proposal blessing of marriage outlived. Son rent face our loud near.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/1.jpg')}}" alt="">
+				{% for supporter in supporters %}
+						<div class="testimonial-item text-center">
+								<p class="testimonial-desc">{{supporter.quote}}</p>
+								<div class="testimonial-thumb">
+										<img class="img-responsive" src="{{asset(vich_uploader_asset(supporter.supporterPicture, 'imageFile'))}}" alt="{{supporter.supporterPicture.name}}">
+								</div>
+								<a target="_blank" href="{{supporter.url}}"><h5 class="testimonial-author">{{supporter.name}}</h5></a>
+								<h5 class="testimonial-profession">{{supporter.profession}}</h5>
 						</div>
-						<h5 class="testimonial-author">Yann Arthus Bertrand</h5>
-						<h5 class="testimonial-profession">Photographe, reporter, réalisateur et militant écologiste</h5>
-				</div>
-
-				<!-- === Testimonial item 2 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Excellent so to no sincerity smallness. Removal request delight if on he we. Unaffected in we by apartments astonished to decisively themselves. Offended ten old consider speaking.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/2.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Alexis Rosenfeld</h5>
-						<h5 class="testimonial-profession">Photographe et explorateur</h5>
-				</div>
-
-				<!-- === Testimonial item 3 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/3.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Marie Amiguet</h5>
-						<h5 class="testimonial-profession">Réalisatrice spécialisée dans le reportage animalier</h5>
-				</div>
-
-				<!-- === Testimonial item 4 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/4.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Julien Wosnitza</h5>
-						<h5 class="testimonial-profession">Militant et fondateur de Wings Of The Ocean</h5>
-				</div>
-
-				<!-- === Testimonial item 5 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/5.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">René Heuzey</h5>
-						<h5 class="testimonial-profession">Plongeur professionnel, réalisateur et producteur de films sous-marins</h5>
-				</div>
-
-				<!-- === Testimonial item 6 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/6.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Jérémie Villet</h5>
-						<h5 class="testimonial-profession">Photographe animalier</h5>
-				</div>
-
-				<!-- === Testimonial item 7 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/7.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Cyril Dion</h5>
-						<h5 class="testimonial-profession">Écrivain, réalisateur et militant écologiste</h5>
-				</div>
-
-				<!-- === Testimonial item 8 === -->
-				<div class="testimonial-item text-center">
-						<p class="testimonial-desc">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-						<div class="testimonial-thumb">
-								<img class="img-responsive" src="{{ asset('bundles/web/img/testimonial/8.jpg')}}" alt="">
-						</div>
-						<h5 class="testimonial-author">Marie-Monique Robin</h5>
-						<h5 class="testimonial-profession">Réalisatrice et journaliste</h5>
-				</div>
+				{% endfor %}
 		</div>
 </section>
 <!-- End Testimonial -->
@@ -709,46 +639,11 @@
 		<div class="container ">
 				<div class="row">
 						<div id="owl-clients" class="owl-carousel owl-theme client text-center">
-
-								<!-- === Partner 1 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://www.arte.tv/fr/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/1.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 2 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://www.cnc.fr/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/2.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 3 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://www.ademe.fr/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/3.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 4 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://www.france.tv/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/4.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 5 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://secoya-ecotournage.com/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/5.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 6 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://www.ecoprod.com/fr/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/6.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 7 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://regionreunion.com/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/7.png')}}" alt=""></a>
-								</div>
-
-								<!-- === Partner 8 === -->
-								<div class="client-item text-center">
-										<a target="_blank" href="https://regard-du-vivant.fr/"><img class="img-responsive" src="{{ asset('bundles/web/img/partners/8.png')}}" alt=""></a>
-								</div>
+								{% for partner in partners %}
+										<div class="client-item text-center">
+												<a target="_blank" href="{{partner.url}}"><img class="img-responsive" src="{{asset(vich_uploader_asset(partner.picture, 'imageFile'))}}" alt="{{partner.picture.name}}"></a>
+										</div>
+								{% endfor %}
 						</div>
 				</div>
 		</div>

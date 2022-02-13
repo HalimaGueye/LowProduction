@@ -4,9 +4,9 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-  app.path.LP_images: /uploads/images/articles
-  app.path.LP_icones: /uploads/images/icones
-  app.path.LP_partner: /uploads/images/partner
+  app.path.LP_images: /uploads/images
+  app.path.LP_icones: /uploads/images
+  app.path.LP_partner: /uploads/images
 
 services:
   # default configuration for services in *this* file
@@ -38,4 +38,4 @@ knp_paginator:
     template:
         pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'     # sliding pagination controls template
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template
-        filtration: '@KnpPaginator/Pagination/filtration.html.twig' 
+        filtration: '@KnpPaginator/Pagination/filtration.html.twig'

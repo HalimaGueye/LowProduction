@@ -404,7 +404,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"service-icon\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-unlock\" aria-hidden=\"true\"></i>
 \t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<h4>La libération</h4>
+\t\t\t\t\t\t\t\t\t\t<h4>La diffusion libre</h4>
 \t\t\t\t\t\t\t\t\t\t<div class=\"service-text\">
 \t\t\t\t\t\t\t\t\t\t\t\t<p><b>Créer</b> et <b>diffuser librement</b> nos oeuvres aux fins de les rendre <b>accessibles</b> au plus grand nombre.</p>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -483,7 +483,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup3\">
-\t\t\t\t\t\t\t\t\t\t<h5>Diffuser</h5>
+\t\t\t\t\t\t\t\t\t\t<h5>Diffuser librement</h5>
 \t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous la <b>licence libre</b> Creative Commons <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">CC BY-SA 4.0</a>. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
@@ -668,111 +668,43 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t</div>
 \t\t<!-- === Testimonials === -->
 \t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
-
-\t\t\t\t<!-- === Testimonial item 1 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Residence you satisfied and rapturous certainty two. Procured outweigh as outlived so so. On in bringing graceful proposal blessing of marriage outlived. Son rent face our loud near.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 537
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/1.jpg"), "html", null, true);
-        echo "\" alt=\"\">
+\t\t\t\t";
+        // line 532
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["supporters"]) || array_key_exists("supporters", $context) ? $context["supporters"] : (function () { throw new RuntimeError('Variable "supporters" does not exist.', 532, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["supporter"]) {
+            // line 533
+            echo "\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
+\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">";
+            // line 534
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "quote", [], "any", false, false, false, 534), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
+\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
+            // line 536
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 536), "imageFile")), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 536), "name", [], "any", false, false, false, 536), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
+            // line 538
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "url", [], "any", false, false, false, 538), "html", null, true);
+            echo "\"><h5 class=\"testimonial-author\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "name", [], "any", false, false, false, 538), "html", null, true);
+            echo "</h5></a>
+\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">";
+            // line 539
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "profession", [], "any", false, false, false, 539), "html", null, true);
+            echo "</h5>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Yann Arthus Bertrand</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe, reporter, réalisateur et militant écologiste</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 2 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Excellent so to no sincerity smallness. Removal request delight if on he we. Unaffected in we by apartments astonished to decisively themselves. Offended ten old consider speaking.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 547
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/2.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Alexis Rosenfeld</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe et explorateur</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 3 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 557
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/3.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Marie Amiguet</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Réalisatrice spécialisée dans le reportage animalier</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 4 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 567
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/4.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Julien Wosnitza</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Militant et fondateur de Wings Of The Ocean</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 5 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 577
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/5.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">René Heuzey</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Plongeur professionnel, réalisateur et producteur de films sous-marins</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 6 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 587
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/6.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Jérémie Villet</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe animalier</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 7 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 597
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/7.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Cyril Dion</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Écrivain, réalisateur et militant écologiste</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 8 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-        // line 607
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial/8.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Marie-Monique Robin</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Réalisatrice et journaliste</h5>
-\t\t\t\t</div>
-\t\t</div>
+\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['supporter'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 542
+        echo "\t\t</div>
 </section>
 <!-- End Testimonial -->
 
@@ -798,7 +730,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 637
+        // line 567
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b1.jpg"), "html", null, true);
@@ -810,12 +742,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 644
+        // line 574
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\">Le projet Koméla lancé</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 646
+        // line 576
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -825,7 +757,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 653
+        // line 583
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b2.jpg"), "html", null, true);
@@ -837,12 +769,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 660
+        // line 590
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\">Berr(k)e primé</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 662
+        // line 592
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -852,7 +784,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 669
+        // line 599
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b3.jpg"), "html", null, true);
@@ -864,12 +796,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 676
+        // line 606
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\">Bonne année !</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 678
+        // line 608
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -879,7 +811,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 685
+        // line 615
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b4.jpg"), "html", null, true);
@@ -891,12 +823,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 692
+        // line 622
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\">Nouveaux projets</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 694
+        // line 624
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
         echo "\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -916,71 +848,29 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t<div class=\"container \">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div id=\"owl-clients\" class=\"owl-carousel owl-theme client text-center\">
-
-\t\t\t\t\t\t\t\t<!-- === Partner 1 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.arte.tv/fr/\"><img class=\"img-responsive\" src=\"";
-        // line 715
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/1.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 2 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.cnc.fr/\"><img class=\"img-responsive\" src=\"";
-        // line 720
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/2.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 3 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.ademe.fr/\"><img class=\"img-responsive\" src=\"";
-        // line 725
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/3.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 4 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.france.tv/\"><img class=\"img-responsive\" src=\"";
-        // line 730
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/4.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 5 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://secoya-ecotournage.com/\"><img class=\"img-responsive\" src=\"";
-        // line 735
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/5.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 6 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.ecoprod.com/fr/\"><img class=\"img-responsive\" src=\"";
-        // line 740
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/6.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 7 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://regionreunion.com/\"><img class=\"img-responsive\" src=\"";
-        // line 745
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/7.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 8 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://regard-du-vivant.fr/\"><img class=\"img-responsive\" src=\"";
-        // line 750
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/partners/8.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+        // line 642
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["partners"]) || array_key_exists("partners", $context) ? $context["partners"] : (function () { throw new RuntimeError('Variable "partners" does not exist.', 642, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["partner"]) {
+            // line 643
+            echo "\t\t\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
+            // line 644
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partner"], "url", [], "any", false, false, false, 644), "html", null, true);
+            echo "\"><img class=\"img-responsive\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 644), "imageFile")), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 644), "name", [], "any", false, false, false, 644), "html", null, true);
+            echo "\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['partner'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 647
+        echo "\t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
 </section>
@@ -995,7 +885,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     }
 
-    // line 760
+    // line 655
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1005,52 +895,52 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 761
+        // line 656
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<!-- RS Plugin Extensions -->
 \t<script src=\"";
-        // line 764
+        // line 659
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.carousel.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 765
+        // line 660
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 766
+        // line 661
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 767
+        // line 662
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.migration.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 768
+        // line 663
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/visible-jquery.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 769
+        // line 664
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/video-bg.js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Components Plugin -->
 \t<script src=\"";
-        // line 772
+        // line 667
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 773
+        // line 668
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 774
+        // line 669
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"";
-        // line 775
+        // line 670
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
@@ -1159,7 +1049,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     public function getDebugInfo()
     {
-        return array (  1054 => 775,  1050 => 774,  1046 => 773,  1042 => 772,  1036 => 769,  1032 => 768,  1028 => 767,  1024 => 766,  1020 => 765,  1016 => 764,  1009 => 761,  999 => 760,  980 => 750,  972 => 745,  964 => 740,  956 => 735,  948 => 730,  940 => 725,  932 => 720,  924 => 715,  900 => 694,  895 => 692,  883 => 685,  873 => 678,  868 => 676,  856 => 669,  846 => 662,  841 => 660,  829 => 653,  819 => 646,  814 => 644,  802 => 637,  769 => 607,  756 => 597,  743 => 587,  730 => 577,  717 => 567,  704 => 557,  691 => 547,  678 => 537,  662 => 524,  638 => 503,  633 => 501,  613 => 484,  608 => 482,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  944 => 670,  940 => 669,  936 => 668,  932 => 667,  926 => 664,  922 => 663,  918 => 662,  914 => 661,  910 => 660,  906 => 659,  899 => 656,  889 => 655,  873 => 647,  860 => 644,  857 => 643,  853 => 642,  832 => 624,  827 => 622,  815 => 615,  805 => 608,  800 => 606,  788 => 599,  778 => 592,  773 => 590,  761 => 583,  751 => 576,  746 => 574,  734 => 567,  707 => 542,  698 => 539,  692 => 538,  685 => 536,  680 => 534,  677 => 533,  673 => 532,  662 => 524,  638 => 503,  633 => 501,  613 => 484,  608 => 482,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -1458,7 +1348,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"service-icon\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-unlock\" aria-hidden=\"true\"></i>
 \t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<h4>La libération</h4>
+\t\t\t\t\t\t\t\t\t\t<h4>La diffusion libre</h4>
 \t\t\t\t\t\t\t\t\t\t<div class=\"service-text\">
 \t\t\t\t\t\t\t\t\t\t\t\t<p><b>Créer</b> et <b>diffuser librement</b> nos oeuvres aux fins de les rendre <b>accessibles</b> au plus grand nombre.</p>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -1537,7 +1427,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup3\">
-\t\t\t\t\t\t\t\t\t\t<h5>Diffuser</h5>
+\t\t\t\t\t\t\t\t\t\t<h5>Diffuser librement</h5>
 \t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous la <b>licence libre</b> Creative Commons <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">CC BY-SA 4.0</a>. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
@@ -1695,86 +1585,16 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t</div>
 \t\t<!-- === Testimonials === -->
 \t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
-
-\t\t\t\t<!-- === Testimonial item 1 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Residence you satisfied and rapturous certainty two. Procured outweigh as outlived so so. On in bringing graceful proposal blessing of marriage outlived. Son rent face our loud near.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/1.jpg')}}\" alt=\"\">
+\t\t\t\t{% for supporter in supporters %}
+\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
+\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">{{supporter.quote}}</p>
+\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
+\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(supporter.supporterPicture, 'imageFile'))}}\" alt=\"{{supporter.supporterPicture.name}}\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{supporter.url}}\"><h5 class=\"testimonial-author\">{{supporter.name}}</h5></a>
+\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">{{supporter.profession}}</h5>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Yann Arthus Bertrand</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe, reporter, réalisateur et militant écologiste</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 2 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Excellent so to no sincerity smallness. Removal request delight if on he we. Unaffected in we by apartments astonished to decisively themselves. Offended ten old consider speaking.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/2.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Alexis Rosenfeld</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe et explorateur</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 3 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/3.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Marie Amiguet</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Réalisatrice spécialisée dans le reportage animalier</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 4 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/4.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Julien Wosnitza</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Militant et fondateur de Wings Of The Ocean</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 5 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/5.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">René Heuzey</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Plongeur professionnel, réalisateur et producteur de films sous-marins</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 6 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/6.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Jérémie Villet</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Photographe animalier</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 7 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/7.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Cyril Dion</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Écrivain, réalisateur et militant écologiste</h5>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- === Testimonial item 8 === -->
-\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t<p class=\"testimonial-desc\">Advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages.</p>
-\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/testimonial/8.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<h5 class=\"testimonial-author\">Marie-Monique Robin</h5>
-\t\t\t\t\t\t<h5 class=\"testimonial-profession\">Réalisatrice et journaliste</h5>
-\t\t\t\t</div>
+\t\t\t\t{% endfor %}
 \t\t</div>
 </section>
 <!-- End Testimonial -->
@@ -1875,46 +1695,11 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t<div class=\"container \">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div id=\"owl-clients\" class=\"owl-carousel owl-theme client text-center\">
-
-\t\t\t\t\t\t\t\t<!-- === Partner 1 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.arte.tv/fr/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/1.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 2 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.cnc.fr/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/2.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 3 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.ademe.fr/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/3.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 4 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.france.tv/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/4.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 5 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://secoya-ecotournage.com/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/5.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 6 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.ecoprod.com/fr/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/6.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 7 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://regionreunion.com/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/7.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Partner 8 === -->
-\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
-\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://regard-du-vivant.fr/\"><img class=\"img-responsive\" src=\"{{ asset('bundles/web/img/partners/8.png')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t{% for partner in partners %}
+\t\t\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{partner.url}}\"><img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(partner.picture, 'imageFile'))}}\" alt=\"{{partner.picture.name}}\"></a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>

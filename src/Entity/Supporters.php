@@ -31,9 +31,16 @@ class Supporters
     /**
      * @var string
      *
-     * @ORM\Column(name="quote", type="text", length=0, nullable=false)
+     * @ORM\Column(name="quote", type="text", length=255, nullable=false)
      */
     public $quote;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profession", type="text", length=255, nullable=false)
+     */
+    public $profession;
 
     /**
      * @var string|null
@@ -51,6 +58,4 @@ class Supporters
      * })
      */
     public $supporterPicture;
-
-
 }

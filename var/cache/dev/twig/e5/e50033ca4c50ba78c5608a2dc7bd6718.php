@@ -111,7 +111,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
         // line 10
         echo "
-<!-- Start Portfolio -->
+<!-- Start Films -->
 <section id=\"films\" class=\"p-top-40 p-bottom-80\">
 \t\t<div class=\"container\">
 
@@ -192,7 +192,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t</div> <!-- /.container -->
 </section>
-<!-- End Portfolio -->
+<!-- End Films -->
 
 <!-- Start Call to Action -->
 <section class=\"light-bg p-top-60 p-bottom-60\">
@@ -283,7 +283,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 {% block body %}
 
-<!-- Start Portfolio -->
+<!-- Start Films -->
 <section id=\"films\" class=\"p-top-40 p-bottom-80\">
 \t\t<div class=\"container\">
 
@@ -352,7 +352,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t</div> <!-- /.container -->
 </section>
-<!-- End Portfolio -->
+<!-- End Films -->
 
 <!-- Start Call to Action -->
 <section class=\"light-bg p-top-60 p-bottom-60\">
