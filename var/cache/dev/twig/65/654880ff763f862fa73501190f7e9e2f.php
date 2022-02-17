@@ -362,8 +362,8 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Qui sommes-nous ?</strong></h2>
 \t\t\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
-\t\t\t\t\t\t\t\t\t\t\tLow Production est une association de <b>production audiovisuelle</b> engagée dans la <b>transition écologique</b>. Nous mettons en relation des bénévoles et <b>mutualisons des compétences</b> pour réaliser des <b>documentaires</b> sur les thématiques <b>sociales et environnementales</b>, en veillant à <b>minimiser</b> leur impact.
-\t\t\t\t\t\t\t\t\t\t\t<br><br>Que vous soyez réalisateur, ingénieur du son, graphiste, musicien... <b>professionnel</b> ou <b>amateur</b>, une place vous attend pour collaborer à la <b>réalisation</b> de projets documentaires <b>libres</b>, <b>collaboratifs</b>, à <b>faible impact</b> et <b>engagés</b>.
+\t\t\t\t\t\t\t\t\t\t\tLow Production est une association de <b>production audiovisuelle</b> engagée dans la <b>transition écologique</b>. Nous mettons en relation des bénévoles et <b>mutualisons des compétences</b> pour réaliser des <b>documentaires</b> sur les thématiques <b>sociales et environnementales</b>, en veillant à <b>minimiser</b> leur impact. N’ayant pas de but lucratif et fonctionnant principalement sur la base du bénévolat, nous <b>expérimentons</b> et <b>documentons</b> des techniques de production à <b>faible impact environnemental</b> pour imaginer les métiers audiovisuels de <b>demain</b>.
+\t\t\t\t\t\t\t\t\t\t\t<br><br>Que vous soyez réalisateur, ingénieur du son, graphiste, musicien... <b>professionnel</b> ou <b>amateur</b>, une place vous attend pour collaborer à la <b>réalisation</b> de projets documentaires <b>libres</b>, <b>collaboratifs</b>, à <b>faible impact environnemental</b> et <b>engagés</b>.
 \t\t\t\t\t\t\t\t\t\t\t<br><br>Low Production s'oriente autour de <b>quatre axes</b> principaux :
 \t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
@@ -600,65 +600,53 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3 gutter\">
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item doing\">
-\t\t\t\t\t\t\t\t<a href=\"";
-        // line 482
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
-        echo "\" class=\"pf-style pf-pointer\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 484
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/portfolio/1.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
+\t\t\t\t\t\t";
+        // line 479
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 479, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
+            // line 480
+            echo "\t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 481
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+            echo "\" class=\"pf-style pf-pointer\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+            // line 483
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 483), "imageFile")), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 483), "name", [], "any", false, false, false, 483), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">";
+            // line 488
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "name", [], "any", false, false, false, 488), "html", null, true);
+            echo "</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- End Portfolio Item -->
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item done\">
-\t\t\t\t\t\t\t\t<a href=\"";
-        // line 501
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
-        echo "\" class=\"pf-style pf-pointer\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 503
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/portfolio/2.jpg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- End Portfolio Item -->
-
-\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 497
+        echo "\t\t\t\t</div>
 \t\t</div>
 </section>
 <!-- End Portfolio -->
 
 <!-- Start Testimonial -->
 <section id=\"testimonials\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url(";
-        // line 524
+        // line 503
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/testimonial-bg.jpg"), "html", null, true);
         echo "\" data-stellar-background-ratio=\"0.1\">
 \t\t<!-- Section Title -->
@@ -669,33 +657,33 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t<!-- === Testimonials === -->
 \t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
 \t\t\t\t";
-        // line 532
+        // line 511
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["supporters"]) || array_key_exists("supporters", $context) ? $context["supporters"] : (function () { throw new RuntimeError('Variable "supporters" does not exist.', 532, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["supporters"]) || array_key_exists("supporters", $context) ? $context["supporters"] : (function () { throw new RuntimeError('Variable "supporters" does not exist.', 511, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["supporter"]) {
-            // line 533
+            // line 512
             echo "\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
 \t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">";
-            // line 534
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "quote", [], "any", false, false, false, 534), "html", null, true);
+            // line 513
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "quote", [], "any", false, false, false, 513), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-            // line 536
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 536), "imageFile")), "html", null, true);
+            // line 515
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 515), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 536), "name", [], "any", false, false, false, 536), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 515), "name", [], "any", false, false, false, 515), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
-            // line 538
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "url", [], "any", false, false, false, 538), "html", null, true);
+            // line 517
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "url", [], "any", false, false, false, 517), "html", null, true);
             echo "\"><h5 class=\"testimonial-author\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "name", [], "any", false, false, false, 538), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "name", [], "any", false, false, false, 517), "html", null, true);
             echo "</h5></a>
 \t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">";
-            // line 539
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "profession", [], "any", false, false, false, 539), "html", null, true);
+            // line 518
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "profession", [], "any", false, false, false, 518), "html", null, true);
             echo "</h5>
 \t\t\t\t\t\t</div>
 \t\t\t\t";
@@ -703,7 +691,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['supporter'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 542
+        // line 521
         echo "\t\t</div>
 </section>
 <!-- End Testimonial -->
@@ -725,115 +713,55 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<!-- === blog === -->
 \t\t\t\t\t\t<div id=\"owl-blog\" class=\"owl-carousel owl-theme\">
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 1 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 567
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b1.jpg"), "html", null, true);
-        echo "\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t";
+        // line 542
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new RuntimeError('Variable "news" does not exist.', 542, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["new"]) {
+            // line 543
+            echo "\t\t\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+            // line 545
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["new"], "actualityPicture", [], "any", false, false, false, 545), "imageFile")), "html", null, true);
+            echo "\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>";
+            // line 548
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "publication", [], "any", false, false, false, 548), "d/m/Y"), "html", null, true);
+            echo "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>";
+            // line 549
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549), "html", null, true);
+            echo "</a></span>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
+            // line 552
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "name", [], "any", false, false, false, 552), "html", null, true);
+            echo "</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">";
+            // line 553
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 553)), 0, 50), "html", null, true);
+            echo "...</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 554
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo "\" class=\"read-more\">En savoir plus >></a>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>William Boffy</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 574
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\">Le projet Koméla lancé</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 576
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 2 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 583
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b2.jpg"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 06 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>Claire Monchauzou</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 590
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\">Berr(k)e primé</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 592
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 3 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 599
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b3.jpg"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 02 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> Chloé Marzin</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 606
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\">Bonne année !</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 608
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 4 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
-        // line 615
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/news/b4.jpg"), "html", null, true);
-        echo "\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 19 Décembre 2021</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
-        // line 622
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\">Nouveaux projets</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 624
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
-        echo "\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['new'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 558
+        echo "\t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
 </section>
@@ -849,19 +777,19 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div id=\"owl-clients\" class=\"owl-carousel owl-theme client text-center\">
 \t\t\t\t\t\t\t\t";
-        // line 642
+        // line 573
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["partners"]) || array_key_exists("partners", $context) ? $context["partners"] : (function () { throw new RuntimeError('Variable "partners" does not exist.', 642, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["partners"]) || array_key_exists("partners", $context) ? $context["partners"] : (function () { throw new RuntimeError('Variable "partners" does not exist.', 573, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["partner"]) {
-            // line 643
+            // line 574
             echo "\t\t\t\t\t\t\t\t\t\t<div class=\"client-item text-center\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
-            // line 644
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partner"], "url", [], "any", false, false, false, 644), "html", null, true);
+            // line 575
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partner"], "url", [], "any", false, false, false, 575), "html", null, true);
             echo "\"><img class=\"img-responsive\" src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 644), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 575), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 644), "name", [], "any", false, false, false, 644), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["partner"], "picture", [], "any", false, false, false, 575), "name", [], "any", false, false, false, 575), "html", null, true);
             echo "\"></a>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
@@ -869,7 +797,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['partner'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 647
+        // line 578
         echo "\t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
@@ -885,7 +813,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     }
 
-    // line 655
+    // line 586
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -895,52 +823,52 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 656
+        // line 587
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<!-- RS Plugin Extensions -->
 \t<script src=\"";
-        // line 659
+        // line 590
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.carousel.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 660
+        // line 591
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 661
+        // line 592
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 662
+        // line 593
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.migration.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 663
+        // line 594
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/visible-jquery.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 664
+        // line 595
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/video-bg.js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Components Plugin -->
 \t<script src=\"";
-        // line 667
+        // line 598
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 668
+        // line 599
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 669
+        // line 600
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"";
-        // line 670
+        // line 601
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
@@ -1049,7 +977,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     public function getDebugInfo()
     {
-        return array (  944 => 670,  940 => 669,  936 => 668,  932 => 667,  926 => 664,  922 => 663,  918 => 662,  914 => 661,  910 => 660,  906 => 659,  899 => 656,  889 => 655,  873 => 647,  860 => 644,  857 => 643,  853 => 642,  832 => 624,  827 => 622,  815 => 615,  805 => 608,  800 => 606,  788 => 599,  778 => 592,  773 => 590,  761 => 583,  751 => 576,  746 => 574,  734 => 567,  707 => 542,  698 => 539,  692 => 538,  685 => 536,  680 => 534,  677 => 533,  673 => 532,  662 => 524,  638 => 503,  633 => 501,  613 => 484,  608 => 482,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  872 => 601,  868 => 600,  864 => 599,  860 => 598,  854 => 595,  850 => 594,  846 => 593,  842 => 592,  838 => 591,  834 => 590,  827 => 587,  817 => 586,  801 => 578,  788 => 575,  785 => 574,  781 => 573,  764 => 558,  754 => 554,  750 => 553,  744 => 552,  738 => 549,  734 => 548,  726 => 545,  722 => 543,  718 => 542,  695 => 521,  686 => 518,  680 => 517,  673 => 515,  668 => 513,  665 => 512,  661 => 511,  650 => 503,  642 => 497,  627 => 488,  617 => 483,  612 => 481,  609 => 480,  605 => 479,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -1306,8 +1234,8 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"><strong>Qui sommes-nous ?</strong></h2>
 \t\t\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
-\t\t\t\t\t\t\t\t\t\t\tLow Production est une association de <b>production audiovisuelle</b> engagée dans la <b>transition écologique</b>. Nous mettons en relation des bénévoles et <b>mutualisons des compétences</b> pour réaliser des <b>documentaires</b> sur les thématiques <b>sociales et environnementales</b>, en veillant à <b>minimiser</b> leur impact.
-\t\t\t\t\t\t\t\t\t\t\t<br><br>Que vous soyez réalisateur, ingénieur du son, graphiste, musicien... <b>professionnel</b> ou <b>amateur</b>, une place vous attend pour collaborer à la <b>réalisation</b> de projets documentaires <b>libres</b>, <b>collaboratifs</b>, à <b>faible impact</b> et <b>engagés</b>.
+\t\t\t\t\t\t\t\t\t\t\tLow Production est une association de <b>production audiovisuelle</b> engagée dans la <b>transition écologique</b>. Nous mettons en relation des bénévoles et <b>mutualisons des compétences</b> pour réaliser des <b>documentaires</b> sur les thématiques <b>sociales et environnementales</b>, en veillant à <b>minimiser</b> leur impact. N’ayant pas de but lucratif et fonctionnant principalement sur la base du bénévolat, nous <b>expérimentons</b> et <b>documentons</b> des techniques de production à <b>faible impact environnemental</b> pour imaginer les métiers audiovisuels de <b>demain</b>.
+\t\t\t\t\t\t\t\t\t\t\t<br><br>Que vous soyez réalisateur, ingénieur du son, graphiste, musicien... <b>professionnel</b> ou <b>amateur</b>, une place vous attend pour collaborer à la <b>réalisation</b> de projets documentaires <b>libres</b>, <b>collaboratifs</b>, à <b>faible impact environnemental</b> et <b>engagés</b>.
 \t\t\t\t\t\t\t\t\t\t\t<br><br>Low Production s'oriente autour de <b>quatre axes</b> principaux :
 \t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
@@ -1532,45 +1460,24 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3 gutter\">
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item doing\">
-\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\")}}\" class=\"pf-style pf-pointer\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('bundles/web/img/portfolio/1.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
+\t\t\t\t\t\t{% for project in projects %}
+\t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\")}}\" class=\"pf-style pf-pointer\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{project.name}}</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- End Portfolio Item -->
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item done\">
-\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\")}}\" class=\"pf-style pf-pointer\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('bundles/web/img/portfolio/2.jpg')}}\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- End Portfolio Item -->
-
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
 \t\t</div>
 </section>
@@ -1616,70 +1523,22 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<!-- === blog === -->
 \t\t\t\t\t\t<div id=\"owl-blog\" class=\"owl-carousel owl-theme\">
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 1 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{ asset('bundles/web/img/news/b1.jpg')}}\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t{% for new in news %}
+\t\t\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{asset(vich_uploader_asset(new.actualityPicture, 'imageFile'))}}\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>{{new.publication|date(\"d/m/Y\")}}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{{new.user.pseudo}}</a></span>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">{{new.name}}</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{new.article|striptags|slice(0, 50)}}...</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 12 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>William Boffy</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">Le projet Koméla lancé</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 2 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{ asset('bundles/web/img/news/b2.jpg')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 06 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>Claire Monchauzou</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">Berr(k)e primé</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 3 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{ asset('bundles/web/img/news/b3.jpg')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 02 Janvier 2022</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> Chloé Marzin</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">Bonne année !</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t\t\t<!-- === Blog item 4 === -->
-\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{ asset('bundles/web/img/news/b4.jpg')}}\" alt=\"\"></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i> 19 Décembre 2021</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> William Boffy</a></span>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">Nouveaux projets</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. Those an equal point no years do. Depend warmth fat but her but played.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>

@@ -15,19 +15,14 @@ class PortfolioTypeCrudController extends AbstractCrudController
         return PortfolioType::class;
     }
 
-    
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Type Name'),
-            ColorField::new('color', 'Color'),
-            ImageField::new('icone', 'Portfolio Type icon')
-            ->setBasePath('uploads/images/icones')
-            ->setUploadDir('/public/uploads/images/icones')
-            ->setUploadedFileNamePattern('[randomhash].[extension]')
-            ->setRequired(true),
-            
+            TextField::new('name', 'Nom'),
+            TextField::new('icone', 'Icône Font Awesome'),
+            ColorField::new('color', 'Couleur')
         ];
     }
-    
+
 }

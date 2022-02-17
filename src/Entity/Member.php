@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\OneToMany;
 
 /**
  * Member
@@ -57,7 +57,7 @@ class Member
      *
      * @ORM\ManyToOne(targetEntity="MemberType")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="member_type_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="member_type_id", referencedColumnName="id")
      * })
      */
     public $memberType;
@@ -71,6 +71,12 @@ class Member
      * })
      */
     public $memberPicture;
+
+    /**
+     * @OneToMany(targetEntity="Portfolio", mappedBy="member")
+     */
+    public $portfolios;
+
 
     public function __toString()
     {

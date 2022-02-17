@@ -33,7 +33,7 @@ class Portfolio
      *
      * @ORM\ManyToOne(targetEntity="PortfolioType")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="portfolio_type_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="portfolio_type_id", referencedColumnName="id")
      * })
      */
     public $portfolioType;
@@ -47,6 +47,4 @@ class Portfolio
      * })
      */
     public $member;
-
-
 }

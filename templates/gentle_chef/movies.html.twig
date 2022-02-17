@@ -34,45 +34,26 @@
 
 				<!-- Portfolio -->
 				<div class="portfolio portfolio-isotope col-3">
-
-						<!-- Portfolio Item -->
-						<div class="pf-item doing">
-								<a href="{{url('movie')}}" class="pf-style">
-										<div class="pf-image">
-												<img src="{{asset('bundles/web/')}}img/portfolio/1.jpg" alt="">
-												<div class="overlay">
-														<div class="overlay-caption">
-																<div class="overlay-content">
-																		<div class="pf-info white-color">
-																				<h4 class="pf-title">Koméla</h4>
-																				<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+						{% for project in projects %}
+								<!-- Portfolio Item -->
+								<div class="pf-item">
+										<a href="{{url('movie')}}" class="pf-style">
+												<div class="pf-image">
+														<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">
+														<div class="overlay">
+																<div class="overlay-caption">
+																		<div class="overlay-content">
+																				<div class="pf-info white-color">
+																						<h4 class="pf-title">{{project.name}}</h4>
+																						<p>{{project.description}}</p>
+																				</div>
 																		</div>
 																</div>
 														</div>
 												</div>
-										</div>
-								</a>
-						</div>
-
-						<!-- Portfolio Item -->
-						<div class="pf-item done">
-								<a href="{{url('movie')}}" class="pf-style">
-										<div class="pf-image">
-												<img src="{{asset('bundles/web/')}}img/portfolio/2.jpg" alt="">
-												<div class="overlay">
-														<div class="overlay-caption">
-																<div class="overlay-content">
-																		<div class="pf-info white-color">
-																				<h4 class="pf-title">Berr(k)e</h4>
-																				<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
-																		</div>
-																</div>
-														</div>
-												</div>
-										</div>
-								</a>
-						</div>
-
+										</a>
+								</div>
+						{% endfor %}
 				</div> <!-- Portfolio -->
 
 		</div> <!-- /.container -->

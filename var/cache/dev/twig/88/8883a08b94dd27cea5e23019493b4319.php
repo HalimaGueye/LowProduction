@@ -145,391 +145,67 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-4 gutter\">
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
+\t\t\t\t\t\t";
+        // line 45
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 45, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["member"]) {
+            // line 46
+            echo "\t\t\t\t\t\t<!-- === Item === -->
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 52
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 52));
+            foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
+                // line 53
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["portfolio"], "url", [], "any", false, false, false, 53), "html", null, true);
+                echo "\"><i class=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["portfolio"], "portfolioType", [], "any", false, false, false, 53), "icone", [], "any", false, false, false, 53), "html", null, true);
+                echo "\"></i></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['portfolio'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 55
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 54
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/8.jpg\" alt=\"\" />
+            // line 57
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "memberPicture", [], "any", false, false, false, 57), "imageFile")), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "memberPicture", [], "any", false, false, false, 57), "name", [], "any", false, false, false, 57), "html", null, true);
+            echo "\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tRomane Jeunemaître
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 61
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "name", [], "any", false, false, false, 61), "html", null, true);
+            echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendante
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 64
+            echo twig_get_attribute($this->env, $this->source, $context["member"], "description", [], "any", false, false, false, 64);
+            echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/claire-monchauzou-866088198/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/claire.mcz\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/claire_oz/\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 78
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/2.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tClaire Monchauzou
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargée de projet (vice-présidente et trésorière)
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/franckmithieux/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/franck.mthx\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://instagram.com/_franckm\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 102
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/3.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tFranck Mithieux
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargé de communication
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 123
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/15.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tGaëtan Richard
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDessinateur
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/william-boffy-2994a3ba/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/william.boffy/\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 146
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/1.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tWilliam Boffy
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieur et vidéaste (fondateur et président)
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 167
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/13.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChloé Marzin
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieure
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/william-boffy-2994a3ba/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/laura.bernard.9469\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 190
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/5.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tLaura Bernard
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tÉtudiante à Science Po
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://wlo.link/@damajira\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://open.spotify.com/artist/5pbB3XwWGUKvwqAhaqcxoP\"><i class=\"fa fa-spotify\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/Damajira\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 214
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/12.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDamajira
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tProducteur et auteur-compositeur-interprète.
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://manonpoinsot.webador.fr/\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/manonpsnt\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 237
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/11.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tManon Poinsot
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhotographe
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.halima-gueye.online/\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 259
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/14.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tHalima Gueye
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDéveloppeuse
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/thomasbousquet_/\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 281
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/6.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tThomas Bousquet
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendant
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://victorjanjic8.wixsite.com/victorjanjic\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/victor.janjic\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 304
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/7.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVictor Janjic
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendant
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://ginkio.com/mathilde-oudot\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/mathilde_udt\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 327
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/9.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tMathilde Oudot
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tJournaliste et vidéaste
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/margaux-regnier-92a67331/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/margaux.regnier.5\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 350
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/4.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tMargaux Regnier
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargée d'études environnementales
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/loic.franzini\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 372
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/team/10.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoïc Franzini
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieur du son
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['member'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 70
+        echo "\t\t\t\t</div>
 
 \t\t</div>
 </section>
@@ -546,7 +222,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
 \t\t\t\t\t\t\t\t<!-- Button -->
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 400
+        // line 86
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
 \t\t\t\t\t\t</div> <!-- /.col -->
@@ -566,7 +242,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     }
 
-    // line 411
+    // line 97
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -576,16 +252,16 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 412
+        // line 98
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 413
+        // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 414
+        // line 100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 ";
@@ -609,7 +285,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     public function getDebugInfo()
     {
-        return array (  589 => 414,  585 => 413,  580 => 412,  570 => 411,  550 => 400,  519 => 372,  494 => 350,  468 => 327,  442 => 304,  416 => 281,  391 => 259,  366 => 237,  340 => 214,  313 => 190,  287 => 167,  263 => 146,  237 => 123,  213 => 102,  186 => 78,  159 => 54,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  265 => 100,  261 => 99,  256 => 98,  246 => 97,  226 => 86,  208 => 70,  196 => 64,  190 => 61,  181 => 57,  177 => 55,  166 => 53,  162 => 52,  154 => 46,  150 => 45,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -658,345 +334,31 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-4 gutter\">
-
+\t\t\t\t\t\t{% for member in members %}
 \t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for portfolio in member.portfolios %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{portfolio.url}}\"><i class=\"{{portfolio.portfolioType.icone}}\"></i></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/8.jpg\" alt=\"\" />
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(member.memberPicture, 'imageFile'))}}\" alt=\"{{member.memberPicture.name}}\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tRomane Jeunemaître
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{member.name}}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendante
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{member.description|raw}}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/claire-monchauzou-866088198/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/claire.mcz\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/claire_oz/\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/2.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tClaire Monchauzou
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargée de projet (vice-présidente et trésorière)
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/franckmithieux/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/franck.mthx\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://instagram.com/_franckm\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/3.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tFranck Mithieux
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargé de communication
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/15.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tGaëtan Richard
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDessinateur
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item bureau p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/william-boffy-2994a3ba/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/william.boffy/\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/1.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tWilliam Boffy
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieur et vidéaste (fondateur et président)
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/13.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChloé Marzin
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieure
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/william-boffy-2994a3ba/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/laura.bernard.9469\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/5.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tLaura Bernard
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tÉtudiante à Science Po
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://wlo.link/@damajira\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://open.spotify.com/artist/5pbB3XwWGUKvwqAhaqcxoP\"><i class=\"fa fa-spotify\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/Damajira\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/12.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDamajira
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tProducteur et auteur-compositeur-interprète.
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://manonpoinsot.webador.fr/\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/manonpsnt\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/11.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tManon Poinsot
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhotographe
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.halima-gueye.online/\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/14.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tHalima Gueye
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tDéveloppeuse
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/thomasbousquet_/\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/6.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tThomas Bousquet
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendant
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://victorjanjic8.wixsite.com/victorjanjic\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/victor.janjic\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/7.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVictor Janjic
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tVidéaste indépendant
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://ginkio.com/mathilde-oudot\"><i class=\"fa fa-globe\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/mathilde_udt\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/9.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tMathilde Oudot
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tJournaliste et vidéaste
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p2\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/in/margaux-regnier-92a67331/\"><i class=\"fa fa-linkedin\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/margaux.regnier.5\"><i class=\"fa fa-facebook\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/4.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tMargaux Regnier
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tChargée d'études environnementales
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p p1\">
-\t\t\t\t\t\t\t\t<div class=\"team-item\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/loic.franzini\"><i class=\"fa fa-instagram\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/team/10.jpg\" alt=\"\" />
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoïc Franzini
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tIngénieur du son
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
 
 \t\t</div>

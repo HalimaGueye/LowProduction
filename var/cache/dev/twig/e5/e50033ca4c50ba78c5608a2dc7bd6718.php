@@ -137,58 +137,51 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item doing\">
-\t\t\t\t\t\t\t\t<a href=\"";
-        // line 40
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
-        echo "\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 42
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/portfolio/1.jpg\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+\t\t\t\t\t\t";
+        // line 37
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 37, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
+            // line 38
+            echo "\t\t\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t\t\t<div class=\"pf-item\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 40
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+            echo "\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+            // line 42
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 42), "imageFile")), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 42), "name", [], "any", false, false, false, 42), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "name", [], "any", false, false, false, 47), "html", null, true);
+            echo "</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>";
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "description", [], "any", false, false, false, 48), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item done\">
-\t\t\t\t\t\t\t\t<a href=\"";
-        // line 59
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
-        echo "\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 61
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
-        echo "img/portfolio/2.jpg\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t</div> <!-- Portfolio -->
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
+        echo "\t\t\t\t</div> <!-- Portfolio -->
 
 \t\t</div> <!-- /.container -->
 </section>
@@ -205,7 +198,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 \t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
 \t\t\t\t\t\t\t\t<!-- Button -->
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 92
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
 \t\t\t\t\t\t</div> <!-- /.col -->
@@ -224,7 +217,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     }
 
-    // line 102
+    // line 83
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -234,16 +227,16 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 103
+        // line 84
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 104
+        // line 85
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 105
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 
@@ -268,7 +261,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     public function getDebugInfo()
     {
-        return array (  247 => 105,  243 => 104,  238 => 103,  228 => 102,  209 => 92,  175 => 61,  170 => 59,  150 => 42,  145 => 40,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  240 => 86,  236 => 85,  231 => 84,  221 => 83,  202 => 73,  184 => 57,  169 => 48,  165 => 47,  155 => 42,  150 => 40,  146 => 38,  142 => 37,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -309,45 +302,26 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item doing\">
-\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/portfolio/1.jpg\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Koméla</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Située en plein cœur de l’Océan Indien, l’île de La Réunion a longtemps été un espace insulaire, préservé des activités humaines. Avec l’artificialisation de plus en plus intense de son littoral, les espèces indigènes et endémiques qui en faisaient sa particularité deviennent rares. Partons à la rencontre de celles et ceux qui se battent pour les préserver.</p>
+\t\t\t\t\t\t{% for project in projects %}
+\t\t\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t\t\t<div class=\"pf-item\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{project.name}}</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>{{project.description}}</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t<div class=\"pf-item done\">
-\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/portfolio/2.jpg\" alt=\"\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">Berr(k)e</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Depuis avril 2021, l’association Wings of the Ocean travaille à des actions de dépollution plastique autour de l’Étang de Berre. Dans un monde en constante pollution, l’initiative peut sembler désespérée et pourtant, tous les matins, des bénévoles se lèvent avec le sourire et ramassent les déchets des autres.</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</div>
-
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t</div> <!-- Portfolio -->
 
 \t\t</div> <!-- /.container -->
