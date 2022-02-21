@@ -147,7 +147,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 \t\t\t\t\t\t\t\t<div class=\"pf-item\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 40
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie", ["id" => twig_get_attribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 40)]), "html", null, true);
             echo "\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
@@ -166,7 +166,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
             echo "</h4>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>";
             // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "description", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_get_attribute($this->env, $this->source, $context["project"], "description", [], "any", false, false, false, 48);
             echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -305,7 +305,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 \t\t\t\t\t\t{% for project in projects %}
 \t\t\t\t\t\t\t\t<!-- Portfolio Item -->
 \t\t\t\t\t\t\t\t<div class=\"pf-item\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{url('movie')}}\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\", {\"id\": project.id})}}\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
@@ -313,7 +313,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{project.name}}</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>{{project.description}}</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>{{project.description|raw}}</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>

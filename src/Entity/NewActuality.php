@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * NewActuality
  *
- * @ORM\Table(name="new_actuality", indexes={@ORM\Index(name="IDX_720CD8B7166D1F9C", columns={"project_id"}), @ORM\Index(name="IDX_720CD8B748F8FCD6", columns={"actuality_picture_id"}), @ORM\Index(name="IDX_720CD8B7A76ED395", columns={"user_id"})})
  * @ORM\Entity(repositoryClass="App\Repository\NewActualityRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class NewActuality
 {
@@ -19,28 +19,28 @@ class NewActuality
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
-    public $name;
+    private $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="article", type="text", length=0, nullable=false)
      */
-    public $article;
+    private $article;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="publication", type="date", nullable=false)
      */
-    public $publication;
+    private $publication;
 
     /**
      * @var \User
@@ -50,17 +50,31 @@ class NewActuality
      *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * })
      */
-    public $user;
+    private $user;
 
     /**
      * @var \Picture
      *
      * @ORM\ManyToOne(targetEntity="Picture")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="actuality_picture_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
      * })
      */
-    public $actualityPicture;
+    private $picture;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
 
     /**
      * @var \Project
@@ -70,7 +84,118 @@ class NewActuality
      *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      * })
      */
-    public $project;
+    private $project;
 
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getArticle(): ?string
+    {
+        return $this->article;
+    }
+
+    public function setArticle(string $article): self
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    public function getPublication(): ?\DateTimeInterface
+    {
+        return $this->publication;
+    }
+
+    public function setPublication(\DateTimeInterface $publication): self
+    {
+        $this->publication = $publication;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getPicture(): ?Picture
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?Picture $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getProject(): ?Project
+    {
+        return $this->project;
+    }
+
+    public function setProject(?Project $project): self
+    {
+        $this->project = $project;
+
+        return $this;
+    }
 }

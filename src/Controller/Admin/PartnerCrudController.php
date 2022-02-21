@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 
 class PartnerCrudController extends AbstractCrudController
 {
@@ -16,19 +17,21 @@ class PartnerCrudController extends AbstractCrudController
         return Partner::class;
     }
 
-    
+    public function configureFilters(Filters $filters): Filters
+    {
+        return $filters
+            ->add('name')
+            ->add('createdAt')
+        ;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            UrlField::new('url'),
-            AssociationField::new('picture', 'Associated picture')
-            // ImageField::new('picture', 'Partner icon')
-            // ->setBasePath('uploads/images/partner')
-            // ->setUploadDir('/public/uploads/images/partner')
-            // ->setUploadedFileNamePattern('[randomhash].[extension]')
-            // ->setRequired(true),
+            TextField::new('name', 'Nom'),
+            UrlField::new('url', 'URL'),
+            AssociationField::new('picture', 'Illustration')
         ];
     }
-    
+
 }

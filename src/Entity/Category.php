@@ -9,8 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Category
  *
- * @ORM\Table(name="category", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_64C19C15E237E06", columns={"name"}), @ORM\UniqueConstraint(name="UNIQ_64C19C1665648E9", columns={"color"})}, indexes={@ORM\Index(name="IDX_64C19C112469DE2", columns={"category_id"})})
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Category
 {
@@ -21,21 +21,21 @@ class Category
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
-    public $name;
+    private $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="color", type="string", length=255, nullable=false)
      */
-    public $color;
+    private $color;
 
     /**
      * @var \Category
@@ -45,16 +45,46 @@ class Category
      *   @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      * })
      */
-    public $category;
+    private $motherCategory;
 
     /**
-     * @ORM\OneToMany(targetEntity=ProjectCategory::class, mappedBy="category")
+     * @ORM\ManyToMany(targetEntity="Project")
+     * @ORM\JoinTable(name="project_category",
+     *      joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id")}
+     *      )
      */
-    private $projectCategories;
+    private $projects;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
 
     public function __construct()
     {
-        $this->projectCategories = new ArrayCollection();
+        $this->projects = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
     }
 
     public function __toString()
@@ -62,35 +92,92 @@ class Category
         return (string) $this->name;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): self
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getMotherCategory(): ?self
+    {
+        return $this->motherCategory;
+    }
+
+    public function setMotherCategory(?self $motherCategory): self
+    {
+        $this->motherCategory = $motherCategory;
+
+        return $this;
+    }
+
     /**
-     * @return Collection|ProjectCategory[]
+     * @return Collection|Project[]
      */
-    public function getProjectCategories(): Collection
+    public function getProjects(): Collection
     {
-        return $this->projectCategories;
+        return $this->projects;
     }
 
-    public function addProjectCategory(ProjectCategory $projectCategory): self
+    public function addProject(Project $project): self
     {
-        if (!$this->projectCategories->contains($projectCategory)) {
-            $this->projectCategories[] = $projectCategory;
-            $projectCategory->setCategory($this);
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
         }
 
         return $this;
     }
 
-    public function removeProjectCategory(ProjectCategory $projectCategory): self
+    public function removeProject(Project $project): self
     {
-        if ($this->projectCategories->removeElement($projectCategory)) {
-            // set the owning side to null (unless already changed)
-            if ($projectCategory->getCategory() === $this) {
-                $projectCategory->setCategory(null);
-            }
-        }
+        $this->projects->removeElement($project);
 
         return $this;
     }
-
-
 }

@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Portfolio
  *
- * @ORM\Table(name="portfolio", indexes={@ORM\Index(name="IDX_A9ED10627597D3FE", columns={"member_id"}), @ORM\Index(name="IDX_A9ED106293F9A35D", columns={"portfolio_type_id"})})
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Portfolio
 {
@@ -19,14 +19,14 @@ class Portfolio
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="url", type="string", length=255, nullable=false)
      */
-    public $url;
+    private $url;
 
     /**
      * @var \PortfolioType
@@ -36,7 +36,7 @@ class Portfolio
      * @ORM\JoinColumn(name="portfolio_type_id", referencedColumnName="id")
      * })
      */
-    public $portfolioType;
+    private $portfolioType;
 
     /**
      * @var \Member
@@ -46,5 +46,97 @@ class Portfolio
      *   @ORM\JoinColumn(name="member_id", referencedColumnName="id")
      * })
      */
-    public $member;
+    private $member;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getPortfolioType(): ?PortfolioType
+    {
+        return $this->portfolioType;
+    }
+
+    public function setPortfolioType(?PortfolioType $portfolioType): self
+    {
+        $this->portfolioType = $portfolioType;
+
+        return $this;
+    }
+
+    public function getMember(): ?Member
+    {
+        return $this->member;
+    }
+
+    public function setMember(?Member $member): self
+    {
+        $this->member = $member;
+
+        return $this;
+    }
 }

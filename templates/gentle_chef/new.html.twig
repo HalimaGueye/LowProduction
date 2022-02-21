@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% set n = new[0] %}
+
+{% block title %}
+	{{parent()}} | {{n.name}}
+{% endblock %}
+
+{% block news %}<li class="active">{% endblock %}
+
+{% block body %}
+
+<section id="blog-single" class="p-top-80 p-bottom-80">
+		<div class="container clearfix">
+				<div class="row">
+						<div class="col-xs-12">
+								<div class="postSingle">
+										<div class="postMedia">
+												<img src="{{asset(vich_uploader_asset(n.picture, 'imageFile'))}}" alt="{{n.picture.name}}">
+										</div>
+										<div class="postMeta clearfix">
+												<div class="postMeta-info">
+														<span class="metaAuthor"><i class="fa fa-pencil"></i> <a href="#">{% if n.user.pseudo is defined and n.user.pseudo is not null %}{{n.user.pseudo}}{% endif %}</a></span>
+														<span class="metaCategory"><i class="fa fa-folder"></i> <a href="#">Actualités</a></span>
+												</div>
+												<div class="postMeta-date">
+														<span class="metaDate"><i class="fa fa-calendar"></i> <a href="#">{{n.publication|date("d/m/Y")}}</a></span>
+												</div>
+										</div>
+										<div class="postTitle">
+												<h1>{{n.name}}</h1>
+												<div class="divider-small"></div>
+										</div>
+										<p>{{n.article|raw}}</p>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+	{{parent()}}
+	<script src="{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/isotope.pkgd.min.js"></script>
+
+{% endblock %}

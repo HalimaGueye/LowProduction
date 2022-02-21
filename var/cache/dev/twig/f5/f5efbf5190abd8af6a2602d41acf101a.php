@@ -155,12 +155,12 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movies");
         echo "\">Films</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- ";
         // line 82
         $this->displayBlock('studies', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("studies");
-        echo "\">Études</a></li>
+        echo "\">Études</a></li> -->
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
         // line 83
         $this->displayBlock('news', $context, $blocks);
@@ -735,7 +735,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block story %}<li>{% endblock %}<a href=\"{{url(\"story\")}}\">Histoire</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block team %}<li>{% endblock %}<a href=\"{{url(\"team\")}}\">L'équipe</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block movies %}<li>{% endblock %}<a href=\"{{url(\"movies\")}}\">Films</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block studies %}<li>{% endblock %}<a href=\"{{url(\"studies\")}}\">Études</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- {% block studies %}<li>{% endblock %}<a href=\"{{url(\"studies\")}}\">Études</a></li> -->
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block news %}<li>{% endblock %}<a href=\"{{url(\"news\")}}\">Actualités</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block support %}<li>{% endblock %}<a href=\"{{url(\"support\")}}\">Soutenir</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% block contact %}<li>{% endblock %}<a href=\"{{url(\"contact\")}}\">Contact</a></li>

@@ -4,16 +4,14 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Project
  *
- * @ORM\Table(name="project", indexes={@ORM\Index(name="IDX_2FB3D0EE5D83CC1", columns={"state_id"}), @ORM\Index(name="IDX_2FB3D0EEEE45BDBF", columns={"picture_id"})})
  * @ORM\Entity
- *  @Vich\Uploadable
+ * @ORM\HasLifecycleCallbacks
  */
 class Project
 {
@@ -24,42 +22,70 @@ class Project
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
-    public $name;
+    private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", length=0, nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
-    public $description;
+    private $description;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="creation", type="date", nullable=false)
+     * @ORM\Column(name="format", type="string", nullable=false)
      */
-    public $creation;
+    private $format;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="duration", type="string", nullable=false)
+     */
+    private $duration;
 
     /**
      * @var \DateTime|null
      *
      * @ORM\Column(name="publication", type="date", nullable=true)
      */
-    public $publication;
+    private $publication;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="acvMessage", type="text", nullable=true)
+     */
+    private $acvMessage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contributorsMessage", type="text", nullable=true)
+     */
+    private $contributorsMessage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="supportMessage", type="text", nullable=true)
+     */
+    private $supportMessage;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="url_crowdfunding", type="string", length=255, nullable=true)
      */
-    public $urlCrowdfunding;
+    private $urlCrowdfunding;
 
     /**
      * @var \State
@@ -69,19 +95,23 @@ class Project
      *   @ORM\JoinColumn(name="state_id", referencedColumnName="id")
      * })
      */
-    public $state;
+    private $state;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Picture::class, inversedBy="projects")
-     * @Vich\UploadableField (mapping="articlePicture", fileNameProperty="imageFile")
+     * @var \Picture
+     *
+     * @ORM\ManyToOne(targetEntity="Picture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     * })
      */
     private $picture;
 
     /**
-     * 
-     * @var File|null
+     * @ORM\OneToMany(targetEntity=Video::class, mappedBy="project")
      */
-    public $imageFile;
+    private $videos;
+
 
     /**
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="project")
@@ -89,16 +119,202 @@ class Project
     private $articles;
 
     /**
-     * @ORM\OneToMany(targetEntity=ProjectCategory::class, mappedBy="project")
+     * @ORM\ManyToMany(targetEntity="Category", mappedBy="projects")
      */
-    private $projectCategories;
+    private $categories;
 
-    
+    /**
+     * @ORM\ManyToMany(targetEntity="Partner", mappedBy="projects")
+     */
+    private $partners;
+
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
 
     public function __construct()
     {
         $this->articles = new ArrayCollection();
-        $this->projectCategories = new ArrayCollection();
+        $this->categories = new ArrayCollection();
+        $this->partners = new ArrayCollection();
+        $this->videos = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getAcvMessage(): ?string
+    {
+        return $this->acvMessage;
+    }
+
+    public function setAcvMessage(string $acvMessage): self
+    {
+        $this->acvMessage = $acvMessage;
+
+        return $this;
+    }
+
+    public function getSupportMessage(): ?string
+    {
+        return $this->supportMessage;
+    }
+
+    public function setSupportMessage(string $supportMessage): self
+    {
+        $this->supportMessage = $supportMessage;
+
+        return $this;
+    }
+
+    public function getContributorsMessage(): ?string
+    {
+        return $this->contributorsMessage;
+    }
+
+    public function setContributorsMessage(string $contributorsMessage): self
+    {
+        $this->contributorsMessage = $contributorsMessage;
+
+        return $this;
+    }
+
+    public function getDuration(): ?string
+    {
+        return $this->duration;
+    }
+
+    public function setDuration(string $duration): self
+    {
+        $this->duration = $duration;
+
+        return $this;
+    }
+
+    public function getFormat(): ?string
+    {
+        return $this->format;
+    }
+
+    public function setFormat(string $format): self
+    {
+        $this->format = $format;
+
+        return $this;
+    }
+
+    public function getPublication(): ?\DateTimeInterface
+    {
+        return $this->publication;
+    }
+
+    public function setPublication(?\DateTimeInterface $publication): self
+    {
+        $this->publication = $publication;
+
+        return $this;
+    }
+
+    public function getUrlCrowdfunding(): ?string
+    {
+        return $this->urlCrowdfunding;
+    }
+
+    public function setUrlCrowdfunding(?string $urlCrowdfunding): self
+    {
+        $this->urlCrowdfunding = $urlCrowdfunding;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getState(): ?State
+    {
+        return $this->state;
+    }
+
+    public function setState(?State $state): self
+    {
+        $this->state = $state;
+
+        return $this;
     }
 
     public function getPicture(): ?Picture
@@ -143,43 +359,87 @@ class Project
         return $this;
     }
 
-
-
-
-    public function __toString()
-    {
-        return (string) $this->name;
-    }
-
     /**
-     * @return Collection|ProjectCategory[]
+     * @return Collection|Category[]
      */
-    public function getProjectCategories(): Collection
+    public function getCategories(): Collection
     {
-        return $this->projectCategories;
+        return $this->categories;
     }
 
-    public function addProjectCategory(ProjectCategory $projectCategory): self
+    public function addCategory(Category $category): self
     {
-        if (!$this->projectCategories->contains($projectCategory)) {
-            $this->projectCategories[] = $projectCategory;
-            $projectCategory->setProject($this);
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+            $category->addProject($this);
         }
 
         return $this;
     }
 
-    public function removeProjectCategory(ProjectCategory $projectCategory): self
+    public function removeCategory(Category $category): self
     {
-        if ($this->projectCategories->removeElement($projectCategory)) {
+        if ($this->categories->removeElement($category)) {
+            $category->removeProject($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Partner[]
+     */
+    public function getPartners(): Collection
+    {
+        return $this->partners;
+    }
+
+    public function addPartner(Partner $partner): self
+    {
+        if (!$this->partners->contains($partner)) {
+            $this->partners[] = $partner;
+            $partner->addProject($this);
+        }
+
+        return $this;
+    }
+
+    public function removePartner(Partner $partner): self
+    {
+        if ($this->partners->removeElement($partner)) {
+            $partner->removeProject($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Video[]
+     */
+    public function getVideos(): Collection
+    {
+        return $this->videos;
+    }
+
+    public function addVideo(Video $video): self
+    {
+        if (!$this->videos->contains($video)) {
+            $this->videos[] = $video;
+            $video->setProject($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideo(Video $video): self
+    {
+        if ($this->videos->removeElement($video)) {
             // set the owning side to null (unless already changed)
-            if ($projectCategory->getProject() === $this) {
-                $projectCategory->setProject(null);
+            if ($video->getProject() === $this) {
+                $video->setProject(null);
             }
         }
 
         return $this;
     }
-
-   
 }

@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Comic;
 use App\Entity\Article;
 use App\Entity\Picture;
 use App\Entity\NewActuality;
@@ -18,6 +19,7 @@ use App\Entity\ProjectCategory;
 use App\Entity\Portfolio;
 use App\Entity\PortfolioType;
 use App\Entity\Member;
+use App\Entity\MemberProject;
 use App\Entity\Video;
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Component\Pager\PaginatorInterface;
@@ -41,7 +43,9 @@ class GentleChefController extends AbstractController
   #[Route('/histoire', name: 'story')]
   public function showStory(EntityManagerInterface $em)
   {
-    return $this->render('gentle_chef/story.html.twig');
+    return $this->render('gentle_chef/story.html.twig', [
+      'comics' => $em->getRepository(Comic::class)->findAll()
+    ]);
   }
 
   #[Route('/equipe', name: 'team')]
@@ -63,10 +67,13 @@ class GentleChefController extends AbstractController
       ]);
   }
 
-  #[Route('/film', name: 'movie')]
-  public function showMovie(EntityManagerInterface $em)
+  #[Route('/film/{id}', name: 'movie')]
+  public function showMovie(EntityManagerInterface $em, int $id)
   {
-    return $this->render('gentle_chef/movie.html.twig');
+    return $this->render('gentle_chef/movie.html.twig',[
+        'movie' => $em->getRepository(Project::class)->findById($id),
+        'contributors' => $em->getRepository(MemberProject::class)->findByProjectId($id)
+    ]);
   }
 
   #[Route('/etudes', name: 'studies')]
@@ -84,19 +91,25 @@ class GentleChefController extends AbstractController
   #[Route('/actualites', name: 'news')]
   public function showNews(EntityManagerInterface $em)
   {
-    return $this->render('gentle_chef/news.html.twig');
+    return $this->render('gentle_chef/news.html.twig',[
+        'news' => $em->getRepository(NewActuality::class)->findAll()
+    ]);
   }
 
-  #[Route('/actualite', name: 'new')]
-  public function showNew(EntityManagerInterface $em)
+  #[Route('/actualite/{id}', name: 'new')]
+  public function showNew(EntityManagerInterface $em, int $id)
   {
-    return $this->render('gentle_chef/new.html.twig');
+    return $this->render('gentle_chef/new.html.twig', [
+      'new' => $em->getRepository(NewActuality::class)->findById($id),
+    ]);
   }
 
   #[Route('/soutenir', name: 'support')]
   public function showSupport(EntityManagerInterface $em)
   {
-    return $this->render('gentle_chef/support.html.twig');
+    return $this->render('gentle_chef/support.html.twig', [
+      'members' => $em->getRepository(Member::class)->findMembersWithQuotes(3)
+    ]);
   }
 
   #[Route('/contact', name: 'contact')]

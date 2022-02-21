@@ -8,8 +8,8 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 /**
  * User
  *
- * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D64986CC499D", columns={"pseudo"})})
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class User
 {
@@ -20,28 +20,59 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Member::class)
+     */
+    private $member;
 
     /**
      * @var string
      *
      * @ORM\Column(name="pseudo", type="string", length=255, nullable=false)
      */
-    public $pseudo;
+    private $pseudo;
 
     /**
      * @var string
      *
      * @ORM\Column(name="role", type="string", length=255, nullable=false)
      */
-    public $role;
+    private $role;
 
     /**
      * @var string The hashed password
      *
      * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
-    public $password;
+    private $password;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
 
 
     public function getId(): ?int
@@ -130,4 +161,44 @@ class User
         return (string) $this->pseudo;
     }
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime('now');
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getMember(): ?Member
+    {
+        return $this->member;
+    }
+
+    public function setMember(?Member $member): self
+    {
+        $this->member = $member;
+
+        return $this;
+    }
 }

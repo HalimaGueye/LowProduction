@@ -7,7 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DoctrineMigrationVersions
  *
- * @ORM\Table(name="doctrine_migration_versions")
  * @ORM\Entity
  */
 class DoctrineMigrationVersions
@@ -34,6 +33,4 @@ class DoctrineMigrationVersions
      * @ORM\Column(name="execution_time", type="integer", nullable=true)
      */
     public $executionTime;
-
-
 }

@@ -37,7 +37,7 @@
 						{% for project in projects %}
 								<!-- Portfolio Item -->
 								<div class="pf-item">
-										<a href="{{url('movie')}}" class="pf-style">
+										<a href="{{url("movie", {"id": project.id})}}" class="pf-style">
 												<div class="pf-image">
 														<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">
 														<div class="overlay">
@@ -45,7 +45,7 @@
 																		<div class="overlay-content">
 																				<div class="pf-info white-color">
 																						<h4 class="pf-title">{{project.name}}</h4>
-																						<p>{{project.description}}</p>
+																						<p>{{project.description|raw}}</p>
 																				</div>
 																		</div>
 																</div>

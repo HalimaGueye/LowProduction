@@ -609,7 +609,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "\t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 481
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie", ["id" => twig_get_attribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 481)]), "html", null, true);
             echo "\" class=\"pf-style pf-pointer\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
@@ -665,14 +665,14 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
 \t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">";
             // line 513
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "quote", [], "any", false, false, false, 513), "html", null, true);
+            echo twig_get_attribute($this->env, $this->source, $context["supporter"], "quote", [], "any", false, false, false, 513);
             echo "</p>
 \t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
             // line 515
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 515), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["supporter"], "picture", [], "any", false, false, false, 515), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["supporter"], "supporterPicture", [], "any", false, false, false, 515), "name", [], "any", false, false, false, 515), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["supporter"], "picture", [], "any", false, false, false, 515), "name", [], "any", false, false, false, 515), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
@@ -683,7 +683,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "</h5></a>
 \t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">";
             // line 518
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["supporter"], "profession", [], "any", false, false, false, 518), "html", null, true);
+            echo twig_get_attribute($this->env, $this->source, $context["supporter"], "profession", [], "any", false, false, false, 518);
             echo "</h5>
 \t\t\t\t\t\t</div>
 \t\t\t\t";
@@ -723,9 +723,9 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
             // line 545
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 545)]), "html", null, true);
             echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["new"], "actualityPicture", [], "any", false, false, false, 545), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["new"], "picture", [], "any", false, false, false, 545), "imageFile")), "html", null, true);
             echo "\" alt=\"\"></a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
@@ -735,13 +735,15 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>";
             // line 549
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549), "html", null, true);
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, true, false, 549), "pseudo", [], "any", true, true, false, 549) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549)))) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549), "html", null, true);
+            }
             echo "</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"";
             // line 552
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 552)]), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "name", [], "any", false, false, false, 552), "html", null, true);
             echo "</a></h4>
@@ -751,7 +753,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "...</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 554
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 554)]), "html", null, true);
             echo "\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -977,7 +979,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     public function getDebugInfo()
     {
-        return array (  872 => 601,  868 => 600,  864 => 599,  860 => 598,  854 => 595,  850 => 594,  846 => 593,  842 => 592,  838 => 591,  834 => 590,  827 => 587,  817 => 586,  801 => 578,  788 => 575,  785 => 574,  781 => 573,  764 => 558,  754 => 554,  750 => 553,  744 => 552,  738 => 549,  734 => 548,  726 => 545,  722 => 543,  718 => 542,  695 => 521,  686 => 518,  680 => 517,  673 => 515,  668 => 513,  665 => 512,  661 => 511,  650 => 503,  642 => 497,  627 => 488,  617 => 483,  612 => 481,  609 => 480,  605 => 479,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  874 => 601,  870 => 600,  866 => 599,  862 => 598,  856 => 595,  852 => 594,  848 => 593,  844 => 592,  840 => 591,  836 => 590,  829 => 587,  819 => 586,  803 => 578,  790 => 575,  787 => 574,  783 => 573,  766 => 558,  756 => 554,  752 => 553,  746 => 552,  738 => 549,  734 => 548,  726 => 545,  722 => 543,  718 => 542,  695 => 521,  686 => 518,  680 => 517,  673 => 515,  668 => 513,  665 => 512,  661 => 511,  650 => 503,  642 => 497,  627 => 488,  617 => 483,  612 => 481,  609 => 480,  605 => 479,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -1462,7 +1464,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3 gutter\">
 \t\t\t\t\t\t{% for project in projects %}
 \t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\")}}\" class=\"pf-style pf-pointer\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\", {\"id\": project.id})}}\" class=\"pf-style pf-pointer\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
@@ -1494,12 +1496,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
 \t\t\t\t{% for supporter in supporters %}
 \t\t\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">{{supporter.quote}}</p>
+\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">{{supporter.quote|raw}}</p>
 \t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(supporter.supporterPicture, 'imageFile'))}}\" alt=\"{{supporter.supporterPicture.name}}\">
+\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(supporter.picture, 'imageFile'))}}\" alt=\"{{supporter.picture.name}}\">
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{supporter.url}}\"><h5 class=\"testimonial-author\">{{supporter.name}}</h5></a>
-\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">{{supporter.profession}}</h5>
+\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">{{supporter.profession|raw}}</h5>
 \t\t\t\t\t\t</div>
 \t\t\t\t{% endfor %}
 \t\t</div>
@@ -1526,16 +1528,16 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t{% for new in news %}
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog wow fadeInLeft\" data-wow-duration=\"1s\" data-wow-delay=\"0.7s\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\")}}\"><img src=\"{{asset(vich_uploader_asset(new.actualityPicture, 'imageFile'))}}\" alt=\"\"></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\", {\"id\": new.id})}}\"><img src=\"{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}\" alt=\"\"></a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>{{new.publication|date(\"d/m/Y\")}}</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{{new.user.pseudo}}</a></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{% if new.user.pseudo is defined and new.user.pseudo is not null %}{{new.user.pseudo}}{% endif %}</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\")}}\">{{new.name}}</a></h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\", {\"id\": new.id})}}\">{{new.name}}</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{new.article|striptags|slice(0, 50)}}...</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\")}}\" class=\"read-more\">En savoir plus >></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\" class=\"read-more\">En savoir plus >></a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t{% endfor %}

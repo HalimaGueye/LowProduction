@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 
 
 class NewActualityCrudController extends AbstractCrudController
@@ -17,20 +18,26 @@ class NewActualityCrudController extends AbstractCrudController
         return NewActuality::class;
     }
 
-    
+    public function configureFilters(Filters $filters): Filters
+    {
+        return $filters
+            ->add('name')
+            ->add('createdAt')
+        ;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            AssociationField::new('actualityPicture', 'Actuality Picture'),
-            AssociationField::new('project', 'Associated Project(s)'),
-            DateField::new('publication', 'Publication date')->setFormat('Y-MM-dd HH:mm')->renderAsNativeWidget(),
-            AssociationField::new('user', 'Written by'),
-
-            TextEditorField::new('article'),
+            TextField::new('name', 'Titre'),
+            TextEditorField::new('article', 'Contenu'),
+            DateField::new('publication', 'Publication')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
+            AssociationField::new('user', 'Rédigé par'),
+            AssociationField::new('picture', 'Illustration'),
+            AssociationField::new('project', 'Projet associé')
 
 
         ];
     }
-    
+
 }

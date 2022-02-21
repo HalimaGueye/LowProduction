@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -13,9 +11,9 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Picture
  *
- * @ORM\Table(name="picture")
  * @ORM\Entity
  * @Vich\Uploadable
+ * @ORM\HasLifecycleCallbacks
  */
 class Picture
 {
@@ -26,50 +24,41 @@ class Picture
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Project::class, mappedBy="picture")
-     */
-    public $projects;
+    private $id;
 
      /**
      * @ORM\Column(type="string", length=255)
-     * 
+     *
      * @var string
      */
-    public $name;
+    private $name;
 
     /**
-     * @ORM\Column(name="publication", type="date", nullable=true)
+     * @ORM\Column(type="date", nullable=true)
      * @var \DateTime
      *
      */
-    public $creation;
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * 
+     *
      * @var string
      */
-    public $image;
+    private $image;
 
     /**
      * @Vich\UploadableField(mapping="LP_images", fileNameProperty="image")
      * * @var File
      */
     public $imageFile;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Article::class, mappedBy="articlePicture")
-     */
-    private $articles;
-
-    public function __construct()
-    {
-        $this->projects = new ArrayCollection();
-        $this->articles = new ArrayCollection();
-    }
 
     public function setImageFile(File $image = null)
     {
@@ -79,75 +68,8 @@ class Picture
         // It is required that at least one field changes if you are using Doctrine,
         // otherwise the event listeners won't be called and the file is lost
         if ($image) {
-            // if 'updatedAt' is not defined in your entity, use another property
             $this->updatedAt = new \DateTime('now');
         }
-    }
-
-    public function getCreation()
-    {
-        return $this->creation;
-    }
-
-    public function setCreation($creation)
-    {
-        $this->creation = $creation;
-    }
-
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
-
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    
-    /**
-     * @return Collection|Project[]
-     */
-    public function getProjects(): Collection
-    {
-        return $this->projects;
-    }
-
-    public function addProject(Project $project): self
-    {
-        if (!$this->projects->contains($project)) {
-            $this->projects[] = $project;
-            $project->setPicture($this);
-        }
-
-        return $this;
-    }
-
-    public function removeProject(Project $project): self
-    {
-        if ($this->projects->removeElement($project)) {
-            // set the owning side to null (unless already changed)
-            if ($project->getPicture() === $this) {
-                $project->setPicture(null);
-            }
-        }
-
-        return $this;
     }
 
     public function __toString()
@@ -156,33 +78,68 @@ class Picture
     }
 
     /**
-     * @return Collection|Article[]
-     */
-    public function getArticles(): Collection
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
     {
-        return $this->articles;
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
     }
 
-    public function addArticle(Article $article): self
+
+    public function getId(): ?int
     {
-        if (!$this->articles->contains($article)) {
-            $this->articles[] = $article;
-            $article->setArticlePicture($this);
-        }
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }
 
-    public function removeArticle(Article $article): self
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        if ($this->articles->removeElement($article)) {
-            // set the owning side to null (unless already changed)
-            if ($article->getArticlePicture() === $this) {
-                $article->setArticlePicture(null);
-            }
-        }
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage($image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
 }

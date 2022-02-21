@@ -18,11 +18,9 @@ return [
         '/histoire' => [[['_route' => 'story', '_controller' => 'App\\Controller\\GentleChefController::showStory'], null, null, null, false, false, null]],
         '/equipe' => [[['_route' => 'team', '_controller' => 'App\\Controller\\GentleChefController::showTeam'], null, null, null, false, false, null]],
         '/films' => [[['_route' => 'movies', '_controller' => 'App\\Controller\\GentleChefController::showMovies'], null, null, null, false, false, null]],
-        '/film' => [[['_route' => 'movie', '_controller' => 'App\\Controller\\GentleChefController::showMovie'], null, null, null, false, false, null]],
         '/etudes' => [[['_route' => 'studies', '_controller' => 'App\\Controller\\GentleChefController::showStudies'], null, null, null, false, false, null]],
         '/etude' => [[['_route' => 'study', '_controller' => 'App\\Controller\\GentleChefController::showStudy'], null, null, null, false, false, null]],
         '/actualites' => [[['_route' => 'news', '_controller' => 'App\\Controller\\GentleChefController::showNews'], null, null, null, false, false, null]],
-        '/actualite' => [[['_route' => 'new', '_controller' => 'App\\Controller\\GentleChefController::showNew'], null, null, null, false, false, null]],
         '/soutenir' => [[['_route' => 'support', '_controller' => 'App\\Controller\\GentleChefController::showSupport'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\GentleChefController::showContact'], null, null, null, false, false, null]],
     ],
@@ -43,6 +41,8 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
+                .'|/film/([^/]++)(*:182)'
+                .'|/actualite/([^/]++)(*:209)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -52,8 +52,10 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [
-            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        182 => [[['_route' => 'movie', '_controller' => 'App\\Controller\\GentleChefController::showMovie'], ['id'], null, null, false, true, null]],
+        209 => [
+            [['_route' => 'new', '_controller' => 'App\\Controller\\GentleChefController::showNew'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

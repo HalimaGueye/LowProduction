@@ -20,11 +20,11 @@ return [
     'story' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showStory'], [], [['text', '/histoire']], [], [], []],
     'team' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showTeam'], [], [['text', '/equipe']], [], [], []],
     'movies' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showMovies'], [], [['text', '/films']], [], [], []],
-    'movie' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showMovie'], [], [['text', '/film']], [], [], []],
+    'movie' => [['id'], ['_controller' => 'App\\Controller\\GentleChefController::showMovie'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/film']], [], [], []],
     'studies' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showStudies'], [], [['text', '/etudes']], [], [], []],
     'study' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showStudy'], [], [['text', '/etude']], [], [], []],
     'news' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showNews'], [], [['text', '/actualites']], [], [], []],
-    'new' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showNew'], [], [['text', '/actualite']], [], [], []],
+    'new' => [['id'], ['_controller' => 'App\\Controller\\GentleChefController::showNew'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/actualite']], [], [], []],
     'support' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showSupport'], [], [['text', '/soutenir']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showContact'], [], [['text', '/contact']], [], [], []],
 ];

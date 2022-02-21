@@ -478,7 +478,7 @@
 				<div class="portfolio portfolio-isotope col-3 gutter">
 						{% for project in projects %}
 								<div class="pf-item doing">
-										<a href="{{url("movie")}}" class="pf-style pf-pointer">
+										<a href="{{url("movie", {"id": project.id})}}" class="pf-style pf-pointer">
 												<div class="pf-image">
 														<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">
 														<div class="overlay">
@@ -510,12 +510,12 @@
 		<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
 				{% for supporter in supporters %}
 						<div class="testimonial-item text-center">
-								<p class="testimonial-desc">{{supporter.quote}}</p>
+								<p class="testimonial-desc">{{supporter.quote|raw}}</p>
 								<div class="testimonial-thumb">
-										<img class="img-responsive" src="{{asset(vich_uploader_asset(supporter.supporterPicture, 'imageFile'))}}" alt="{{supporter.supporterPicture.name}}">
+										<img class="img-responsive" src="{{asset(vich_uploader_asset(supporter.picture, 'imageFile'))}}" alt="{{supporter.picture.name}}">
 								</div>
 								<a target="_blank" href="{{supporter.url}}"><h5 class="testimonial-author">{{supporter.name}}</h5></a>
-								<h5 class="testimonial-profession">{{supporter.profession}}</h5>
+								<h5 class="testimonial-profession">{{supporter.profession|raw}}</h5>
 						</div>
 				{% endfor %}
 		</div>
@@ -542,16 +542,16 @@
 								{% for new in news %}
 										<div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
 												<div class="blog-media">
-														<a  href="{{url("new")}}"><img src="{{asset(vich_uploader_asset(new.actualityPicture, 'imageFile'))}}" alt=""></a>
+														<a  href="{{url("new", {"id": new.id})}}"><img src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt=""></a>
 												</div>
 												<div class="blog-post-info clearfix">
 														<span class="time"><i class="fa fa-calendar"></i>{{new.publication|date("d/m/Y")}}</span>
-														<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{{new.user.pseudo}}</a></span>
+														<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{% if new.user.pseudo is defined and new.user.pseudo is not null %}{{new.user.pseudo}}{% endif %}</a></span>
 												</div>
 												<div class="blog-post-body">
-														<h4><a class="title" href="{{url("new")}}">{{new.name}}</a></h4>
+														<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
 														<p class="p-bottom-20">{{new.article|striptags|slice(0, 50)}}...</p>
-														<a href="{{url("new")}}" class="read-more">En savoir plus >></a>
+														<a href="{{url("new", {"id": new.id})}}" class="read-more">En savoir plus >></a>
 												</div>
 										</div>
 								{% endfor %}

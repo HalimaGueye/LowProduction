@@ -178,9 +178,9 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
             // line 57
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "memberPicture", [], "any", false, false, false, 57), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 57), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "memberPicture", [], "any", false, false, false, 57), "name", [], "any", false, false, false, 57), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 57), "name", [], "any", false, false, false, 57), "html", null, true);
             echo "\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
@@ -346,7 +346,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(member.memberPicture, 'imageFile'))}}\" alt=\"{{member.memberPicture.name}}\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(member.picture, 'imageFile'))}}\" alt=\"{{member.picture.name}}\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">

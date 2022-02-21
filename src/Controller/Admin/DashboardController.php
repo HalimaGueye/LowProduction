@@ -8,12 +8,17 @@ use App\Entity\User;
 use App\Entity\NewActuality;
 use App\Entity\Partner;
 use App\Entity\Supporters;
+use App\Entity\Comic;
 use App\Entity\Portfolio;
 use App\Entity\PortfolioType;
 use App\Entity\Project;
 use App\Entity\Video;
 use App\Entity\Member;
+use App\Entity\MemberType;
 use App\Entity\Picture;
+use App\Entity\RoleProject;
+use App\Entity\MemberProject;
+use App\Entity\State;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -56,15 +61,20 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Films');
         yield MenuItem::linkToCrud('Projets', 'far fa-folder', Project::class);
         yield MenuItem::linkToCrud('Catégories', 'fas fa-grip-vertical', Category::class);
+        yield MenuItem::linkToCrud('État', 'fas fa-grip-vertical', State::class);
+        yield MenuItem::linkToCrud('Rôles', 'fa fa-users', RoleProject::class);
+        yield MenuItem::linkToCrud('Participations', 'fa fa-users', MemberProject::class);
 
         yield MenuItem::section('Articles');
         yield MenuItem::linkToCrud('Actualités', 'fas fa-newspaper', NewActuality::class);
-        yield MenuItem::linkToCrud('Études environnementales', 'fa fa-file-text-o', Article::class);
+        yield MenuItem::linkToCrud('Études', 'fa fa-file-text-o', Article::class);
+        yield MenuItem::linkToCrud('BD', 'fa fa-file-text-o', Comic::class);
 
         yield MenuItem::section('Membres et portfolios');
         yield MenuItem::linkToCrud('Membres', 'far fa-smile', Member::class);
+        yield MenuItem::linkToCrud('Types', 'far fa-smile', MemberType::class);
         yield MenuItem::linkToCrud('Portfolios', 'fas fa-id-card-alt', Portfolio::class);
-        yield MenuItem::linkToCrud('Types', 'fas fa-grip-horizontal', PortfolioType::class);
+        yield MenuItem::linkToCrud('Types', 'fas fa-id-card-alt', PortfolioType::class);
 
         yield MenuItem::section('Médias');
         yield MenuItem::linkToCrud('Images', 'fas fa-images', Picture::class);

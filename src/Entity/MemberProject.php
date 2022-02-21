@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * MemberProject
  *
- * @ORM\Table(name="member_project", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_9047677A995975B0", columns={"role_project_id"})}, indexes={@ORM\Index(name="IDX_9047677A7597D3FE", columns={"member_id"}), @ORM\Index(name="IDX_9047677A166D1F9C", columns={"project_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\MemberProjectRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class MemberProject
 {
@@ -19,17 +19,12 @@ class MemberProject
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
-     * @var \RoleProject
-     *
-     * @ORM\ManyToOne(targetEntity="RoleProject")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="role_project_id", referencedColumnName="id")
-     * })
-     */
-    public $roleProject;
+    * @ORM\OneToOne(targetEntity=RoleProject::class)
+    */
+    private $roleProject;
 
     /**
      * @var \Member
@@ -39,7 +34,7 @@ class MemberProject
      *   @ORM\JoinColumn(name="member_id", referencedColumnName="id")
      * })
      */
-    public $member;
+    private $member;
 
     /**
      * @var \Project
@@ -49,7 +44,97 @@ class MemberProject
      *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      * })
      */
-    public $project;
+    private $project;
 
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getRoleProject(): ?RoleProject
+    {
+        return $this->roleProject;
+    }
+
+    public function setRoleProject(?RoleProject $roleProject): self
+    {
+        $this->roleProject = $roleProject;
+
+        return $this;
+    }
+
+    public function getMember(): ?Member
+    {
+        return $this->member;
+    }
+
+    public function setMember(?Member $member): self
+    {
+        $this->member = $member;
+
+        return $this;
+    }
+
+    public function getProject(): ?Project
+    {
+        return $this->project;
+    }
+
+    public function setProject(?Project $project): self
+    {
+        $this->project = $project;
+
+        return $this;
+    }
 
 }

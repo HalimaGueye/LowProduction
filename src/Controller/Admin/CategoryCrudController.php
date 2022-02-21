@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\Category;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ColorField;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -23,22 +22,19 @@ class CategoryCrudController extends AbstractCrudController
     public function configureFilters(Filters $filters): Filters
     {
         return $filters
-            ->add('category')
+            ->add('name')
+            ->add('createdAt')
         ;
     }
 
-    
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            AssociationField::new('category', 'Super Category'),
-            AssociationField::new('projectCategories', 'Project Category'),
-            TextField::new('name', 'Category Name'),
-            ColorField::new('color', 'Color'),
+            AssociationField::new('motherCategory', 'Super-catégorie'),
+            TextField::new('name', 'Nom'),
+            ColorField::new('color', 'Couleur'),
         ];
     }
-    
+
 }
-
-
-

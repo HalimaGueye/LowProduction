@@ -1,0 +1,130 @@
+{% extends 'base.html.twig' %}
+
+{% set m = movie[0] %}
+
+{% block title %}
+	{{parent()}} | {{m.name}}
+{% endblock %}
+
+{% block movies %}<li class="active">{% endblock %}
+
+{% block body %}
+
+<section id="blog-single" class="p-top-80 p-bottom-80">
+		<div class="container clearfix">
+				<div class="row">
+						<div class="col-xs-12">
+								<div class="postSingle">
+										<div class="postMedia">
+												<img alt="" src="{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}" alt="{{m.picture.name}}">
+										</div>
+
+										<div class="postMeta clearfix">
+												<div class="postMeta-info">
+														<span class="metaCategory"><i class="fa fa-folder"></i> <a href="#">{{m.format}}</a></span>
+														<span class="metaComment"><i class="fa fa-clock-o"></i> <a href="#">{{m.duration}}</a></span>
+												</div>
+												<div class="postMeta-date">
+														<span class="metaDate"><i class="fa fa-calendar"></i> <a href="#">{{m.publication|date("d/m/Y")}}</a></span>
+												</div>
+										</div>
+										<div class="postTitle">
+												<!-- title -->
+												<h1>{{m.name}}</h1>
+												<div class="divider-small"></div>
+										</div>
+										<!-- Synopsis -->
+										<p>{{m.description|raw}}</p>
+										<br>
+
+										<div class="dropdown">
+											<a class="btn btn-main btn-theme m-5">Visionner</a>
+											<div class="dropdown-content">
+												{% for video in m.videos %}
+														<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-{{video.id}}" aria-expanded="false" aria-controls="p{{m.id}}-{{video.id}}">{{video.name}}</a>
+												{% endfor %}
+											</div>
+										</div>
+
+										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-informations" aria-expanded="false" aria-controls="p{{m.id}}-informations" class="btn btn-main btn-transparent m-5">Informations</a>
+										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-acv" aria-expanded="false" aria-controls="p{{m.id}}-acv" class="btn btn-main btn-transparent m-5">Étude environnementale</a>
+										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-soutenir" aria-expanded="false" aria-controls="p{{m.id}}-soutenir" class="btn btn-main btn-transparent m-5">Soutenir</a>
+
+										<div class="p-bottom-20 postTags clearfix">
+												<h4><i class="fa fa-tags"></i>Catégories :</h4>
+												<ul class="list-inline">
+														{% for ctg in m.categories %}
+															<li><a>{{ctg.name}}</a></li>
+														{% endfor %}
+												</ul>
+										</div>
+
+										<div id="myProject">
+												<div class="accordion-group ">
+														{% for video in m.videos %}
+																<div class="collapse" id="p{{m.id}}-{{video.id}}">
+																	<div class="card card-body">
+																		<div class="postTitle">
+																				<!-- title -->
+																				<h1>{{video.name}}</h1>
+																				<div class="divider-small"></div>
+																		</div>
+																		<p>{{video.description}}</p>
+																		<div class="peertube-container">
+																			{{video.iframe}}
+																		</div>
+																	</div>
+																</div>
+														{% endfor %}
+														<div class="collapse" id="p{{m.id}}-informations">
+															<div class="postTitle p-top-20">
+																	<!-- title -->
+																	<h1>Contributeurs</h1>
+																	<div class="divider-small"></div>
+															</div>
+															<div class="card card-body">
+																<p>{{m.contributorsMessage}}</p>
+																<ul>
+																	{% for c in contributors %}
+																	<li><strong>{{c.roleProject.name}}</strong> : {{c.member.name|raw}}</li>
+																	{% endfor %}
+																</ul>
+															</div>
+														</div>
+														<div class="collapse" id="p{{m.id}}-acv">
+															<div class="card card-body">
+																<div class="postTitle">
+																		<!-- title -->
+																		<h1>Étude environnementale</h1>
+																		<div class="divider-small"></div>
+																</div>
+																<p>{{m.acvMessage}}</p>
+															</div>
+														</div>
+														<div class="collapse" id="p{{m.id}}-soutenir">
+															<div class="card card-body">
+																<div class="postTitle">
+																		<!-- title -->
+																		<h1>Nous soutenir</h1>
+																		<div class="divider-small"></div>
+																</div>
+																<p>{{m.supportMessage}}</p>
+															</div>
+														</div>
+												</div>
+										</div>
+
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+	{{parent()}}
+	<script src="{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js"></script>
+	<script src="{{asset('bundles/web/')}}js/isotope.pkgd.min.js"></script>
+
+{% endblock %}

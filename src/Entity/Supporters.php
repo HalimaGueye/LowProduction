@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Supporters
  *
- * @ORM\Table(name="supporters", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_C9A1E5E237E06", columns={"name"})}, indexes={@ORM\Index(name="IDX_C9A1E53B0CC1B", columns={"supporter_picture_id"})})
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Supporters
 {
@@ -19,35 +19,35 @@ class Supporters
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
-    public $name;
+    private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="quote", type="text", length=255, nullable=false)
+     * @ORM\Column(name="quote", type="text", nullable=false)
      */
-    public $quote;
+    private $quote;
 
     /**
      * @var string
      *
      * @ORM\Column(name="profession", type="text", length=255, nullable=false)
      */
-    public $profession;
+    private $profession;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
-    public $url;
+    private $url;
 
     /**
      * @var \Picture
@@ -57,5 +57,121 @@ class Supporters
      *   @ORM\JoinColumn(name="supporter_picture_id", referencedColumnName="id")
      * })
      */
-    public $supporterPicture;
+    private $picture;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getQuote(): ?string
+    {
+        return $this->quote;
+    }
+
+    public function setQuote(string $quote): self
+    {
+        $this->quote = $quote;
+
+        return $this;
+    }
+
+    public function getProfession(): ?string
+    {
+        return $this->profession;
+    }
+
+    public function setProfession(string $profession): self
+    {
+        $this->profession = $profession;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getPicture(): ?Picture
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?Picture $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
 }

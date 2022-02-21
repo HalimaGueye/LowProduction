@@ -19,22 +19,19 @@ class MemberRepository extends ServiceEntityRepository
         parent::__construct($registry, Member::class);
     }
 
-    // /**
-    //  * @return Member[] Returns an array of Member objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return Member[] Returns an array of Member objects
+      */
+    public function findMembersWithQuotes($limit)
     {
         return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('m.quote IS NOT NULL')
             ->orderBy('m.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Member

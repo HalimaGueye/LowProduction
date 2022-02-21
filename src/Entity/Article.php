@@ -2,17 +2,17 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
 use App\Entity\Picture;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Article
  *
- * @ORM\Table(name="article", indexes={@ORM\Index(name="IDX_23A0E66166D1F9C", columns={"project_id"}), @ORM\Index(name="IDX_23A0E66D29C6C3E", columns={"article_picture_id"})})
  * @ORM\Entity
- * @Vich\Uploadable
+ * @ORM\HasLifecycleCallbacks
  */
 class Article
 {
@@ -23,36 +23,35 @@ class Article
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
      */
-    public $title;
+    private $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="abstract", type="text", length=0, nullable=false)
      */
-    public $abstract;
+    private $abstract;
 
     /**
      * @var string
      *
      * @ORM\Column(name="url_article", type="string", length=255, nullable=false)
      */
-    public $urlArticle;
+    private $urlArticle;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="url_dashboard", type="string", length=255, nullable=true)
      */
-    public $urlDashboard;
-
+    private $urlDashboard;
 
     /**
      * @ORM\ManyToOne(targetEntity=Project::class, inversedBy="articles")
@@ -60,11 +59,133 @@ class Article
     private $project;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Picture::class, inversedBy="articles")
+     * @var \Picture
+     *
+     * @ORM\ManyToOne(targetEntity="Picture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     * })
      */
-    private $articlePicture;
+    private $picture;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Member", mappedBy="articles")
+     */
+    private $writers;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $updatedAt;
+
+    public function __construct()
+    {
+        $this->writers = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return (string) $this->title;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+    */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
 
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getAbstract(): ?string
+    {
+        return $this->abstract;
+    }
+
+    public function setAbstract(string $abstract): self
+    {
+        $this->abstract = $abstract;
+
+        return $this;
+    }
+
+    public function getUrlArticle(): ?string
+    {
+        return $this->urlArticle;
+    }
+
+    public function setUrlArticle(string $urlArticle): self
+    {
+        $this->urlArticle = $urlArticle;
+
+        return $this;
+    }
+
+    public function getUrlDashboard(): ?string
+    {
+        return $this->urlDashboard;
+    }
+
+    public function setUrlDashboard(?string $urlDashboard): self
+    {
+        $this->urlDashboard = $urlDashboard;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
 
     public function getProject(): ?Project
     {
@@ -78,23 +199,42 @@ class Article
         return $this;
     }
 
-    public function getArticlePicture(): ?Picture
+    public function getPicture(): ?Picture
     {
-        return $this->articlePicture;
+        return $this->picture;
     }
 
-    public function setArticlePicture(?Picture $articlePicture): self
+    public function setPicture(?Picture $picture): self
     {
-        $this->articlePicture = $articlePicture;
+        $this->picture = $picture;
 
         return $this;
     }
 
-    public function __toString()
+    /**
+     * @return Collection|Member[]
+     */
+    public function getWriters(): Collection
     {
-        return (string) $this->title;
+        return $this->writers;
     }
- 
-    
 
+    public function addWriter(Member $writer): self
+    {
+        if (!$this->writers->contains($writer)) {
+            $this->writers[] = $writer;
+            $writer->addArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWriter(Member $writer): self
+    {
+        if ($this->writers->removeElement($writer)) {
+            $writer->removeArticle($this);
+        }
+
+        return $this;
+    }
 }
