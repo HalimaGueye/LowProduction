@@ -54,7 +54,7 @@ class Supporters
      *
      * @ORM\ManyToOne(targetEntity="Picture")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="supporter_picture_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="supporter_picture_id", referencedColumnName="id", onDelete="CASCADE")
      * })
      */
     private $picture;

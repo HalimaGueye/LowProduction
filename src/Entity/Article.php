@@ -61,9 +61,9 @@ class Article
     /**
      * @var \Picture
      *
-     * @ORM\ManyToOne(targetEntity="Picture")
+     * @ORM\ManyToOne(targetEntity="Picture", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id", onDelete="CASCADE")
      * })
      */
     private $picture;

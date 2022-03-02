@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
@@ -18,7 +19,7 @@ class UserCrudController extends AbstractCrudController
     public function configureFilters(Filters $filters): Filters
     {
         return $filters
-            ->add('name')
+            ->add('pseudo')
             ->add('createdAt')
         ;
     }
@@ -28,7 +29,7 @@ class UserCrudController extends AbstractCrudController
     {
         return [
             AssociationField::new('member', 'Membre'),
-            TextField::new('role', 'Rôle'),
+            ArrayField::new('roles', 'Rôle'),
             TextField::new('pseudo', 'Pseudo'),
             TextField::new('password', 'Mot de passe'),
         ];

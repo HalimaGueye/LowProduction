@@ -58,7 +58,7 @@ class ProjectCrudController extends AbstractCrudController
             TextEditorField::new('contributorsMessage', 'Message (contributeurs)'),
             TextEditorField::new('acvMessage', 'Message (ACV)'),
             TextEditorField::new('supportMessage', 'Message (soutient)'),
-            DateTimeField::new('publication', 'Publication')->setFormat('Y-MM-dd HH:mm')->renderAsNativeWidget(),
+            DateTimeField::new('beginsAt')->setFormat('Y-MM-dd HH:mm')->renderAsNativeWidget(),
             UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
             AssociationField::new('picture', 'Image liées'),
             AssociationField::new('state', 'État'),

@@ -102,7 +102,7 @@ class Project
      *
      * @ORM\ManyToOne(targetEntity="Picture")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id", onDelete="CASCADE")
      * })
      */
     private $picture;
@@ -128,6 +128,13 @@ class Project
      */
     private $partners;
 
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     * @var \DateTime
+     *
+     */
+    private $beginsAt;
 
     /**
      * @ORM\Column(type="date", nullable=true)
@@ -301,6 +308,18 @@ class Project
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getBeginsAt(): ?\DateTimeInterface
+    {
+        return $this->beginsAt;
+    }
+
+    public function setBeginsAt(?\DateTimeInterface $beginsAt): self
+    {
+        $this->beginsAt = $beginsAt;
 
         return $this;
     }

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
@@ -11,7 +12,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
-class User
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     /**
      * @var int
@@ -35,11 +36,9 @@ class User
     private $pseudo;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="role", type="string", length=255, nullable=false)
+     * @ORM\Column(type="json")
      */
-    private $role;
+    private $roles = [];
 
     /**
      * @var string The hashed password
@@ -105,21 +104,22 @@ class User
     /**
      * @see UserInterface
      */
-    public function getRole()
+    public function getRoles(): array
     {
-        $role = $this->role;
+        $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $role = 'ROLE_USER';
+        $roles[] = 'ROLE_USER';
 
-        return ($role);
+        return array_unique($roles);
     }
 
-    public function setRole(?string $role): self
+    public function setRoles(array $roles): self
     {
-        $this->role = $role;
+        $this->roles = $roles;
 
         return $this;
     }
+
 
     /**
      * @see PasswordAuthenticatedUserInterface
