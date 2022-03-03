@@ -167,7 +167,7 @@ class Comic
     {
         if (!$this->writers->contains($writer)) {
             $this->writers[] = $writer;
-            $writer->addArticle($this);
+            $writer->addComic($this);
         }
 
         return $this;
@@ -176,7 +176,7 @@ class Comic
     public function removeWriter(Member $writer): self
     {
         if ($this->writers->removeElement($writer)) {
-            $writer->removeArticle($this);
+            $writer->removeComic($this);
         }
 
         return $this;

@@ -555,14 +555,6 @@
         <argument type="service" id=".service_locator.GymbEAg.App\Controller\Admin\SupportersCrudController"/>
       </call>
     </service>
-    <service id="App\Controller\Admin\UserCrudController" class="App\Controller\Admin\UserCrudController" public="true" autowire="true" autoconfigure="true">
-      <tag name="ea.crud_controller"/>
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.GymbEAg.App\Controller\Admin\UserCrudController"/>
-      </call>
-    </service>
     <service id="App\Controller\Admin\VideoCrudController" class="App\Controller\Admin\VideoCrudController" public="true" autowire="true" autoconfigure="true">
       <tag name="ea.crud_controller"/>
       <tag name="controller.service_arguments"/>
@@ -576,6 +568,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\GentleChefController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\SecurityController"/>
       </call>
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
@@ -658,13 +657,12 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
     <service id="App\Repository\VideoRepository" class="App\Repository\VideoRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Security\AppAuthenticator" class="App\Security\AppAuthenticator" autowire="true" autoconfigure="true">
+      <argument type="service" id="router.default"/>
     </service>
     <service id="App\Type\ChangePasswordType" class="App\Type\ChangePasswordType" autowire="true" autoconfigure="true"/>
     <service id="App\Type\CollectionComplexType" class="App\Type\CollectionComplexType" autowire="true" autoconfigure="true"/>
@@ -5003,7 +5001,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.sEG2GJm"/>
+      <argument type="service" id=".service_locator.9ElSAaH"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5516,6 +5514,14 @@
       <argument type="service" id="request_stack" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
+      <call method="registerListener">
+        <argument>main</argument>
+        <argument>app_logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.user.provider.missing" class="Symfony\Component\Security\Core\User\MissingUserProvider" abstract="true">
       <argument type="abstract">firewall</argument>
@@ -5551,29 +5557,14 @@
     </service>
     <service id="security.password_hasher_factory" class="Symfony\Component\PasswordHasher\Hasher\PasswordHasherFactory">
       <argument type="collection">
-        <argument key="App\Entity\User" type="collection">
-          <argument key="algorithm">auto</argument>
-          <argument key="migrate_from" type="collection"/>
-          <argument key="hash_algorithm">sha512</argument>
-          <argument key="key_length">40</argument>
-          <argument key="ignore_case">false</argument>
-          <argument key="encode_as_base64">true</argument>
-          <argument key="iterations">5000</argument>
-          <argument key="cost">null</argument>
-          <argument key="memory_cost">null</argument>
-          <argument key="time_cost">null</argument>
-        </argument>
         <argument key="Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface" type="collection">
-          <argument key="algorithm">auto</argument>
-          <argument key="migrate_from" type="collection"/>
-          <argument key="hash_algorithm">sha512</argument>
-          <argument key="key_length">40</argument>
-          <argument key="ignore_case">false</argument>
-          <argument key="encode_as_base64">true</argument>
-          <argument key="iterations">5000</argument>
-          <argument key="cost">null</argument>
-          <argument key="memory_cost">null</argument>
-          <argument key="time_cost">null</argument>
+          <argument key="class">Symfony\Component\PasswordHasher\Hasher\NativePasswordHasher</argument>
+          <argument key="arguments" type="collection">
+            <argument>null</argument>
+            <argument>null</argument>
+            <argument>13</argument>
+            <argument>2y</argument>
+          </argument>
         </argument>
       </argument>
     </service>
@@ -5595,13 +5586,20 @@
         </service>
       </argument>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.5dJADCx"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
       <argument type="iterator">
         <argument type="service" id="security.user.provider.concrete.users_in_memory"/>
-        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument type="abstract">Provider Key</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -5719,7 +5717,7 @@
     </service>
     <service id="security.listener.user_provider" class="Symfony\Component\Security\Http\EventListener\UserProviderListener">
       <tag name="kernel.event_listener" event="Symfony\Component\Security\Http\Event\CheckPassportEvent" priority="1024" method="checkPassport"/>
-      <argument type="service" id="security.user_providers"/>
+      <argument type="service" id="security.user.provider.concrete.users_in_memory"/>
     </service>
     <service id="security.listener.user_provider.abstract" class="Symfony\Component\Security\Http\EventListener\UserProviderListener" abstract="true">
       <argument type="abstract">user provider</argument>
@@ -5820,7 +5818,9 @@
       <argument type="service" id=".service_locator.zJyh7qS"/>
       <argument type="service" id=".service_locator.XsyfP82"/>
       <argument type="collection">
-        <argument key="main" type="collection"/>
+        <argument key="main" type="collection">
+          <argument type="service" id="App\Security\AppAuthenticator"/>
+        </argument>
       </argument>
       <argument>false</argument>
       <call method="setName">
@@ -5831,18 +5831,13 @@
       </call>
     </service>
     <service id="security.user.provider.concrete.users_in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider">
-      <argument type="collection"/>
-    </service>
-    <service id="security.user.provider.concrete.app_user_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider">
-      <argument type="service" id="doctrine"/>
-      <argument>App\Entity\User</argument>
-      <argument>pseudo</argument>
-      <argument>null</argument>
-    </service>
-    <service id="security.user_providers" class="Symfony\Component\Security\Core\User\ChainUserProvider">
-      <argument type="iterator">
-        <argument type="service" id="security.user.provider.concrete.users_in_memory"/>
-        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
+      <argument type="collection">
+        <argument key="admin" type="collection">
+          <argument key="password">$2a$13$RdhIb3ztPGkNLsGEB3RqrO3gsUUarAuiLbV1JvFkwoqt6eTesaEsO</argument>
+          <argument key="roles" type="collection">
+            <argument>ROLE_ADMIN</argument>
+          </argument>
+        </argument>
       </argument>
     </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig">
@@ -5876,10 +5871,12 @@
       <argument>false</argument>
       <argument>security.user.provider.concrete.users_in_memory</argument>
       <argument>main</argument>
+      <argument>App\Security\AppAuthenticator</argument>
       <argument>null</argument>
       <argument>null</argument>
-      <argument>null</argument>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>App\Security\AppAuthenticator</argument>
+      </argument>
       <argument>null</argument>
     </service>
     <service id="security.listener.main.user_provider" class="Symfony\Component\Security\Http\EventListener\UserProviderListener">
@@ -5901,6 +5898,22 @@
         <argument type="collection">
           <argument type="service_closure" id="security.listener.session.main"/>
           <argument>onSuccessfulLogin</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="security.logout.listener.default.main"/>
+          <argument>onLogout</argument>
+        </argument>
+        <argument>64</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="security.logout.listener.session.main"/>
+          <argument>onLogout</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -5967,7 +5980,6 @@
       <argument type="service" id="security.untracked_token_storage"/>
       <argument type="iterator">
         <argument type="service" id="security.user.provider.concrete.users_in_memory"/>
-        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -5982,9 +5994,29 @@
       <tag name="kernel.event_subscriber" dispatcher="security.event_dispatcher.main"/>
       <argument type="service" id="security.authentication.session_strategy"/>
     </service>
+    <service id="security.logout_listener.main" class="Symfony\Component\Security\Http\Firewall\LogoutListener">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="service" id="security.event_dispatcher.main"/>
+      <argument type="collection">
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">logout</argument>
+        <argument key="logout_path">app_logout</argument>
+      </argument>
+    </service>
+    <service id="security.logout.listener.default.main" class="Symfony\Component\Security\Http\EventListener\DefaultLogoutListener">
+      <tag name="kernel.event_subscriber" dispatcher="security.event_dispatcher.main"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>/</argument>
+    </service>
+    <service id="security.logout.listener.session.main" class="Symfony\Component\Security\Http\EventListener\SessionLogoutListener">
+      <tag name="kernel.event_subscriber" dispatcher="security.event_dispatcher.main"/>
+    </service>
     <service id="security.authenticator.manager.main" class="Symfony\Component\Security\Http\Authentication\AuthenticatorManager">
       <tag name="monolog.logger" channel="security"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument type="service" id="App\Security\AppAuthenticator"/>
+      </argument>
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.event_dispatcher.main"/>
       <argument>main</argument>
@@ -6005,7 +6037,7 @@
       <argument type="service" id="security.authentication.trust_resolver"/>
       <argument type="service" id="security.http_utils"/>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument type="service" id="App\Security\AppAuthenticator"/>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -6019,7 +6051,7 @@
         <argument type="service" id="security.access_listener"/>
       </argument>
       <argument type="service" id="security.exception_listener.main"/>
-      <argument>null</argument>
+      <argument type="service" id="security.logout_listener.main"/>
       <argument type="service" id="security.firewall.map.config.main"/>
       <argument type="service" id="security.untracked_token_storage"/>
     </service>
@@ -6030,12 +6062,14 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
+    <service id=".security.request_matcher.5dJADCx" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/admin</argument>
+    </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="security.password_hasher_factory"/>
       <argument type="collection">
-        <argument>App\Entity\User</argument>
         <argument>Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface</argument>
       </argument>
       <call method="setName">
@@ -6788,10 +6822,6 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\SupportersCrudController" class="App\Controller\Admin\SupportersCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\SupportersCrudController" class="App\Controller\Admin\SupportersCrudController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\SupportersCrudController" class="App\Controller\Admin\SupportersCrudController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\UserCrudController" class="App\Controller\Admin\UserCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\UserCrudController" class="App\Controller\Admin\UserCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\UserCrudController" class="App\Controller\Admin\UserCrudController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\UserCrudController" class="App\Controller\Admin\UserCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\VideoCrudController" class="App\Controller\Admin\VideoCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\VideoCrudController" class="App\Controller\Admin\VideoCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\VideoCrudController" class="App\Controller\Admin\VideoCrudController" autowire="true" abstract="true"/>
@@ -6799,6 +6829,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GentleChefController" class="App\Controller\GentleChefController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GentleChefController" class="App\Controller\GentleChefController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\GentleChefController" class="App\Controller\GentleChefController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\Articles" class="App\DataFixtures\Articles" autowire="true" abstract="true"/>
@@ -6841,8 +6874,6 @@
     <service id=".abstract.instanceof.App\Repository\StateRepository" class="App\Repository\StateRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SupportersRepository" class="App\Repository\SupportersRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SupportersRepository" class="App\Repository\SupportersRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\VideoRepository" class="App\Repository\VideoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\VideoRepository" class="App\Repository\VideoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
@@ -7310,7 +7341,20 @@
         <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator._mmcLa2" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.hvKzUl4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="paginator" type="service_closure" id="knp_paginator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.zFcJjKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
+      </argument>
+    </service>
+    <service id=".service_locator.EoiDwpK" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\ArticleCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
@@ -7629,27 +7673,6 @@
         <argument key="App\Controller\Admin\SupportersCrudController::persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\SupportersCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\SupportersCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
-        <argument key="App\Controller\Admin\UserCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
-        <argument key="App\Controller\Admin\UserCrudController::configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
-        <argument key="App\Controller\Admin\UserCrudController::configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
-        <argument key="App\Controller\Admin\UserCrudController::configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
-        <argument key="App\Controller\Admin\UserCrudController::configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
-        <argument key="App\Controller\Admin\UserCrudController::createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
-        <argument key="App\Controller\Admin\UserCrudController::createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController::delete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController::detail" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::edit" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::index" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::new" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\VideoCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\VideoCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\VideoCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -7676,12 +7699,13 @@
         <argument key="App\Controller\GentleChefController::showMovie" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showMovies" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showNew" type="service_closure" id=".service_locator.t6i3vFk"/>
-        <argument key="App\Controller\GentleChefController::showNews" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\GentleChefController::showNews" type="service_closure" id=".service_locator.hvKzUl4"/>
         <argument key="App\Controller\GentleChefController::showStory" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showStudies" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showStudy" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showSupport" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController::showTeam" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
@@ -8004,27 +8028,6 @@
         <argument key="App\Controller\Admin\SupportersCrudController:persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\SupportersCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\SupportersCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
-        <argument key="App\Controller\Admin\UserCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
-        <argument key="App\Controller\Admin\UserCrudController:configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
-        <argument key="App\Controller\Admin\UserCrudController:configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
-        <argument key="App\Controller\Admin\UserCrudController:configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
-        <argument key="App\Controller\Admin\UserCrudController:configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
-        <argument key="App\Controller\Admin\UserCrudController:createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
-        <argument key="App\Controller\Admin\UserCrudController:createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\UserCrudController:delete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController:detail" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:edit" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:index" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:new" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\UserCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\UserCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\VideoCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\VideoCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\VideoCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -8051,12 +8054,13 @@
         <argument key="App\Controller\GentleChefController:showMovie" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showMovies" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showNew" type="service_closure" id=".service_locator.t6i3vFk"/>
-        <argument key="App\Controller\GentleChefController:showNews" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\GentleChefController:showNews" type="service_closure" id=".service_locator.hvKzUl4"/>
         <argument key="App\Controller\GentleChefController:showStory" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showStudies" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showStudy" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showSupport" type="service_closure" id=".service_locator.t6i3vFk"/>
         <argument key="App\Controller\GentleChefController:showTeam" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.bRdave9"/>
@@ -8341,7 +8345,7 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.sEG2GJm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.9ElSAaH" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ArticleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
@@ -8361,7 +8365,6 @@
         <argument key="App\Repository\RoleProjectRepository" type="service_closure" id="App\Repository\RoleProjectRepository"/>
         <argument key="App\Repository\StateRepository" type="service_closure" id="App\Repository\StateRepository"/>
         <argument key="App\Repository\SupportersRepository" type="service_closure" id="App\Repository\SupportersRepository"/>
-        <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
         <argument key="App\Repository\VideoRepository" type="service_closure" id="App\Repository\VideoRepository"/>
       </argument>
     </service>
@@ -8428,7 +8431,6 @@
         <argument>App\Controller\Admin\RoleProjectCrudController</argument>
         <argument>App\Controller\Admin\StateCrudController</argument>
         <argument>App\Controller\Admin\SupportersCrudController</argument>
-        <argument>App\Controller\Admin\UserCrudController</argument>
         <argument>App\Controller\Admin\VideoCrudController</argument>
       </argument>
     </service>
@@ -8588,12 +8590,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.GymbEAg" method="withContext"/>
     </service>
-    <service id=".service_locator.GymbEAg.App\Controller\Admin\UserCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\UserCrudController"/>
-      <argument>App\Controller\Admin\UserCrudController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.GymbEAg" method="withContext"/>
-    </service>
     <service id=".service_locator.GymbEAg.App\Controller\Admin\VideoCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\VideoCrudController"/>
       <argument>App\Controller\Admin\VideoCrudController</argument>
@@ -8618,6 +8614,12 @@
     <service id=".service_locator.jIxfAsi.App\Controller\GentleChefController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\GentleChefController"/>
       <argument>App\Controller\GentleChefController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
+      <argument>App\Controller\SecurityController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
@@ -8803,12 +8805,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator._mmcLa2"/>
+      <argument type="service" id=".service_locator.EoiDwpK"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator._mmcLa2"/>
+      <argument type="service" id=".service_locator.EoiDwpK"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -9679,6 +9681,8 @@
     <service id="Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface" alias="security.user_password_hasher"/>
     <service id="Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface" alias="security.user_authenticator"/>
     <service id="security.firewall" alias="debug.security.firewall"/>
+    <service id="security.user_providers" alias="security.user.provider.concrete.users_in_memory"/>
+    <service id="Symfony\Component\Security\Core\User\UserProviderInterface" alias="security.user.provider.concrete.users_in_memory"/>
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker"/>
     <service id="security.firewall.context_locator" alias=".service_locator.zJyh7qS"/>
@@ -9705,7 +9709,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._mmcLa2"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.EoiDwpK"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -9726,7 +9730,8 @@
     <service id=".service_locator.nTL_G5r" alias=".service_locator.esmk6IF"/>
     <service id=".service_locator.hNls88j" alias=".service_locator.ENGuM7_"/>
     <service id=".service_locator.6rNHno." alias=".service_locator.riFbGaB"/>
-    <service id=".service_locator.jCy6P8V" alias=".service_locator._mmcLa2"/>
+    <service id=".service_locator.6XxFdB9" alias=".service_locator.hvKzUl4"/>
+    <service id=".service_locator.wGA0vh2" alias=".service_locator.EoiDwpK"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.DXfJJk." alias=".service_locator.bCucHRT"/>
     <service id=".service_locator.KSE.gtY" alias=".service_locator.hgaihSW"/>
@@ -9770,6 +9775,8 @@
     <service id=".service_locator.YGHh.DA" alias=".service_locator.W.c5h2_"/>
     <service id=".service_locator..Z_8zjg" alias=".service_locator.st3ASTR"/>
     <service id=".service_locator.hCumxIO" alias=".service_locator.t6i3vFk"/>
+    <service id=".service_locator.3X5YS_K" alias=".service_locator.hvKzUl4"/>
+    <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.LJ9KDVo" alias=".service_locator.GymbEAg"/>
     <service id=".service_locator.t0V3OFl" alias=".service_locator.XmW3LYn"/>
     <service id=".service_locator.eAaUVIw" alias=".service_locator.jIxfAsi"/>

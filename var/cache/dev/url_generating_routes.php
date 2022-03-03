@@ -27,4 +27,6 @@ return [
     'new' => [['id'], ['_controller' => 'App\\Controller\\GentleChefController::showNew'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/actualite']], [], [], []],
     'support' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showSupport'], [], [['text', '/soutenir']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\GentleChefController::showContact'], [], [['text', '/contact']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
 ];

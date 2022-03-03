@@ -128,14 +128,6 @@ class Project
      */
     private $partners;
 
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     * @var \DateTime
-     *
-     */
-    private $beginsAt;
-
     /**
      * @ORM\Column(type="date", nullable=true)
      * @var \DateTime
@@ -308,18 +300,6 @@ class Project
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    public function getBeginsAt(): ?\DateTimeInterface
-    {
-        return $this->beginsAt;
-    }
-
-    public function setBeginsAt(?\DateTimeInterface $beginsAt): self
-    {
-        $this->beginsAt = $beginsAt;
 
         return $this;
     }

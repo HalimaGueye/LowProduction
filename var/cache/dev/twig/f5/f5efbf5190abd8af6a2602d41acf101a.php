@@ -71,19 +71,19 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <!-- Favicons -->
     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/favicon/apple-touch-icon.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/apple-touch-icon.png"), "html", null, true);
         echo "\">
     <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/favicon/favicon-32x32.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/favicon-32x32.png"), "html", null, true);
         echo "\">
     <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/favicon/favicon-16x16.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/favicon-16x16.png"), "html", null, true);
         echo "\">
     <link rel=\"manifest\" href=\"";
         // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/favicon/site.webmanifest"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/site.webmanifest"), "html", null, true);
         echo "\">
 
 \t\t";
@@ -122,7 +122,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo "\">
                                     <img class=\"logo\" src=\"";
         // line 70
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/logo/logo_light.svg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/logo/logo_light.svg"), "html", null, true);
         echo "\" alt=\"logo\" data-rjs=\"2\">
                                   </a>
                                 </div>
@@ -353,43 +353,43 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo "\t    <!-- Bootstrap CSS -->
 \t    <link href=\"";
         // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 
 \t    <!-- CSS Files For Plugin -->
 \t    <link href=\"";
         // line 25
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/css/animate.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/animate.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 \t    <link href=\"";
         // line 26
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/css/font-awesome/font-awesome.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/font-awesome/font-awesome.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 \t    <link href=\"";
         // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/owlcarousel/css/owl.carousel.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/owlcarousel/css/owl.carousel.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
         // line 28
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/owlcarousel/css/owl.theme.default.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/owlcarousel/css/owl.theme.default.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
         // line 29
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/css/settings.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/settings.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
         // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/css/layers.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/layers.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
         // line 31
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/css/navigation.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/navigation.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 
 \t    <!-- Custom CSS -->
 \t    <link href=\"";
         // line 34
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/css/style.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/style.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
 \t    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -591,41 +591,41 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo "\t    <!-- jQuery -->
 \t    <script src=\"";
         // line 211
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/jquery.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Bootstrap -->
 \t    <script src=\"";
         // line 214
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/bootstrap/js/bootstrap.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Custom Plugin -->
 \t    <script src=\"";
         // line 217
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/custom.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/custom.js"), "html", null, true);
         echo "\"></script>
 
 \t\t\t<!-- Components Plugin -->
 \t\t\t<script src=\"";
         // line 220
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/smooth-scroll.js\"></script>
 \t\t\t<script src=\"";
         // line 221
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.appear.js\"></script>
 \t\t\t<script src=\"";
         // line 222
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.stellar.min.js\"></script>
 \t\t\t<script src=\"";
         // line 223
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/wow.min.js\"></script>
 \t\t\t<script src=\"";
         // line 224
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
 \t\t";
@@ -668,26 +668,26 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <meta name=\"author\" content=\"tabthemes\">
 
     <!-- Favicons -->
-    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('bundles/web/img/favicon/apple-touch-icon.png') }}\">
-    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"{{ asset('bundles/web/img/favicon/favicon-32x32.png') }}\">
-    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ asset('bundles/web/img/favicon/favicon-16x16.png') }}\">
-    <link rel=\"manifest\" href=\"{{ asset('bundles/web/img/favicon/site.webmanifest') }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('web/img/favicon/apple-touch-icon.png') }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"{{ asset('web/img/favicon/favicon-32x32.png') }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ asset('web/img/favicon/favicon-16x16.png') }}\">
+    <link rel=\"manifest\" href=\"{{ asset('web/img/favicon/site.webmanifest') }}\">
 
 \t\t{% block css %}
 \t    <!-- Bootstrap CSS -->
-\t    <link href=\"{{ asset('bundles/web/bootstrap/css/bootstrap.min.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/bootstrap/css/bootstrap.min.css')}}\" rel=\"stylesheet\" />
 
 \t    <!-- CSS Files For Plugin -->
-\t    <link href=\"{{ asset('bundles/web/css/animate.css')}}\" rel=\"stylesheet\">
-\t    <link href=\"{{ asset('bundles/web/css/font-awesome/font-awesome.min.css')}}\" rel=\"stylesheet\">
-\t    <link href=\"{{ asset('bundles/web/inc/owlcarousel/css/owl.carousel.min.css')}}\" rel=\"stylesheet\" />
-\t    <link href=\"{{ asset('bundles/web/inc/owlcarousel/css/owl.theme.default.min.css')}}\" rel=\"stylesheet\" />
-\t    <link href=\"{{ asset('bundles/web/inc/revolution/css/settings.css')}}\" rel=\"stylesheet\" />
-\t    <link href=\"{{ asset('bundles/web/inc/revolution/css/layers.css')}}\" rel=\"stylesheet\" />
-\t    <link href=\"{{ asset('bundles/web/inc/revolution/css/navigation.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/css/animate.css')}}\" rel=\"stylesheet\">
+\t    <link href=\"{{ asset('web/css/font-awesome/font-awesome.min.css')}}\" rel=\"stylesheet\">
+\t    <link href=\"{{ asset('web/inc/owlcarousel/css/owl.carousel.min.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/inc/owlcarousel/css/owl.theme.default.min.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/inc/revolution/css/settings.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/inc/revolution/css/layers.css')}}\" rel=\"stylesheet\" />
+\t    <link href=\"{{ asset('web/inc/revolution/css/navigation.css')}}\" rel=\"stylesheet\" />
 
 \t    <!-- Custom CSS -->
-\t    <link href=\"{{ asset('bundles/web/css/style.css')}}\" rel=\"stylesheet\">
+\t    <link href=\"{{ asset('web/css/style.css')}}\" rel=\"stylesheet\">
 
 \t    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 \t    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -723,7 +723,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
                             <div class=\"logo-container\">
                                 <div class=\"logo-wrap local-scroll\">
                                   <a href=\"{{url(\"home\")}}\">
-                                    <img class=\"logo\" src=\"{{ asset('bundles/web/img/logo/logo_light.svg') }}\" alt=\"logo\" data-rjs=\"2\">
+                                    <img class=\"logo\" src=\"{{ asset('web/img/logo/logo_light.svg') }}\" alt=\"logo\" data-rjs=\"2\">
                                   </a>
                                 </div>
                             </div>
@@ -864,20 +864,20 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
 \t\t{% block js %}
 \t    <!-- jQuery -->
-\t    <script src=\"{{ asset('bundles/web/js/jquery.min.js')}}\"></script>
+\t    <script src=\"{{ asset('web/js/jquery.min.js')}}\"></script>
 
 \t    <!-- Bootstrap -->
-\t    <script src=\"{{ asset('bundles/web/bootstrap/js/bootstrap.min.js')}}\"></script>
+\t    <script src=\"{{ asset('web/bootstrap/js/bootstrap.min.js')}}\"></script>
 
 \t    <!-- Custom Plugin -->
-\t    <script src=\"{{ asset('bundles/web/js/custom.js')}}\"></script>
+\t    <script src=\"{{ asset('web/js/custom.js')}}\"></script>
 
 \t\t\t<!-- Components Plugin -->
-\t\t\t<script src=\"{{ asset('bundles/web/')}}js/smooth-scroll.js\"></script>
-\t\t\t<script src=\"{{ asset('bundles/web/')}}js/jquery.appear.js\"></script>
-\t\t\t<script src=\"{{ asset('bundles/web/')}}js/jquery.stellar.min.js\"></script>
-\t\t\t<script src=\"{{ asset('bundles/web/')}}js/wow.min.js\"></script>
-\t\t\t<script src=\"{{ asset('bundles/web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
+\t\t\t<script src=\"{{ asset('web/')}}js/smooth-scroll.js\"></script>
+\t\t\t<script src=\"{{ asset('web/')}}js/jquery.appear.js\"></script>
+\t\t\t<script src=\"{{ asset('web/')}}js/jquery.stellar.min.js\"></script>
+\t\t\t<script src=\"{{ asset('web/')}}js/wow.min.js\"></script>
+\t\t\t<script src=\"{{ asset('web/')}}inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
 \t\t{% endblock %}
   </body>

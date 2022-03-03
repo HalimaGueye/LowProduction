@@ -89,8 +89,11 @@ class GentleChefController extends AbstractController
   }
 
   #[Route('/actualites', name: 'news')]
-  public function showNews(EntityManagerInterface $em)
+  public function showNews(PaginatorInterface $paginator, EntityManagerInterface $em)
   {
+    // $pagination = $paginator->paginate(
+    //     $em->getRepository(NewActuality::class)->findAll()
+    // );
     return $this->render('gentle_chef/news.html.twig',[
         'news' => $em->getRepository(NewActuality::class)->findAll()
     ]);

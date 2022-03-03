@@ -34,7 +34,7 @@ class ComicCrudController extends AbstractCrudController
             UrlField::new('url', 'Lien'),
             DateField::new('publication', 'Publication')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
             AssociationField::new('picture', 'Illustration'),
-            CollectionField::new('writers', 'Contributeurs'),
+            AssociationField::new('writers', 'Contributeurs')->setFormTypeOption('by_reference', false)
         ];
     }
 

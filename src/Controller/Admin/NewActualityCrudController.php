@@ -32,11 +32,9 @@ class NewActualityCrudController extends AbstractCrudController
             TextField::new('name', 'Titre'),
             TextEditorField::new('article', 'Contenu'),
             DateField::new('publication', 'Publication')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
-            AssociationField::new('user', 'Rédigé par'),
+            AssociationField::new('writer', 'Rédigé par'),
             AssociationField::new('picture', 'Illustration'),
             AssociationField::new('project', 'Projet associé')
-
-
         ];
     }
 

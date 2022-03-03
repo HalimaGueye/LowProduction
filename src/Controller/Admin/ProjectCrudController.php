@@ -6,7 +6,7 @@ use App\Entity\Project;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -58,13 +58,13 @@ class ProjectCrudController extends AbstractCrudController
             TextEditorField::new('contributorsMessage', 'Message (contributeurs)'),
             TextEditorField::new('acvMessage', 'Message (ACV)'),
             TextEditorField::new('supportMessage', 'Message (soutient)'),
-            DateTimeField::new('beginsAt')->setFormat('Y-MM-dd HH:mm')->renderAsNativeWidget(),
+            DateField::new('publication', 'Publié le')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
             UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
-            AssociationField::new('picture', 'Image liées'),
+            AssociationField::new('picture', 'Image liée'),
             AssociationField::new('state', 'État'),
-            CollectionField::new('categories', 'Catégories'),
-            CollectionField::new('articles', 'Articles liés'),
-            CollectionField::new('partners', 'Partenaires associés')
+            AssociationField::new('categories', 'Catégories')->setFormTypeOption('by_reference', false),
+            AssociationField::new('articles', 'Articles liés')->setFormTypeOption('by_reference', false),
+            AssociationField::new('partners', 'Partenaires associés')->setFormTypeOption('by_reference', false)
         ];
     }
 }

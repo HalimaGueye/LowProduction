@@ -22,8 +22,13 @@ class MemberProject
     private $id;
 
     /**
-    * @ORM\OneToOne(targetEntity=RoleProject::class)
-    */
+     * @var \RoleProject
+     *
+     * @ORM\ManyToOne(targetEntity="RoleProject")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="role_project_id", referencedColumnName="id")
+     * })
+     */
     private $roleProject;
 
     /**

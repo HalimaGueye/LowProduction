@@ -105,6 +105,7 @@ class Member
     {
         $this->portfolios = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->comics = new ArrayCollection();
     }
 
     public function __toString()
@@ -264,6 +265,30 @@ class Member
     public function removeArticle(Article $article): self
     {
         $this->articles->removeElement($article);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Comic[]
+     */
+    public function getComics(): Collection
+    {
+        return $this->comics;
+    }
+
+    public function addComic(Comic $comic): self
+    {
+        if (!$this->comics->contains($comic)) {
+            $this->comics[] = $comic;
+        }
+
+        return $this;
+    }
+
+    public function removeComic($comic): self
+    {
+        $this->comics->removeElement($comic);
 
         return $this;
     }

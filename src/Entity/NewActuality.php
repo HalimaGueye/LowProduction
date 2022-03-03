@@ -43,14 +43,14 @@ class NewActuality
     private $publication;
 
     /**
-     * @var \User
+     * @var \Member
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Member")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="member_id", referencedColumnName="id")
      * })
      */
-    private $user;
+    private $writer;
 
     /**
      * @var \Picture
@@ -163,14 +163,14 @@ class NewActuality
         return $this;
     }
 
-    public function getUser(): ?User
+    public function getWriter(): ?Member
     {
-        return $this->user;
+        return $this->writer;
     }
 
-    public function setUser(?User $user): self
+    public function setWriter(?Member $writer): self
     {
-        $this->user = $user;
+        $this->writer = $writer;
 
         return $this;
     }

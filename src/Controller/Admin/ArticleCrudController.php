@@ -39,7 +39,7 @@ class ArticleCrudController extends AbstractCrudController
             UrlField::new('urlDashboard', 'Lien du tableau de bord'),
             AssociationField::new('picture', 'Illustration'),
             AssociationField::new('project', 'Projet associé'),
-            CollectionField::new('writers', 'Contributeurs')
+            AssociationField::new('writers', 'Contributeurs')->setFormTypeOption('by_reference', false)
         ];
     }
 

@@ -4,7 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Entity\Article;
 use App\Entity\Category;
-use App\Entity\User;
 use App\Entity\NewActuality;
 use App\Entity\Partner;
 use App\Entity\Supporters;
@@ -82,7 +81,6 @@ class DashboardController extends AbstractDashboardController
 
         //Ne laisser cette partie qu'aux administrateurs
         yield MenuItem::section('Administration');
-        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-users', User::class);
         yield MenuItem::linkToCrud('Partenaires', 'fa fa-hands-helping', Partner::class);
         yield MenuItem::linkToCrud('Soutiens', 'fa fa-star', Supporters::class);
     }
