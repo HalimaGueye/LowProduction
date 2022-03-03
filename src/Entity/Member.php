@@ -70,6 +70,11 @@ class Member
     private $portfolios;
 
     /**
+     * @ORM\OneToMany(targetEntity=MemberProject::class, mappedBy="member")
+     */
+    private $projects;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Article")
      * @ORM\JoinTable(name="member_article",
      *      joinColumns={@ORM\JoinColumn(name="article_id", referencedColumnName="id")},
@@ -104,6 +109,7 @@ class Member
     public function __construct()
     {
         $this->portfolios = new ArrayCollection();
+        $this->projects = new ArrayCollection();
         $this->articles = new ArrayCollection();
         $this->comics = new ArrayCollection();
     }
@@ -239,6 +245,36 @@ class Member
             // set the owning side to null (unless already changed)
             if ($portfolio->getMember() === $this) {
                 $portfolio->setMember(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|MemberProject[]
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(MemberProject $project): self
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
+            $project->setMember($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(MemberProject $project): self
+    {
+        if ($this->projects->removeElement($project)) {
+            // set the owning side to null (unless already changed)
+            if ($project->getMember() === $this) {
+                $project->setMember(null);
             }
         }
 

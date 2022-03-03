@@ -28,13 +28,16 @@
 				<!-- Portfolio-filter -->
 				<ul class="pf-filter pf-filter-gray text-center list-inline">
 						<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
-						<li><a href="#" data-filter=".bureau" class="iso-button">Bureau</a></li>
+						{% for c in categories %}
+								<li><a href="#" data-filter=".mt{{c.id}}" class="iso-button">{{c.name}}</a></li>
+						{% endfor %}
 						<li>
 							<div class="dropdown">
 								<a data-filter=".p" class="iso-button">Projets documentaires</a>
 								<div class="dropdown-content">
-									<a data-filter=".p1" class="iso-button">Berr(k)e</a>
-									<a data-filter=".p2" class="iso-button">Koméla</a>
+									{% for p in projects %}
+											<a data-filter=".p{{p.id}}" class="iso-button">{{p.name}}</a>
+									{% endfor %}
 								</div>
 							</div>
 						</li>
@@ -44,7 +47,7 @@
 				<div class="portfolio portfolio-isotope col-4 gutter">
 						{% for member in members %}
 						<!-- === Item === -->
-						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p">
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}">
 								<div class="team-item">
 										<div class="team-item-image">
 												{% if member.portfolios|length != 0 %}

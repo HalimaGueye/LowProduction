@@ -33,6 +33,23 @@ class MemberProjectRepository extends ServiceEntityRepository
         ;
     }
 
+    public function test($id)
+    {
+        $sql = "
+            SELECT r.name, GROUP_CONCAT(mb.name SEPARATOR ', ')
+              FROM member_project m, member mb, role_project r, project p
+              WHERE m.project_id = p.id AND m.member_id = mb.id AND r.id = m.role_project_id
+              AND p.id = :idp
+            GROUP BY 1
+            ";
+        $em = $this->getEntityManager();
+        $stmt = $em->getConnection()->prepare($sql);
+        $stmt->bindValue("idp", $id);
+        $stmt->execute();
+        return $stmt->executeQuery()
+        ->fetchAllNumeric();
+    }
+
     /*
     public function findOneBySomeField($value): ?MemberProject
     {

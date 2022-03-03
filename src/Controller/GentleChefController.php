@@ -13,13 +13,14 @@ use App\Entity\Picture;
 use App\Entity\NewActuality;
 use App\Entity\Partner;
 use App\Entity\Supporters;
-use App\Entity\Category;
+use App\Entity\State;
 use App\Entity\Project;
 use App\Entity\ProjectCategory;
 use App\Entity\Portfolio;
 use App\Entity\PortfolioType;
 use App\Entity\Member;
 use App\Entity\MemberProject;
+use App\Entity\MemberType;
 use App\Entity\Video;
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Component\Pager\PaginatorInterface;
@@ -36,6 +37,7 @@ class GentleChefController extends AbstractController
           'partners' => $em->getRepository(Partner::class)->findAll(),
           'projects' => $em->getRepository(Project::class)->findAll(),
           'supporters' => $em->getRepository(Supporters::class)->findAll(),
+          'categories' => $em->getRepository(State::class)->findAll(),
           'news' => $em->getRepository(NewActuality::class)->findLastOnes(5)
       ]);
   }
@@ -53,7 +55,8 @@ class GentleChefController extends AbstractController
   {
       return $this->render('gentle_chef/team.html.twig', [
           'controller_name' => 'GentleChefController',
-          'portfolioType' => $em->getRepository(Portfolio::class)->findAll(),
+          'categories' => $em->getRepository(MemberType::class)->findAll(),
+          'projects' => $em->getRepository(Project::class)->findAll(),
           'members' => $em->getRepository(Member::class)->findAll()
       ]);
   }
@@ -72,7 +75,7 @@ class GentleChefController extends AbstractController
   {
     return $this->render('gentle_chef/movie.html.twig',[
         'movie' => $em->getRepository(Project::class)->findById($id),
-        'contributors' => $em->getRepository(MemberProject::class)->findByProjectId($id)
+        'contributors' => $em->getRepository(MemberProject::class)->test($id)
     ]);
   }
 

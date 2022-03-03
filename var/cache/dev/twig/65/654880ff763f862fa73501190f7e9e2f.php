@@ -593,10 +593,24 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter text-center list-inline\">
 \t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
-\t\t\t\t</ul>
+\t\t\t\t\t\t";
+        // line 472
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 472, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
+            // line 473
+            echo "\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".c";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 473), "html", null, true);
+            echo "\" class=\"iso-button\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "name", [], "any", false, false, false, 473), "html", null, true);
+            echo "</a></li>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 475
+        echo "\t\t\t\t</ul>
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3 gutter\">
@@ -606,7 +620,13 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
         $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 479, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
             // line 480
-            echo "\t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
+            echo "\t\t\t\t\t\t\t\t<div class=\"pf-item ";
+            if ((twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", true, true, false, 480) &&  !(null === twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", false, false, false, 480)))) {
+                echo "c";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", false, false, false, 480), "id", [], "any", false, false, false, 480), "html", null, true);
+                echo " ";
+            }
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 481
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie", ["id" => twig_get_attribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 481)]), "html", null, true);
@@ -979,7 +999,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 
     public function getDebugInfo()
     {
-        return array (  874 => 601,  870 => 600,  866 => 599,  862 => 598,  856 => 595,  852 => 594,  848 => 593,  844 => 592,  840 => 591,  836 => 590,  829 => 587,  819 => 586,  803 => 578,  790 => 575,  787 => 574,  783 => 573,  766 => 558,  756 => 554,  752 => 553,  746 => 552,  738 => 549,  734 => 548,  726 => 545,  722 => 543,  718 => 542,  695 => 521,  686 => 518,  680 => 517,  673 => 515,  668 => 513,  665 => 512,  661 => 511,  650 => 503,  642 => 497,  627 => 488,  617 => 483,  612 => 481,  609 => 480,  605 => 479,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  894 => 601,  890 => 600,  886 => 599,  882 => 598,  876 => 595,  872 => 594,  868 => 593,  864 => 592,  860 => 591,  856 => 590,  849 => 587,  839 => 586,  823 => 578,  810 => 575,  807 => 574,  803 => 573,  786 => 558,  776 => 554,  772 => 553,  766 => 552,  758 => 549,  754 => 548,  746 => 545,  742 => 543,  738 => 542,  715 => 521,  706 => 518,  700 => 517,  693 => 515,  688 => 513,  685 => 512,  681 => 511,  670 => 503,  662 => 497,  647 => 488,  637 => 483,  632 => 481,  623 => 480,  619 => 479,  613 => 475,  602 => 473,  598 => 472,  576 => 453,  567 => 447,  562 => 445,  546 => 432,  277 => 166,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -1455,15 +1475,15 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter text-center list-inline\">
 \t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
+\t\t\t\t\t\t{% for c in categories %}
+\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".c{{c.id}}\" class=\"iso-button\">{{c.name}}</a></li>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t</ul>
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3 gutter\">
 \t\t\t\t\t\t{% for project in projects %}
-\t\t\t\t\t\t\t\t<div class=\"pf-item doing\">
+\t\t\t\t\t\t\t\t<div class=\"pf-item {% if project.state is defined and project.state is not null %}c{{project.state.id}} {% endif %}\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\", {\"id\": project.id})}}\" class=\"pf-style pf-pointer\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">

@@ -9,7 +9,6 @@
 {% block movies %}<li class="active">{% endblock %}
 
 {% block body %}
-
 <section id="blog-single" class="p-top-80 p-bottom-80">
 		<div class="container clearfix">
 				<div class="row">
@@ -86,7 +85,7 @@
 																<p>{{m.contributorsMessage|raw}}</p>
 																<ul>
 																	{% for c in contributors %}
-																	<li><strong>{{c.roleProject.name}}</strong> : {{c.member.name|raw}}</li>
+																	<li><strong>{{c[0]}}</strong> : {{c[1]|raw}}</li>
 																	{% endfor %}
 																</ul>
 															</div>

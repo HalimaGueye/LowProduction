@@ -131,14 +131,45 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
 \t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".bureau\" class=\"iso-button\">Bureau</a></li>
-\t\t\t\t\t\t<li>
+\t\t\t\t\t\t";
+        // line 31
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 31, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
+            // line 32
+            echo "\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".mt";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 32), "html", null, true);
+            echo "\" class=\"iso-button\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "name", [], "any", false, false, false, 32), "html", null, true);
+            echo "</a></li>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 34
+        echo "\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t\t\t\t<a data-filter=\".p\" class=\"iso-button\">Projets documentaires</a>
 \t\t\t\t\t\t\t\t<div class=\"dropdown-content\">
-\t\t\t\t\t\t\t\t\t<a data-filter=\".p1\" class=\"iso-button\">Berr(k)e</a>
-\t\t\t\t\t\t\t\t\t<a data-filter=\".p2\" class=\"iso-button\">Koméla</a>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t";
+        // line 38
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 38, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+            // line 39
+            echo "\t\t\t\t\t\t\t\t\t\t\t<a data-filter=\".p";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 39), "html", null, true);
+            echo "\" class=\"iso-button\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "name", [], "any", false, false, false, 39), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 41
+        echo "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</li>
 \t\t\t\t</ul>
@@ -146,60 +177,78 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-4 gutter\">
 \t\t\t\t\t\t";
-        // line 45
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 48, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["member"]) {
-            // line 46
+            // line 49
             echo "\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p ";
+            // line 50
+            if ((twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", true, true, false, 50) &&  !(null === twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", false, false, false, 50)))) {
+                echo "mt";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50), "html", null, true);
+                echo " ";
+            }
+            echo " ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "projects", [], "any", false, false, false, 50));
+            foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+                echo "p";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "project", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50), "html", null, true);
+                echo " ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            echo "\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 50
-            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 50)) != 0)) {
-                // line 51
+            // line 53
+            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 53)) != 0)) {
+                // line 54
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                // line 53
+                // line 56
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 53));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 56));
                 foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
-                    // line 54
+                    // line 57
                     echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["portfolio"], "url", [], "any", false, false, false, 54), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["portfolio"], "url", [], "any", false, false, false, 57), "html", null, true);
                     echo "\"><i class=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["portfolio"], "portfolioType", [], "any", false, false, false, 54), "icone", [], "any", false, false, false, 54), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["portfolio"], "portfolioType", [], "any", false, false, false, 57), "icone", [], "any", false, false, false, 57), "html", null, true);
                     echo "\"></i></a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['portfolio'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 56
+                // line 59
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 59
+            // line 62
             echo "\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 59), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 62), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 59), "name", [], "any", false, false, false, 59), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 62), "name", [], "any", false, false, false, 62), "html", null, true);
             echo "\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 63
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "name", [], "any", false, false, false, 63), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "name", [], "any", false, false, false, 66), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 66
-            echo twig_get_attribute($this->env, $this->source, $context["member"], "description", [], "any", false, false, false, 66);
+            // line 69
+            echo twig_get_attribute($this->env, $this->source, $context["member"], "description", [], "any", false, false, false, 69);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -210,7 +259,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['member'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 72
+        // line 75
         echo "\t\t\t\t</div>
 
 \t\t</div>
@@ -228,7 +277,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
 \t\t\t\t\t\t\t\t<!-- Button -->
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 88
+        // line 91
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
 \t\t\t\t\t\t</div> <!-- /.col -->
@@ -248,7 +297,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     }
 
-    // line 99
+    // line 102
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -258,16 +307,16 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 100
+        // line 103
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 101
+        // line 104
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 102
+        // line 105
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 ";
@@ -291,7 +340,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     public function getDebugInfo()
     {
-        return array (  271 => 102,  267 => 101,  262 => 100,  252 => 99,  232 => 88,  214 => 72,  202 => 66,  196 => 63,  186 => 59,  181 => 56,  170 => 54,  166 => 53,  162 => 51,  160 => 50,  154 => 46,  150 => 45,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  320 => 105,  316 => 104,  311 => 103,  301 => 102,  281 => 91,  263 => 75,  251 => 69,  245 => 66,  235 => 62,  230 => 59,  219 => 57,  215 => 56,  211 => 54,  209 => 53,  188 => 50,  185 => 49,  181 => 48,  172 => 41,  161 => 39,  157 => 38,  151 => 34,  140 => 32,  136 => 31,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -326,13 +375,16 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
 \t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".bureau\" class=\"iso-button\">Bureau</a></li>
+\t\t\t\t\t\t{% for c in categories %}
+\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".mt{{c.id}}\" class=\"iso-button\">{{c.name}}</a></li>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t\t\t\t<a data-filter=\".p\" class=\"iso-button\">Projets documentaires</a>
 \t\t\t\t\t\t\t\t<div class=\"dropdown-content\">
-\t\t\t\t\t\t\t\t\t<a data-filter=\".p1\" class=\"iso-button\">Berr(k)e</a>
-\t\t\t\t\t\t\t\t\t<a data-filter=\".p2\" class=\"iso-button\">Koméla</a>
+\t\t\t\t\t\t\t\t\t{% for p in projects %}
+\t\t\t\t\t\t\t\t\t\t\t<a data-filter=\".p{{p.id}}\" class=\"iso-button\">{{p.name}}</a>
+\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</li>
@@ -342,7 +394,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-4 gutter\">
 \t\t\t\t\t\t{% for member in members %}
 \t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t{% if member.portfolios|length != 0 %}
