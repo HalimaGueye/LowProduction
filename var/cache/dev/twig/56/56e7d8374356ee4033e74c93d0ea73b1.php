@@ -293,7 +293,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\t\tIl est possible de s’engager en <b>adhérant</b>, en <b>participant</b> à nos missions, en organisant des <b>diffusions</b> chez soi ou en faisant une <b>donation</b> à l’association.
 \t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" src=\"https://www.helloasso.com/associations/les-ailes-de-l-ocean/formulaires/3\"></iframe>
+\t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" id=\"haWidget\" allowtransparency=\"true\" scrolling=\"auto\" src=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\"></iframe>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
@@ -737,7 +737,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\t\tIl est possible de s’engager en <b>adhérant</b>, en <b>participant</b> à nos missions, en organisant des <b>diffusions</b> chez soi ou en faisant une <b>donation</b> à l’association.
 \t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" src=\"https://www.helloasso.com/associations/les-ailes-de-l-ocean/formulaires/3\"></iframe>
+\t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" id=\"haWidget\" allowtransparency=\"true\" scrolling=\"auto\" src=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\"></iframe>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
