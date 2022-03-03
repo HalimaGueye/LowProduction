@@ -161,7 +161,10 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
             foreach ($context['_seq'] as $context["_key"] => $context["w"]) {
                 echo " ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["w"], "name", [], "any", false, false, false, 38), "html", null, true);
-                echo ", ";
+                if (($context["w"] != twig_last($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 38)))) {
+                    echo ", ";
+                }
+                echo " ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['w'], $context['_parent'], $context['loop']);
@@ -244,7 +247,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     public function getDebugInfo()
     {
-        return array (  214 => 57,  208 => 55,  198 => 54,  183 => 47,  159 => 38,  155 => 37,  145 => 32,  140 => 30,  137 => 29,  133 => 28,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  217 => 57,  211 => 55,  201 => 54,  186 => 47,  159 => 38,  155 => 37,  145 => 32,  140 => 30,  137 => 29,  133 => 28,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -286,7 +289,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{comic.name}}</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}, {% endfor %}</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>

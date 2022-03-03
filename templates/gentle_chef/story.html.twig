@@ -35,7 +35,7 @@
 																		<div class="overlay-content">
 																				<div class="pf-info white-color">
 																						<h4 class="pf-title">{{comic.name}}</h4>
-																						<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}, {% endfor %}</p>
+																						<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>
 																				</div>
 																		</div>
 																</div>

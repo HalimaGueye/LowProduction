@@ -735,8 +735,8 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
             echo "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>";
             // line 549
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, true, false, 549), "pseudo", [], "any", true, true, false, 549) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549)))) {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 549), "pseudo", [], "any", false, false, false, 549), "html", null, true);
+            if ((twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", true, true, false, 549) &&  !(null === twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", false, false, false, 549)))) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", false, false, false, 549), "name", [], "any", false, false, false, 549), "html", null, true);
             }
             echo "</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1532,7 +1532,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>{{new.publication|date(\"d/m/Y\")}}</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{% if new.user.pseudo is defined and new.user.pseudo is not null %}{{new.user.pseudo}}{% endif %}</a></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{% if new.writer is defined and new.writer is not null %}{{new.writer.name}}{% endif %}</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\", {\"id\": new.id})}}\">{{new.name}}</a></h4>

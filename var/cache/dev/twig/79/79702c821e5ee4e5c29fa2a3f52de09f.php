@@ -146,8 +146,8 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
             echo "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>";
             // line 29
-            if ((array_key_exists("var", $context) &&  !(null === (isset($context["var"]) || array_key_exists("var", $context) ? $context["var"] : (function () { throw new RuntimeError('Variable "var" does not exist.', 29, $this->source); })())))) {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "user", [], "any", false, false, false, 29), "pseudo", [], "any", false, false, false, 29), "html", null, true);
+            if ((twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", true, true, false, 29) &&  !(null === twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", false, false, false, 29)))) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "writer", [], "any", false, false, false, 29), "name", [], "any", false, false, false, 29), "html", null, true);
             }
             echo "</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -266,7 +266,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>{{new.publication|date(\"d/m/Y\")}}</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{% if var is defined and var is not null %}{{new.user.pseudo}}{% endif %}</a></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"comments\"><a href=\"#\"><i class=\"fa fa-pencil\"></i>{% if new.writer is defined and new.writer is not null %}{{new.writer.name}}{% endif %}</a></span>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\", {\"id\": new.id})}}\">{{new.name}}</a></h4>

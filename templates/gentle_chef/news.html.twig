@@ -26,7 +26,7 @@
 												</div>
 												<div class="blog-post-info clearfix">
 														<span class="time"><i class="fa fa-calendar"></i>{{new.publication|date("d/m/Y")}}</span>
-														<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{% if var is defined and var is not null %}{{new.user.pseudo}}{% endif %}</a></span>
+														<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{% if new.writer is defined and new.writer is not null %}{{new.writer.name}}{% endif %}</a></span>
 												</div>
 												<div class="blog-post-body">
 														<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>

@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Comic
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ComicRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Comic

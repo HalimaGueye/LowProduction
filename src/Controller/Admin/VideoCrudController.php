@@ -5,7 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Video;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextFieldEditor;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
@@ -31,7 +31,7 @@ class VideoCrudController extends AbstractCrudController
             AssociationField::new('project', 'Projet associé'),
             TextField::new('name', 'Titre'),
             TextField::new('iframe', 'Iframe'),
-            TextFieldEditor::new('description', 'Description'),
+            TextEditorField::new('description', 'Description'),
             TextField::new('licence', 'Licence'),
         ];
     }

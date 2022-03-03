@@ -271,20 +271,6 @@ li .dropdown-content {
   background-color: #3e8e41;
 }
 
-.peertube-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-}
-.peertube-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -322,10 +308,6 @@ li .dropdown-content {
    border-top: solid #f8f8f8 1px;
    border-left: none;
    border-right: none;
-}
-
-#owl-blog img{
-  height:250px;
 }
 
 .aro::before {

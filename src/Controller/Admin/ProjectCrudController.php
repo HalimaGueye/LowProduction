@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -53,11 +54,12 @@ class ProjectCrudController extends AbstractCrudController
          return [
             TextField::new('name', 'Nom'),
             TextEditorField::new('description', 'Description'),
-            TextEditorField::new('format', 'Format'),
-            TextEditorField::new('duration', 'Durée'),
+            TextField::new('format', 'Format'),
+            TextField::new('duration', 'Durée'),
             TextEditorField::new('contributorsMessage', 'Message (contributeurs)'),
             TextEditorField::new('acvMessage', 'Message (ACV)'),
             TextEditorField::new('supportMessage', 'Message (soutient)'),
+            BooleanField::new('showSupport', 'Affichage du bouton de donation HelloAsso'),
             DateField::new('publication', 'Publié le')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
             UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
             AssociationField::new('picture', 'Image liée'),

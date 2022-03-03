@@ -24,8 +24,20 @@ class NewActualityRepository extends ServiceEntityRepository
     public function findLastOnes($limit)
     {
         return $this->createQueryBuilder('n')
-            ->orderBy('n.id', 'DESC')
+            ->orderBy('n.publication', 'DESC')
             ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    /**
+     * @return NewActuality[] Returns an array of $limit NewActuality objects
+     */
+    public function findAll()
+    {
+        return $this->createQueryBuilder('n')
+            ->orderBy('n.publication', 'DESC')
             ->getQuery()
             ->getResult()
         ;

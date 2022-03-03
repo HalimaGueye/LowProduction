@@ -45,6 +45,14 @@ class Project
      */
     private $format;
 
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="showSupport", type="boolean", nullable=false)
+     */
+    private $showSupport;
+
     /**
      * @var string
      *
@@ -175,6 +183,17 @@ class Project
     public function getName(): ?string
     {
         return $this->name;
+    }
+
+    public function setShowSupport(bool $b): self
+    {
+        $this->showSupport = $b;
+        return $this;
+    }
+
+    public function getShowSupport(): ?bool
+    {
+        return $this->showSupport;
     }
 
     public function setName(string $name): self

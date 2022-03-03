@@ -20,7 +20,7 @@
 										</div>
 										<div class="postMeta clearfix">
 												<div class="postMeta-info">
-														<span class="metaAuthor"><i class="fa fa-pencil"></i> <a href="#">{% if n.user.pseudo is defined and n.user.pseudo is not null %}{{n.user.pseudo}}{% endif %}</a></span>
+														<span class="metaAuthor"><i class="fa fa-pencil"></i> <a href="#">{% if n.writer is defined and n.writer is not null %}{{n.writer.name}}{% endif %}</a></span>
 														<span class="metaCategory"><i class="fa fa-folder"></i> <a href="#">Actualités</a></span>
 												</div>
 												<div class="postMeta-date">

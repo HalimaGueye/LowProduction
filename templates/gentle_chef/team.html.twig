@@ -47,6 +47,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p">
 								<div class="team-item">
 										<div class="team-item-image">
+												{% if member.portfolios|length != 0 %}
 												<div class="team-item-image-overlay">
 														<div class="team-item-icons">
 																{% for portfolio in member.portfolios %}
@@ -54,6 +55,7 @@
 																{% endfor %}
 														</div>
 												</div>
+												{% endif %}
 												<img src="{{asset(vich_uploader_asset(member.picture, 'imageFile'))}}" alt="{{member.picture.name}}"/>
 										</div>
 										<div class="team-item-info">

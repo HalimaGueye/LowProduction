@@ -155,45 +155,51 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 50
+            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 50)) != 0)) {
+                // line 51
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 52
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 52));
-            foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
                 // line 53
-                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["portfolio"], "url", [], "any", false, false, false, 53), "html", null, true);
-                echo "\"><i class=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["portfolio"], "portfolioType", [], "any", false, false, false, 53), "icone", [], "any", false, false, false, 53), "html", null, true);
-                echo "\"></i></a>
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["member"], "portfolios", [], "any", false, false, false, 53));
+                foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
+                    // line 54
+                    echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["portfolio"], "url", [], "any", false, false, false, 54), "html", null, true);
+                    echo "\"><i class=\"";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["portfolio"], "portfolioType", [], "any", false, false, false, 54), "icone", [], "any", false, false, false, 54), "html", null, true);
+                    echo "\"></i></a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['portfolio'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 55
-            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['portfolio'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 56
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 57
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 57), "imageFile")), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            }
+            // line 59
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 59), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 57), "name", [], "any", false, false, false, 57), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "picture", [], "any", false, false, false, 59), "name", [], "any", false, false, false, 59), "html", null, true);
             echo "\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-name\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 61
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "name", [], "any", false, false, false, 61), "html", null, true);
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "name", [], "any", false, false, false, 63), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-position\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 64
-            echo twig_get_attribute($this->env, $this->source, $context["member"], "description", [], "any", false, false, false, 64);
+            // line 66
+            echo twig_get_attribute($this->env, $this->source, $context["member"], "description", [], "any", false, false, false, 66);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -204,7 +210,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['member'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 72
         echo "\t\t\t\t</div>
 
 \t\t</div>
@@ -222,7 +228,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
 \t\t\t\t\t\t\t\t<!-- Button -->
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 86
+        // line 88
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
 \t\t\t\t\t\t</div> <!-- /.col -->
@@ -242,7 +248,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     }
 
-    // line 97
+    // line 99
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -252,16 +258,16 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 98
+        // line 100
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 99
+        // line 101
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 100
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 ";
@@ -285,7 +291,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     public function getDebugInfo()
     {
-        return array (  265 => 100,  261 => 99,  256 => 98,  246 => 97,  226 => 86,  208 => 70,  196 => 64,  190 => 61,  181 => 57,  177 => 55,  166 => 53,  162 => 52,  154 => 46,  150 => 45,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  271 => 102,  267 => 101,  262 => 100,  252 => 99,  232 => 88,  214 => 72,  202 => 66,  196 => 63,  186 => 59,  181 => 56,  170 => 54,  166 => 53,  162 => 51,  160 => 50,  154 => 46,  150 => 45,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -339,6 +345,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t{% if member.portfolios|length != 0 %}
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image-overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"team-item-icons\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for portfolio in member.portfolios %}
@@ -346,6 +353,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(member.picture, 'imageFile'))}}\" alt=\"{{member.picture.name}}\"/>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-info\">
