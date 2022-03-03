@@ -29,9 +29,9 @@ class MemberProjectCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            AssociationField::new('member'),
-            AssociationField::new('project'),
-            AssociationField::new('roleProject')
+            AssociationField::new('member', 'Membre'),
+            AssociationField::new('project', 'Projet'),
+            AssociationField::new('roles', 'Rôles')->setFormTypeOption('by_reference', false)
         ];
     }
 

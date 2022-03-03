@@ -43,6 +43,15 @@ class RoleProject
     private $icone;
 
     /**
+     * @ORM\ManyToMany(targetEntity="MemberProject")
+     * @ORM\JoinTable(name="project_member_role",
+     *      joinColumns={@ORM\JoinColumn(name="role_project_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="project_member_id", referencedColumnName="id")}
+     *      )
+     */
+    private $projects;
+
+    /**
      * @ORM\Column(type="date", nullable=true)
      * @var \DateTime
      *
@@ -71,6 +80,30 @@ class RoleProject
         if ($this->getCreatedAt() === null) {
             $this->setCreatedAt(new \DateTime('now'));
         }
+    }
+
+    /**
+     * @return Collection|MemberProject[]
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(MemberProject $project): self
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
+        }
+
+        return $this;
+    }
+
+    public function removeProject(MemberProject $project): self
+    {
+        $this->projects->removeElement($project);
+
+        return $this;
     }
 
     public function getId(): ?int

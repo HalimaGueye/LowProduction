@@ -129,44 +129,67 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
+\t\t\t\t\t<ul class=\"pf-filter text-center list-inline\">
+\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
+\t\t\t\t\t\t\t";
+        // line 31
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 31, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
+            // line 32
+            echo "\t\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".c";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 32), "html", null, true);
+            echo "\" class=\"iso-button\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "name", [], "any", false, false, false, 32), "html", null, true);
+            echo "</a></li>
+\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 34
+        echo "\t\t\t\t\t</ul>
 \t\t\t\t</ul>
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
 \t\t\t\t\t\t";
-        // line 37
+        // line 39
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 37, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 39, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 38
-            echo "\t\t\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t\t\t<div class=\"pf-item\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 40
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie", ["id" => twig_get_attribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            echo "\t\t\t\t\t\t\t\t<!-- Portfolio Item -->
+\t\t\t\t\t\t\t\t<div class=\"pf-item ";
+            // line 41
+            if ((twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", true, true, false, 41) &&  !(null === twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", false, false, false, 41)))) {
+                echo "c";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "state", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41), "html", null, true);
+                echo " ";
+            }
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 42
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movie", ["id" => twig_get_attribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 42)]), "html", null, true);
             echo "\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 42
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 42), "imageFile")), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 44), "imageFile")), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 42), "name", [], "any", false, false, false, 42), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["project"], "picture", [], "any", false, false, false, 44), "name", [], "any", false, false, false, 44), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "name", [], "any", false, false, false, 47), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "name", [], "any", false, false, false, 49), "html", null, true);
             echo "</h4>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>";
-            // line 48
-            echo twig_get_attribute($this->env, $this->source, $context["project"], "description", [], "any", false, false, false, 48);
+            // line 50
+            echo twig_get_attribute($this->env, $this->source, $context["project"], "description", [], "any", false, false, false, 50);
             echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -180,7 +203,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
+        // line 59
         echo "\t\t\t\t</div> <!-- Portfolio -->
 
 \t\t</div> <!-- /.container -->
@@ -198,7 +221,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 \t\t\t\t\t\t\t\t<p class=\"m-bottom-30 wow fadeInDown\" data-wow-delay=\"0.4s\">Il y a plusieurs moyens de s'investir dans l'association.</p>
 \t\t\t\t\t\t\t\t<!-- Button -->
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 73
+        // line 75
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\" class=\"btn btn-main btn-theme wow fadeInUp\" data-wow-delay=\"0.5s\">En savoir plus</a>
 \t\t\t\t\t\t</div> <!-- /.col -->
@@ -217,7 +240,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     }
 
-    // line 83
+    // line 85
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -227,16 +250,16 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 84
+        // line 86
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 85
+        // line 87
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 86
+        // line 88
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 
@@ -261,7 +284,7 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
     public function getDebugInfo()
     {
-        return array (  240 => 86,  236 => 85,  231 => 84,  221 => 83,  202 => 73,  184 => 57,  169 => 48,  165 => 47,  155 => 42,  150 => 40,  146 => 38,  142 => 37,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  263 => 88,  259 => 87,  254 => 86,  244 => 85,  225 => 75,  207 => 59,  192 => 50,  188 => 49,  178 => 44,  173 => 42,  165 => 41,  162 => 40,  158 => 39,  151 => 34,  140 => 32,  136 => 31,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -294,17 +317,19 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 \t\t\t\t<!-- Portfolio-filter -->
 \t\t\t\t<ul class=\"pf-filter pf-filter-gray text-center list-inline\">
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".done\" class=\"iso-button\">Réalisés</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".doing\" class=\"iso-button\">En cours</a></li>
-\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".todo\" class=\"iso-button\">À venir</a></li>
+\t\t\t\t\t<ul class=\"pf-filter text-center list-inline\">
+\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\"*\" class=\"iso-active iso-button\">Tous</a></li>
+\t\t\t\t\t\t\t{% for c in categories %}
+\t\t\t\t\t\t\t\t\t<li><a href=\"#\" data-filter=\".c{{c.id}}\" class=\"iso-button\">{{c.name}}</a></li>
+\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t</ul>
 \t\t\t\t</ul>
 
 \t\t\t\t<!-- Portfolio -->
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
 \t\t\t\t\t\t{% for project in projects %}
 \t\t\t\t\t\t\t\t<!-- Portfolio Item -->
-\t\t\t\t\t\t\t\t<div class=\"pf-item\">
+\t\t\t\t\t\t\t\t<div class=\"pf-item {% if project.state is defined and project.state is not null %}c{{project.state.id}} {% endif %}\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"movie\", {\"id\": project.id})}}\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}\" alt=\"{{project.picture.name}}\">

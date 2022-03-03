@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * MemberProject
@@ -22,14 +24,9 @@ class MemberProject
     private $id;
 
     /**
-     * @var \RoleProject
-     *
-     * @ORM\ManyToOne(targetEntity="RoleProject")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="role_project_id", referencedColumnName="id")
-     * })
+     * @ORM\ManyToMany(targetEntity="RoleProject", mappedBy="projects")
      */
-    private $roleProject;
+    private $roles;
 
     /**
      * @var \Member
@@ -106,14 +103,34 @@ class MemberProject
         return $this;
     }
 
-    public function getRoleProject(): ?RoleProject
+    public function __construct()
     {
-        return $this->roleProject;
+        $this->roles = new ArrayCollection();
     }
 
-    public function setRoleProject(?RoleProject $roleProject): self
+    /**
+     * @return Collection|RoleProject[]
+     */
+    public function getRoles(): Collection
     {
-        $this->roleProject = $roleProject;
+        return $this->roles;
+    }
+
+    public function addRole(RoleProject $role): self
+    {
+        if (!$this->roles->contains($role)) {
+            $this->roles[] = $role;
+            $role->addProject($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRole(RoleProject $role): self
+    {
+        if ($this->roles->removeElement($role)) {
+            $role->removeProject($this);
+        }
 
         return $this;
     }

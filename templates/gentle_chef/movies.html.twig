@@ -26,17 +26,19 @@
 
 				<!-- Portfolio-filter -->
 				<ul class="pf-filter pf-filter-gray text-center list-inline">
-						<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
-						<li><a href="#" data-filter=".done" class="iso-button">Réalisés</a></li>
-						<li><a href="#" data-filter=".doing" class="iso-button">En cours</a></li>
-						<li><a href="#" data-filter=".todo" class="iso-button">À venir</a></li>
+					<ul class="pf-filter text-center list-inline">
+							<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
+							{% for c in categories %}
+									<li><a href="#" data-filter=".c{{c.id}}" class="iso-button">{{c.name}}</a></li>
+							{% endfor %}
+					</ul>
 				</ul>
 
 				<!-- Portfolio -->
 				<div class="portfolio portfolio-isotope col-3">
 						{% for project in projects %}
 								<!-- Portfolio Item -->
-								<div class="pf-item">
+								<div class="pf-item {% if project.state is defined and project.state is not null %}c{{project.state.id}} {% endif %}">
 										<a href="{{url("movie", {"id": project.id})}}" class="pf-style">
 												<div class="pf-image">
 														<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">

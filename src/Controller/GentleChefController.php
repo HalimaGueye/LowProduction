@@ -66,6 +66,7 @@ class GentleChefController extends AbstractController
   {
       return $this->render('gentle_chef/movies.html.twig', [
           'controller_name' => 'GentleChefController',
+          'categories' => $em->getRepository(State::class)->findAll(),
           'projects' => $em->getRepository(Project::class)->findAll()
       ]);
   }

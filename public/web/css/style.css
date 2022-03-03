@@ -1853,7 +1853,14 @@ blockquote {
 }
 .blog {
   background-color: #f8f8f8;
+  word-wrap: break-word;
 }
+
+#blog .blog img{
+  height: 40vh;
+  object-fit: cover;
+}
+
 .blog-post-info {
   border-bottom: 1px solid #e6e6e6;
   padding: 10px 25px;
@@ -1879,9 +1886,11 @@ blockquote {
 .blog-post-body {
   padding: 15px 25px 25px;
 }
+
 .blog-post-body h4 {
   text-transform: none;
 }
+
 .blog-post-body h4 a {
   color: #5d5d5d;
 }
