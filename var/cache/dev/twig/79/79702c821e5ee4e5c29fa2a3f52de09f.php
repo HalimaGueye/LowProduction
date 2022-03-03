@@ -124,10 +124,10 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 \t\t\t\t\t\t";
         // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new RuntimeError('Variable "news" does not exist.', 21, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["new"]) {
             // line 22
-            echo "\t\t\t\t\t\t\t\t<div class=\"col-xs-12\">
+            echo "\t\t\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-20\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
@@ -178,6 +178,15 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         echo "\t\t\t\t\t\t<!-- PAGINATION A AJOUTER :) -->
 \t\t\t\t</div>
 \t\t</div>
+\t\t<br>
+\t\t<center>
+\t\t\t<div class=\"navigation\">
+\t\t\t    ";
+        // line 45
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 45, $this->source); })()));
+        echo "
+\t\t\t</div>
+\t\t</center>
 </section>
 <!--End News -->
 ";
@@ -189,7 +198,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     }
 
-    // line 46
+    // line 52
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -199,7 +208,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 47
+        // line 53
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
@@ -224,7 +233,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     public function getDebugInfo()
     {
-        return array (  203 => 47,  193 => 46,  178 => 39,  167 => 34,  163 => 33,  157 => 32,  149 => 29,  145 => 28,  135 => 25,  130 => 22,  126 => 21,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  212 => 53,  202 => 52,  186 => 45,  178 => 39,  167 => 34,  163 => 33,  157 => 32,  149 => 29,  145 => 28,  135 => 25,  130 => 22,  126 => 21,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -249,8 +258,8 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 <section class=\"blog-index\">
 \t\t<div class=\"container clearfix\">
 \t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t{% for new in news %}
-\t\t\t\t\t\t\t\t<div class=\"col-xs-12\">
+\t\t\t\t\t\t{% for new in pagination %}
+\t\t\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-20\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\", {\"id\": new.id})}}\"><img src=\"{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}\" alt=\"{{new.picture.name}}\"></a>
@@ -270,6 +279,12 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 \t\t\t\t\t\t<!-- PAGINATION A AJOUTER :) -->
 \t\t\t\t</div>
 \t\t</div>
+\t\t<br>
+\t\t<center>
+\t\t\t<div class=\"navigation\">
+\t\t\t    {{ knp_pagination_render(pagination) }}
+\t\t\t</div>
+\t\t</center>
 </section>
 <!--End News -->
 {% endblock %}

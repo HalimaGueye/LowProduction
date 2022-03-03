@@ -121,7 +121,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t<li data-index=\"rs-1\" data-transition=\"fadetotopfadefrombottom\" data-slotamount=\"default\" data-easein=\"Power3.easeInOut\" data-easeout=\"Power3.easeInOut\" data-masterspeed=\"1500\" data-rotate=\"0\"  data-saveperformance=\"off\"  data-title=\"N.Agency\" data-description=\"\">
 \t\t\t\t\t\t\t<img src=\"";
         // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "img/slider/s4.jpg\" alt=\"\" data-bgposition=\"center center\" data-bgfit=\"cover\" data-bgrepeat=\"no-repeat\" data-bgparallax=\"10\" class=\"rev-slidebg\" data-no-retina>
 
 \t\t\t\t\t\t\t<!-- LAYER NR. 1 -->
@@ -198,7 +198,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t<li data-index=\"rs-2\" data-slotamount=\"default\" data-easein=\"Power3.easeInOut\" data-easeout=\"Power3.easeInOut\" data-masterspeed=\"1500\" data-rotate=\"0\"  data-saveperformance=\"off\">
 \t\t\t\t\t\t\t<img alt=\"\" class=\"rev-slidebg\" data-bgparallax=\"3\" data-bgposition=\"center center\" data-duration=\"5000\" data-ease=\"Linear.easeNone\" data-kenburns=\"on\" data-no-retina=\"\" data-offsetend=\"0 0\" data-offsetstart=\"0 0\" data-rotateend=\"0\" data-rotatestart=\"0\" data-scaleend=\"100\" data-scalestart=\"110\" src=\"";
         // line 93
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "img/slider/s5.jpg\">
 
 \t\t\t\t\t\t\t<!-- LAYER NR. 1 -->
@@ -303,7 +303,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 <!-- Start Members -->
 <section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url(";
         // line 195
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
 \t\t<!-- Section Title -->
 \t\t<div class=\"section-title text-center white-color m-bottom-40\">
@@ -361,7 +361,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t\tVous souhaitez vous mobiliser à nos côtés et aller <strong>encore plus loin dans votre engagement</strong> ?
 \t\t\t\t\t\t\t\t\t<br>Les <a target=\"_blank\" href=\"";
         // line 226
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/pdf/statuts_low_production.pdf"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/pdf/statuts_low_production.pdf"), "html", null, true);
         echo "\">statuts de l'association</a> prévoient plusieurs qualités de membres pour répondre à plusieurs niveaux d'investissement. Faites <b>votre choix</b> !
 \t\t\t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t\t\tN'hésitez pas à nous contacter pour <b>en savoir plus</b> sur l'association, avant de franchir le pas :)
@@ -369,7 +369,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t<center>
 \t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
         // line 231
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/img/pdf/dossier_candidature_low_production.pdf"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/pdf/dossier_candidature_low_production.pdf"), "html", null, true);
         echo "\" class=\"btn btn-main m-top-20 btn-theme wow fadeInLeft\" href=\"#\" data-wow-duration=\"1s\" data-wow-delay=\"0.5s\">Dossier de candidature</a>
 \t\t\t\t\t\t\t\t</center>
 \t\t\t\t\t\t</div>
@@ -404,41 +404,41 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t<!-- RS Plugin Extensions -->
 \t<script src=\"";
         // line 244
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.carousel.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.carousel.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
         // line 245
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
         // line 246
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
         // line 247
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/inc/revolution/js/extensions/revolution.extension.migration.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.migration.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
         // line 248
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/js/visible-jquery.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/visible-jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Components Plugin -->
 \t<script src=\"";
         // line 251
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 252
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 253
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"";
         // line 254
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
 \t<!-- Slider configuration -->
@@ -569,7 +569,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 
 \t\t\t\t\t\t<!-- slider Item 1 -->
 \t\t\t\t\t\t<li data-index=\"rs-1\" data-transition=\"fadetotopfadefrombottom\" data-slotamount=\"default\" data-easein=\"Power3.easeInOut\" data-easeout=\"Power3.easeInOut\" data-masterspeed=\"1500\" data-rotate=\"0\"  data-saveperformance=\"off\"  data-title=\"N.Agency\" data-description=\"\">
-\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/slider/s4.jpg\" alt=\"\" data-bgposition=\"center center\" data-bgfit=\"cover\" data-bgrepeat=\"no-repeat\" data-bgparallax=\"10\" class=\"rev-slidebg\" data-no-retina>
+\t\t\t\t\t\t\t<img src=\"{{asset('web/')}}img/slider/s4.jpg\" alt=\"\" data-bgposition=\"center center\" data-bgfit=\"cover\" data-bgrepeat=\"no-repeat\" data-bgparallax=\"10\" class=\"rev-slidebg\" data-no-retina>
 
 \t\t\t\t\t\t\t<!-- LAYER NR. 1 -->
 \t\t\t\t\t\t\t<div class=\"tp-caption NotGeneric-Title tp-resizeme white-color rs-parallaxlevel-3\"
@@ -643,7 +643,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 
 \t\t\t\t\t\t<!-- slider Item 2 -->
 \t\t\t\t\t\t<li data-index=\"rs-2\" data-slotamount=\"default\" data-easein=\"Power3.easeInOut\" data-easeout=\"Power3.easeInOut\" data-masterspeed=\"1500\" data-rotate=\"0\"  data-saveperformance=\"off\">
-\t\t\t\t\t\t\t<img alt=\"\" class=\"rev-slidebg\" data-bgparallax=\"3\" data-bgposition=\"center center\" data-duration=\"5000\" data-ease=\"Linear.easeNone\" data-kenburns=\"on\" data-no-retina=\"\" data-offsetend=\"0 0\" data-offsetstart=\"0 0\" data-rotateend=\"0\" data-rotatestart=\"0\" data-scaleend=\"100\" data-scalestart=\"110\" src=\"{{asset('bundles/web/')}}img/slider/s5.jpg\">
+\t\t\t\t\t\t\t<img alt=\"\" class=\"rev-slidebg\" data-bgparallax=\"3\" data-bgposition=\"center center\" data-duration=\"5000\" data-ease=\"Linear.easeNone\" data-kenburns=\"on\" data-no-retina=\"\" data-offsetend=\"0 0\" data-offsetstart=\"0 0\" data-rotateend=\"0\" data-rotatestart=\"0\" data-scaleend=\"100\" data-scalestart=\"110\" src=\"{{asset('web/')}}img/slider/s5.jpg\">
 
 \t\t\t\t\t\t\t<!-- LAYER NR. 1 -->
 \t\t\t\t\t\t\t<div class=\"tp-caption NotGeneric-Title tp-resizeme white-color rs-parallaxlevel-3\"
@@ -745,7 +745,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 <!-- End Support 1 -->
 
 <!-- Start Members -->
-<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url({{asset('bundles/web/')}}img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
+<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url({{asset('web/')}}img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
 \t\t<!-- Section Title -->
 \t\t<div class=\"section-title text-center white-color m-bottom-40\">
 \t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Paroles de membres</h2>
@@ -776,12 +776,12 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
 \t\t\t\t\t\t\t\t\tVous souhaitez vous mobiliser à nos côtés et aller <strong>encore plus loin dans votre engagement</strong> ?
-\t\t\t\t\t\t\t\t\t<br>Les <a target=\"_blank\" href=\"{{asset('bundles/web/img/pdf/statuts_low_production.pdf')}}\">statuts de l'association</a> prévoient plusieurs qualités de membres pour répondre à plusieurs niveaux d'investissement. Faites <b>votre choix</b> !
+\t\t\t\t\t\t\t\t\t<br>Les <a target=\"_blank\" href=\"{{asset('web/img/pdf/statuts_low_production.pdf')}}\">statuts de l'association</a> prévoient plusieurs qualités de membres pour répondre à plusieurs niveaux d'investissement. Faites <b>votre choix</b> !
 \t\t\t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t\t\tN'hésitez pas à nous contacter pour <b>en savoir plus</b> sur l'association, avant de franchir le pas :)
 \t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t<center>
-\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{asset('bundles/web/img/pdf/dossier_candidature_low_production.pdf')}}\" class=\"btn btn-main m-top-20 btn-theme wow fadeInLeft\" href=\"#\" data-wow-duration=\"1s\" data-wow-delay=\"0.5s\">Dossier de candidature</a>
+\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"{{asset('web/img/pdf/dossier_candidature_low_production.pdf')}}\" class=\"btn btn-main m-top-20 btn-theme wow fadeInLeft\" href=\"#\" data-wow-duration=\"1s\" data-wow-delay=\"0.5s\">Dossier de candidature</a>
 \t\t\t\t\t\t\t\t</center>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -794,17 +794,17 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t{{parent()}}
 
 \t<!-- RS Plugin Extensions -->
-\t<script src=\"{{ asset('bundles/web/inc/revolution/js/extensions/revolution.extension.carousel.min.js')}}\"></script>
-\t<script src=\"{{ asset('bundles/web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js')}}\"></script>
-\t<script src=\"{{ asset('bundles/web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js')}}\"></script>
-\t<script src=\"{{ asset('bundles/web/inc/revolution/js/extensions/revolution.extension.migration.min.js')}}\"></script>
-\t<script src=\"{{ asset('bundles/web/js/visible-jquery.min.js')}}\"></script>
+\t<script src=\"{{ asset('web/inc/revolution/js/extensions/revolution.extension.carousel.min.js')}}\"></script>
+\t<script src=\"{{ asset('web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js')}}\"></script>
+\t<script src=\"{{ asset('web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js')}}\"></script>
+\t<script src=\"{{ asset('web/inc/revolution/js/extensions/revolution.extension.migration.min.js')}}\"></script>
+\t<script src=\"{{ asset('web/js/visible-jquery.min.js')}}\"></script>
 
 \t<!-- Components Plugin -->
-\t<script src=\"{{ asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
-\t<script src=\"{{ asset('bundles/web/')}}inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
+\t<script src=\"{{ asset('web/')}}js/imagesloaded.pkgd.min.js\"></script>
+\t<script src=\"{{ asset('web/')}}js/isotope.pkgd.min.js\"></script>
+\t<script src=\"{{ asset('web/')}}inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
+\t<script src=\"{{ asset('web/')}}inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
 \t<!-- Slider configuration -->
 \t<script>

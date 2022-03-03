@@ -233,11 +233,11 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
         echo "
 \t<script src=\"";
         // line 85
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 86
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 
 ";
@@ -350,8 +350,8 @@ class __TwigTemplate_495d41b6ea4b3aab3c9f8ee6d6267baf extends Template
 
 {% block js %}
 \t{{parent()}}
-\t<script src=\"{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
-\t<script src=\"{{asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
+\t<script src=\"{{asset('web/')}}js/imagesloaded.pkgd.min.js\"></script>
+\t<script src=\"{{asset('web/')}}js/isotope.pkgd.min.js\"></script>
 
 {% endblock %}
 ", "gentle_chef/movies.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\movies.html.twig");

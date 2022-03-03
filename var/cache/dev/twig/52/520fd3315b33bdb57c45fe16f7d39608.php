@@ -211,7 +211,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
 \t<script src=\"";
         // line 57
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/lazyload.min.js\"></script>
 
 \t<script type=\"text/javascript\" charset=\"utf-8\">
@@ -305,7 +305,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 {% block js %}
 \t{{parent()}}
 
-\t<script src=\"{{ asset('bundles/web/')}}js/lazyload.min.js\"></script>
+\t<script src=\"{{ asset('web/')}}js/lazyload.min.js\"></script>
 
 \t<script type=\"text/javascript\" charset=\"utf-8\">
 \t\t\$(function() {

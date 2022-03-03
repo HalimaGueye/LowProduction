@@ -253,7 +253,10 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t<!-- Contact Form -->
-\t<script src=\"js/contact.js\"></script>
+\t<script src=\"";
+        // line 134
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
+        echo "js/contact.js\"></script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -275,7 +278,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 
     public function getDebugInfo()
     {
-        return array (  252 => 132,  242 => 131,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  258 => 134,  252 => 132,  242 => 131,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -413,7 +416,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 {% block js %}
 \t{{parent()}}
 \t<!-- Contact Form -->
-\t<script src=\"js/contact.js\"></script>
+\t<script src=\"{{asset('web/')}}js/contact.js\"></script>
 {% endblock %}
 ", "gentle_chef/contact.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\contact.html.twig");
     }

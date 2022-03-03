@@ -141,7 +141,7 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
         // line 36
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "img/studies/1.jpg\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
@@ -166,7 +166,7 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
         // line 55
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "img/studies/2.jpg\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
@@ -233,11 +233,11 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
         echo "
 \t<script src=\"";
         // line 97
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
         // line 98
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/web/"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 
 ";
@@ -301,7 +301,7 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
 \t\t\t\t\t\t<div class=\"pf-item acv\">
 \t\t\t\t\t\t\t\t<a href=\"{{url('study')}}\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/studies/1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('web/')}}img/studies/1.jpg\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
@@ -320,7 +320,7 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
 \t\t\t\t\t\t<div class=\"pf-item general\">
 \t\t\t\t\t\t\t\t<a href=\"{{url('study')}}\" class=\"pf-style\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('bundles/web/')}}img/studies/2.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('web/')}}img/studies/2.jpg\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
@@ -362,8 +362,8 @@ class __TwigTemplate_1ff5fac10a2126c1d2b1fc312c25c00c extends Template
 
 {% block js %}
 \t{{parent()}}
-\t<script src=\"{{asset('bundles/web/')}}js/imagesloaded.pkgd.min.js\"></script>
-\t<script src=\"{{asset('bundles/web/')}}js/isotope.pkgd.min.js\"></script>
+\t<script src=\"{{asset('web/')}}js/imagesloaded.pkgd.min.js\"></script>
+\t<script src=\"{{asset('web/')}}js/isotope.pkgd.min.js\"></script>
 
 {% endblock %}
 ", "gentle_chef/studies.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\studies.html.twig");

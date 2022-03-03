@@ -18,8 +18,8 @@
 <section class="blog-index">
 		<div class="container clearfix">
 				<div class="row">
-						{% for new in news %}
-								<div class="col-xs-12">
+						{% for new in pagination %}
+								<div class="col-xs-12 m-bottom-20">
 										<div class="blog wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
 												<div class="blog-media">
 														<a  href="{{url("new", {"id": new.id})}}"><img src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt="{{new.picture.name}}"></a>
@@ -39,6 +39,12 @@
 						<!-- PAGINATION A AJOUTER :) -->
 				</div>
 		</div>
+		<br>
+		<center>
+			<div class="navigation">
+			    {{ knp_pagination_render(pagination) }}
+			</div>
+		</center>
 </section>
 <!--End News -->
 {% endblock %}

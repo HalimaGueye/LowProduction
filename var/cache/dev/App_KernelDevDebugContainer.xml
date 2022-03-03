@@ -318,7 +318,7 @@
       </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
-    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.pagination">gentle_chef/pagination.html.twig</parameter>
     <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
     <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">15</parameter>
@@ -6743,7 +6743,7 @@
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
       <tag name="container.hot_path"/>
       <argument type="collection">
-        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</argument>
+        <argument key="defaultPaginationTemplate">gentle_chef/pagination.html.twig</argument>
         <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
         <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
         <argument key="defaultPageRange">15</argument>
