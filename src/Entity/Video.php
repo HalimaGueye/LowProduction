@@ -52,7 +52,7 @@ class Video
     /**
      * @var \Project
      *
-     * @ORM\ManyToOne(targetEntity="Project")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="videos")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      * })

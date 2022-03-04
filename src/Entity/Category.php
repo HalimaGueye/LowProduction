@@ -48,7 +48,7 @@ class Category
     private $motherCategory;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Project")
+     * @ORM\ManyToMany(targetEntity="Project", inversedBy="categories")
      * @ORM\JoinTable(name="project_category",
      *      joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id")}

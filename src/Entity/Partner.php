@@ -52,7 +52,7 @@ class Partner
     private $picture;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Project")
+     * @ORM\ManyToMany(targetEntity="Project", inversedBy="partners")
      * @ORM\JoinTable(name="project_partner",
      *      joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="partner_id", referencedColumnName="id")}

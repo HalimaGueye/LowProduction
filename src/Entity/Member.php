@@ -75,7 +75,7 @@ class Member
     private $projects;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Article")
+     * @ORM\ManyToMany(targetEntity="Article", inversedBy="writers")
      * @ORM\JoinTable(name="member_article",
      *      joinColumns={@ORM\JoinColumn(name="article_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="member_id", referencedColumnName="id")}
@@ -84,7 +84,7 @@ class Member
     private $articles;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Comic")
+     * @ORM\ManyToMany(targetEntity="Comic", inversedBy="writers")
      * @ORM\JoinTable(name="member_comic",
      *      joinColumns={@ORM\JoinColumn(name="comic_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="member_id", referencedColumnName="id")}

@@ -31,7 +31,7 @@ class MemberProject
     /**
      * @var \Member
      *
-     * @ORM\ManyToOne(targetEntity="Member")
+     * @ORM\ManyToOne(targetEntity="Member", inversedBy="projects")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="member_id", referencedColumnName="id")
      * })

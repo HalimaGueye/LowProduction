@@ -41,7 +41,7 @@ class Portfolio
     /**
      * @var \Member
      *
-     * @ORM\ManyToOne(targetEntity="Member")
+     * @ORM\ManyToOne(targetEntity="Member", inversedBy="portfolios")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="member_id", referencedColumnName="id")
      * })

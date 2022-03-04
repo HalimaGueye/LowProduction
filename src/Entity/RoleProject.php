@@ -43,7 +43,7 @@ class RoleProject
     private $icone;
 
     /**
-     * @ORM\ManyToMany(targetEntity="MemberProject")
+     * @ORM\ManyToMany(targetEntity="MemberProject", inversedBy="roles")
      * @ORM\JoinTable(name="project_member_role",
      *      joinColumns={@ORM\JoinColumn(name="role_project_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="project_member_id", referencedColumnName="id")}
