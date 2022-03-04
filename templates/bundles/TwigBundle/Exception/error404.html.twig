@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="p-bottom-50">
+    <center>
+      <span style="font-size:10em;">Oops!</span>
+      <h1>Une erreur est survenue...</h1>
+      <p>La page que vous cherchez n'est pas accessible.<br>
+        Vous pouvez revenir à <a href="{{ path('home') }}">la page d'accueil</a>.</p>
+      <br>
+      <p><b>Détails techniques : </b> Erreur {{status_code}}, {{status_text}}</p>
+    </center>
+  </div>
+{% endblock %}
