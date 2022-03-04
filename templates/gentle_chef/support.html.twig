@@ -185,34 +185,37 @@
 									Il est possible de s’engager en <b>adhérant</b>, en <b>participant</b> à nos missions, en organisant des <b>diffusions</b> chez soi ou en faisant une <b>donation</b> à l’association.
 								</p>
 								<iframe class="m-top-30 iframe-helloasso" id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/low-production/formulaires/1/widget"></iframe>
+								<span>Ouvrir la page <a target="_blank" href="https://www.helloasso.com/associations/low-production/formulaires/1/widget">dans un autre onglet</a>.</span>
 						</div>
 				</div>
 		</div>
 </section>
 <!-- End Support 1 -->
 
-<!-- Start Members -->
-<section id="members" class="parallax-bg overlay-dark p-top-80 p-bottom-80" style="background-image:url({{asset('web/')}}img/members-bg.jpg)" data-stellar-background-ratio="0.2">
-		<!-- Section Title -->
-		<div class="section-title text-center white-color m-bottom-40">
-				<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Paroles de membres</h2>
-				<div class="divider-center-small divider-white wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-		</div>
-		<!-- === Testimonials === -->
-		<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
-				{% for m in members %}
-						<div class="testimonial-item text-center">
-								<p class="testimonial-desc">{{m.quote|raw}}</p>
-								<div class="testimonial-thumb">
-										<img class="img-responsive" src="{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}" alt="{{m.picture.name}}">
+{% if members is defined and members is not null and members|length > 0 %}
+		<!-- Start Members -->
+		<section id="members" class="parallax-bg overlay-dark p-top-80 p-bottom-80" style="background-image:url({{asset('web/')}}img/members-bg.jpg)" data-stellar-background-ratio="0.2">
+				<!-- Section Title -->
+				<div class="section-title text-center white-color m-bottom-40">
+						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Paroles de membres</h2>
+						<div class="divider-center-small divider-white wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+				</div>
+				<!-- === Testimonials === -->
+				<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
+						{% for m in members %}
+								<div class="testimonial-item text-center">
+										<p class="testimonial-desc">{{m.quote|raw}}</p>
+										<div class="testimonial-thumb">
+												<img class="img-responsive" src="{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}" alt="{{m.picture.name}}">
+										</div>
+										<h5 class="testimonial-author">{{m.name}}</h5>
+										<h5 class="testimonial-profession">{{m.description|raw}}</h5>
 								</div>
-								<h5 class="testimonial-author">{{m.name}}</h5>
-								<h5 class="testimonial-profession">{{m.description|raw}}</h5>
-						</div>
-				{% endfor %}
-		</div>
-</section>
-<!-- End Members -->
+						{% endfor %}
+				</div>
+		</section>
+		<!-- End Members -->
+{% endif %}
 
 <!-- Start Support 2  -->
 <section id="join-us" class="p-top-30 p-bottom-50">

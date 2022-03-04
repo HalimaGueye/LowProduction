@@ -429,7 +429,7 @@
 				<div class="row m-top-50">
 						<div class="col-md-8 col-md-offset-2">
 							<center>
-								<a #id="bd-button" class="btn btn-main wow fadeInUp" href="{{url("story")}}" data-wow-duration="1s" data-wow-delay="0.8s">Découvrir les origines du projet<br>en bande dessinée</a>
+								<a #id="bd-button" class="btn btn-main wow fadeInUp" href="{{url("story")}}" data-wow-duration="1s" data-wow-delay="0.8s">Découvrir les origines du projet</a>
 							</center>
 						</div>
 				</div>
@@ -456,130 +456,138 @@
 </div>
 <!-- End Video Section -->
 
-<!-- Start Portfolio -->
-<section id="portfolio" class="light-bg p-top-80 p-bottom-80">
-		<div class="container">
+{% if projects is defined and projects is not null and projects|length > 0 %}
+		<!-- Start Portfolio -->
+		<section id="portfolio" class="light-bg p-top-80 p-bottom-80">
+				<div class="container">
 
-				<!-- Section Title -->
-				<div class="section-title text-center m-bottom-30">
-						<h2><strong>Nos derniers films</strong></h2>
-						<div class="divider-center-small"></div>
-				</div>
+						<!-- Section Title -->
+						<div class="section-title text-center m-bottom-30">
+								<h2><strong>Nos derniers films</strong></h2>
+								<div class="divider-center-small"></div>
+						</div>
 
-				<!-- Portfolio-filter -->
-				<ul class="pf-filter text-center list-inline">
-						<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
-						{% for c in categories %}
-								<li><a href="#" data-filter=".c{{c.id}}" class="iso-button">{{c.name}}</a></li>
-						{% endfor %}
-				</ul>
+						<!-- Portfolio-filter -->
+						<ul class="pf-filter text-center list-inline">
+								<li><a href="#" data-filter="*" class="iso-active iso-button">Tous</a></li>
+								{% for c in categories %}
+										<li><a href="#" data-filter=".c{{c.id}}" class="iso-button">{{c.name}}</a></li>
+								{% endfor %}
+						</ul>
 
-				<!-- Portfolio -->
-				<div class="portfolio portfolio-isotope col-3 gutter">
-						{% for project in projects %}
-								<div class="pf-item {% if project.state is defined and project.state is not null %}c{{project.state.id}} {% endif %}">
-										<a href="{{url("movie", {"id": project.id})}}" class="pf-style pf-pointer">
-												<div class="pf-image">
-														<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">
-														<div class="overlay">
-																<div class="overlay-caption">
-																		<div class="overlay-content">
-																				<div class="pf-info white-color">
-																						<h4 class="pf-title">{{project.name}}</h4>
+						<!-- Portfolio -->
+						<div class="portfolio portfolio-isotope col-3 gutter">
+								{% for project in projects %}
+										<div class="pf-item {% if project.state is defined and project.state is not null %}c{{project.state.id}} {% endif %}">
+												<a href="{{url("movie", {"id": project.id})}}" class="pf-style pf-pointer">
+														<div class="pf-image">
+																<img src="{{asset(vich_uploader_asset(project.picture, 'imageFile'))}}" alt="{{project.picture.name}}">
+																<div class="overlay">
+																		<div class="overlay-caption">
+																				<div class="overlay-content">
+																						<div class="pf-info white-color">
+																								<h4 class="pf-title">{{project.name}}</h4>
+																						</div>
 																				</div>
 																		</div>
 																</div>
 														</div>
-												</div>
-										</a>
+												</a>
+										</div>
+								{% endfor %}
+						</div>
+				</div>
+		</section>
+		<!-- End Portfolio -->
+{% endif %}
+
+{% if supporters is defined and supporters is not null and supporters|length > 0 %}
+		<!-- Start Testimonial -->
+		<section id="testimonials" class="parallax-bg overlay-dark p-top-80 p-bottom-80" style="background-image:url({{asset('web/img/testimonial-bg.jpg')}}" data-stellar-background-ratio="0.1">
+				<!-- Section Title -->
+				<div class="section-title text-center white-color m-bottom-40">
+						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Ils nous soutiennent</h2>
+						<div class="divider-center-small divider-white wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+				</div>
+				<!-- === Testimonials === -->
+				<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
+						{% for supporter in supporters %}
+								<div class="testimonial-item text-center">
+										<p class="testimonial-desc">{{supporter.quote|raw}}</p>
+										<div class="testimonial-thumb">
+												<img class="img-responsive" src="{{asset(vich_uploader_asset(supporter.picture, 'imageFile'))}}" alt="{{supporter.picture.name}}">
+										</div>
+										<a target="_blank" href="{{supporter.url}}"><h5 class="testimonial-author">{{supporter.name}}</h5></a>
+										<h5 class="testimonial-profession">{{supporter.profession|raw}}</h5>
 								</div>
 						{% endfor %}
 				</div>
-		</div>
-</section>
-<!-- End Portfolio -->
+		</section>
+		<!-- End Testimonial -->
+{% endif %}
 
-<!-- Start Testimonial -->
-<section id="testimonials" class="parallax-bg overlay-dark p-top-80 p-bottom-80" style="background-image:url({{asset('web/img/testimonial-bg.jpg')}}" data-stellar-background-ratio="0.1">
-		<!-- Section Title -->
-		<div class="section-title text-center white-color m-bottom-40">
-				<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Ils nous soutiennent</h2>
-				<div class="divider-center-small divider-white wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-		</div>
-		<!-- === Testimonials === -->
-		<div id="owl-testimonials" class="owl-carousel owl-theme testimonial text-center white-color">
-				{% for supporter in supporters %}
-						<div class="testimonial-item text-center">
-								<p class="testimonial-desc">{{supporter.quote|raw}}</p>
-								<div class="testimonial-thumb">
-										<img class="img-responsive" src="{{asset(vich_uploader_asset(supporter.picture, 'imageFile'))}}" alt="{{supporter.picture.name}}">
-								</div>
-								<a target="_blank" href="{{supporter.url}}"><h5 class="testimonial-author">{{supporter.name}}</h5></a>
-								<h5 class="testimonial-profession">{{supporter.profession|raw}}</h5>
-						</div>
-				{% endfor %}
-		</div>
-</section>
-<!-- End Testimonial -->
-
-<!-- Start blog -->
-<section id="blog" class="p-top-80 p-bottom-80">
-		<div class="container ">
-				<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-								<!-- Section Title -->
-								<div class="section-title text-center m-bottom-40">
-										<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Dernières actualités</h2>
-										<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-										<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">Retrouvez ci-dessous nos dernières actualités.</p>
+{% if news is defined and news is not null and news|length > 0 %}
+		<!-- Start blog -->
+		<section id="blog" class="p-top-80 p-bottom-80">
+				<div class="container ">
+						<div class="row">
+								<div class="col-md-8 col-md-offset-2">
+										<!-- Section Title -->
+										<div class="section-title text-center m-bottom-40">
+												<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Dernières actualités</h2>
+												<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+												<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">Retrouvez ci-dessous nos dernières actualités.</p>
+										</div>
 								</div>
 						</div>
-				</div>
 
-				<div class="row">
-						<!-- === blog === -->
-						<div id="owl-blog" class="owl-carousel owl-theme">
-								{% for new in news %}
-										<div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
-												<div class="blog-media">
-														<a  href="{{url("new", {"id": new.id})}}"><img src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt=""></a>
+						<div class="row">
+								<!-- === blog === -->
+								<div id="owl-blog" class="owl-carousel owl-theme">
+										{% for new in news %}
+												<div class="blog wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+														<div class="blog-media">
+																<a  href="{{url("new", {"id": new.id})}}"><img src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt=""></a>
+														</div>
+														<div class="blog-post-info clearfix">
+																<span class="time"><i class="fa fa-calendar"></i>{{new.publication|date("d/m/Y")}}</span>
+																<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{% if new.writer is defined and new.writer is not null %}{{new.writer.name}}{% endif %}</a></span>
+														</div>
+														<div class="blog-post-body">
+																<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
+																<p class="p-bottom-20">{{new.article|striptags|slice(0, 50)}}...</p>
+																<a href="{{url("new", {"id": new.id})}}" class="read-more">En savoir plus >></a>
+														</div>
 												</div>
-												<div class="blog-post-info clearfix">
-														<span class="time"><i class="fa fa-calendar"></i>{{new.publication|date("d/m/Y")}}</span>
-														<span class="comments"><a href="#"><i class="fa fa-pencil"></i>{% if new.writer is defined and new.writer is not null %}{{new.writer.name}}{% endif %}</a></span>
-												</div>
-												<div class="blog-post-body">
-														<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
-														<p class="p-bottom-20">{{new.article|striptags|slice(0, 50)}}...</p>
-														<a href="{{url("new", {"id": new.id})}}" class="read-more">En savoir plus >></a>
-												</div>
-										</div>
-								{% endfor %}
+										{% endfor %}
+								</div>
 						</div>
 				</div>
-		</div>
-</section>
+		</section>
+{% endif %}
 
-<!-- Start client -->
-<section id="client" class="light-bg p-top-80 p-bottom-80">
-		<div class="section-title text-center m-bottom-40">
-				<h2>Nos partenaires</h2>
-				<div class="divider-center-small"></div>
-		</div>
-		<!-- === Clients === -->
-		<div class="container ">
-				<div class="row">
-						<div id="owl-clients" class="owl-carousel owl-theme client text-center">
-								{% for partner in partners %}
-										<div class="client-item text-center">
-												<a target="_blank" href="{{partner.url}}"><img class="img-responsive" src="{{asset(vich_uploader_asset(partner.picture, 'imageFile'))}}" alt="{{partner.picture.name}}"></a>
-										</div>
-								{% endfor %}
+{% if partners is defined and partners is not null and partners|length > 0 %}
+		<!-- Start client -->
+		<section id="client" class="light-bg p-top-80 p-bottom-80">
+				<div class="section-title text-center m-bottom-40">
+						<h2>Nos partenaires</h2>
+						<div class="divider-center-small"></div>
+				</div>
+				<!-- === Clients === -->
+				<div class="container ">
+						<div class="row">
+								<div id="owl-clients" class="owl-carousel owl-theme client text-center">
+										{% for partner in partners %}
+												<div class="client-item text-center">
+														<a target="_blank" href="{{partner.url}}"><img class="img-responsive" src="{{asset(vich_uploader_asset(partner.picture, 'imageFile'))}}" alt="{{partner.picture.name}}"></a>
+												</div>
+										{% endfor %}
+								</div>
 						</div>
 				</div>
-		</div>
-</section>
-<!-- End client -->
+		</section>
+		<!-- End client -->
+{% endif %}
 
 {% endblock %}
 

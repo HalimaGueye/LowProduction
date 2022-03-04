@@ -8,46 +8,62 @@
 
 {% block body %}
 <!-- Start Story -->
-<section id="bd" class="p-top-50 p-bottom-20">
+<section id="bd" class="p-top-50">
 		<div class="container">
 				<div class="section-title text-center m-bottom-50">
 						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Notre histoire</h2>
 						<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
 						<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
 							Low Production a été fondée en 2022 à la suite un premier projet <b>documentaire</b> (<em>Berr(k)e</em>, 2021) dont l'exercice soulevait une question : <b>comment conter l'environnement sans l'impacter ?</b> Afin d'y répondre l'association cherche, depuis sa création, à <b>expérimenter</b> et documenter de manière <b>transparente</b> de <b>nouvelles manières</b> de produire et réaliser des documentaires. À partir de ses travaux, elle cherche à <b>transformer</b> et <b>sensibiliser</b> le milieu audiovisuel aux techniques de <em>Low Production</em>.
-							<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>. Afin de vous raconter cette histoire, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+							<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>.
+							<center style="padding:20px;"><img class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" alt="illustration activité associative" src="{{asset('web/img/story-illustration.png')}}"></img></center>
 				</div>
 		</div>
 </section>
 <!-- End Story -->
 
-<!-- Portfolio -->
-<section id="films" class="p-top-20 p-bottom-80">
+<!-- Start BD -->
+<section id="bd" class="p-top-20 p-bottom-20">
 		<div class="container">
-				<div class="portfolio portfolio-isotope col-3">
-						{% for comic in comics %}
-								<div class="pf-item">
-										<a href="{{comic.url}}" target="_blank" class="pf-style">
-												<div class="pf-image">
-														<img src="{{asset(vich_uploader_asset(comic.picture, 'imageFile'))}}" alt="{{comic.picture.name}}">
-														<div class="overlay">
-																<div class="overlay-caption">
-																		<div class="overlay-content">
-																				<div class="pf-info white-color">
-																						<h4 class="pf-title">{{comic.name}}</h4>
-																						<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>
+				<div class="section-title text-center m-bottom-50">
+						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Bande dessinée</h2>
+						<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+						<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+							Afin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+				</div>
+		</div>
+</section>
+<!-- End BD -->
+
+{% if comics is defined and comics is not null and comics|length > 0 %}
+		<!-- BDs -->
+		<section id="bds" class="p-top-20 p-bottom-80">
+				<div class="container">
+						<div class="portfolio portfolio-isotope col-3">
+								{% for comic in comics %}
+										<div class="pf-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+												<a href="{{comic.url}}" target="_blank" class="pf-style">
+														<div class="pf-image">
+																<img src="{{asset(vich_uploader_asset(comic.picture, 'imageFile'))}}" alt="{{comic.picture.name}}">
+																<div class="overlay">
+																		<div class="overlay-caption">
+																				<div class="overlay-content">
+																						<div class="pf-info white-color">
+																								<h4 class="pf-title">{{comic.name}}</h4>
+																								{% if comic.writers is defined and comic.writers is not null and comic.writers|length > 0 %}<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>{% endif %}
+																						</div>
 																				</div>
 																		</div>
 																</div>
 														</div>
-												</div>
-										</a>
-								</div>
-						{% endfor %}
+												</a>
+										</div>
+								{% endfor %}
+						</div>
 				</div>
-		</div>
-</section>
-<!-- Portfolio -->
+		</section>
+		<!-- BDs -->
+{% endif %}
 
 {% endblock %}
 

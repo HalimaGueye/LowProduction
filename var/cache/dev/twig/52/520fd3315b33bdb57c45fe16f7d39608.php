@@ -111,83 +111,111 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
         // line 10
         echo "<!-- Start Story -->
-<section id=\"bd\" class=\"p-top-50 p-bottom-20\">
+<section id=\"bd\" class=\"p-top-50\">
 \t\t<div class=\"container\">
 \t\t\t\t<div class=\"section-title text-center m-bottom-50\">
 \t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Notre histoire</h2>
 \t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
 \t\t\t\t\t\t\tLow Production a été fondée en 2022 à la suite un premier projet <b>documentaire</b> (<em>Berr(k)e</em>, 2021) dont l'exercice soulevait une question : <b>comment conter l'environnement sans l'impacter ?</b> Afin d'y répondre l'association cherche, depuis sa création, à <b>expérimenter</b> et documenter de manière <b>transparente</b> de <b>nouvelles manières</b> de produire et réaliser des documentaires. À partir de ses travaux, elle cherche à <b>transformer</b> et <b>sensibiliser</b> le milieu audiovisuel aux techniques de <em>Low Production</em>.
-\t\t\t\t\t\t\t<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>. Afin de vous raconter cette histoire, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t\t\t\t<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>.
+\t\t\t\t\t\t\t<center style=\"padding:20px;\"><img class=\"wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\" alt=\"illustration activité associative\" src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/story-illustration.png"), "html", null, true);
+        echo "\"></img></center>
 \t\t\t\t</div>
 \t\t</div>
 </section>
 <!-- End Story -->
 
-<!-- Portfolio -->
-<section id=\"films\" class=\"p-top-20 p-bottom-80\">
+<!-- Start BD -->
+<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
 \t\t<div class=\"container\">
-\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
-\t\t\t\t\t\t";
-        // line 28
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 28, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["comic"]) {
-            // line 29
-            echo "\t\t\t\t\t\t\t\t<div class=\"pf-item\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "url", [], "any", false, false, false, 30), "html", null, true);
-            echo "\" target=\"_blank\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["comic"], "picture", [], "any", false, false, false, 32), "imageFile")), "html", null, true);
-            echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comic"], "picture", [], "any", false, false, false, 32), "name", [], "any", false, false, false, 32), "html", null, true);
-            echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "name", [], "any", false, false, false, 37), "html", null, true);
-            echo "</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Par :</b> ";
-            // line 38
+\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
+\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
+\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t</div>
+\t\t</div>
+</section>
+<!-- End BD -->
+
+";
+        // line 38
+        if (((array_key_exists("comics", $context) &&  !(null === (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 38, $this->source); })()))) && (twig_length_filter($this->env, (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 38, $this->source); })())) > 0))) {
+            // line 39
+            echo "\t\t<!-- BDs -->
+\t\t<section id=\"bds\" class=\"p-top-20 p-bottom-80\">
+\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
+\t\t\t\t\t\t\t\t";
+            // line 43
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 38));
-            foreach ($context['_seq'] as $context["_key"] => $context["w"]) {
-                echo " ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["w"], "name", [], "any", false, false, false, 38), "html", null, true);
-                if (($context["w"] != twig_last($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 38)))) {
-                    echo ", ";
+            $context['_seq'] = twig_ensure_traversable((isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 43, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["comic"]) {
+                // line 44
+                echo "\t\t\t\t\t\t\t\t\t\t<div class=\"pf-item wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                // line 45
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "url", [], "any", false, false, false, 45), "html", null, true);
+                echo "\" target=\"_blank\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+                // line 47
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["comic"], "picture", [], "any", false, false, false, 47), "imageFile")), "html", null, true);
+                echo "\" alt=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comic"], "picture", [], "any", false, false, false, 47), "name", [], "any", false, false, false, 47), "html", null, true);
+                echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">";
+                // line 52
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "name", [], "any", false, false, false, 52), "html", null, true);
+                echo "</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+                // line 53
+                if (((twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", true, true, false, 53) &&  !(null === twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 53))) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 53)) > 0))) {
+                    echo "<p><b>Par :</b> ";
+                    $context['_parent'] = $context;
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 53));
+                    foreach ($context['_seq'] as $context["_key"] => $context["w"]) {
+                        echo " ";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["w"], "name", [], "any", false, false, false, 53), "html", null, true);
+                        if (($context["w"] != twig_last($this->env, twig_get_attribute($this->env, $this->source, $context["comic"], "writers", [], "any", false, false, false, 53)))) {
+                            echo ", ";
+                        }
+                        echo " ";
+                    }
+                    $_parent = $context['_parent'];
+                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['w'], $context['_parent'], $context['loop']);
+                    $context = array_intersect_key($context, $_parent) + $_parent;
+                    echo "</p>";
                 }
-                echo " ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['w'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            echo "</p>
+                // line 54
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comic'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 62
+            echo "\t\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t</section>
+\t\t<!-- BDs -->
+";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comic'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
-        echo "\t\t\t\t</div>
-\t\t</div>
-</section>
-<!-- Portfolio -->
-
+        // line 67
+        echo "
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -197,7 +225,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     }
 
-    // line 54
+    // line 70
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -207,13 +235,13 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 55
+        // line 71
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<script src=\"";
-        // line 57
+        // line 73
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/lazyload.min.js\"></script>
 
@@ -247,7 +275,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     public function getDebugInfo()
     {
-        return array (  217 => 57,  211 => 55,  201 => 54,  186 => 47,  159 => 38,  155 => 37,  145 => 32,  140 => 30,  137 => 29,  133 => 28,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  245 => 73,  239 => 71,  229 => 70,  218 => 67,  211 => 62,  198 => 54,  180 => 53,  176 => 52,  166 => 47,  161 => 45,  158 => 44,  154 => 43,  148 => 39,  146 => 38,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -262,46 +290,62 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
 {% block body %}
 <!-- Start Story -->
-<section id=\"bd\" class=\"p-top-50 p-bottom-20\">
+<section id=\"bd\" class=\"p-top-50\">
 \t\t<div class=\"container\">
 \t\t\t\t<div class=\"section-title text-center m-bottom-50\">
 \t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Notre histoire</h2>
 \t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
 \t\t\t\t\t\t\tLow Production a été fondée en 2022 à la suite un premier projet <b>documentaire</b> (<em>Berr(k)e</em>, 2021) dont l'exercice soulevait une question : <b>comment conter l'environnement sans l'impacter ?</b> Afin d'y répondre l'association cherche, depuis sa création, à <b>expérimenter</b> et documenter de manière <b>transparente</b> de <b>nouvelles manières</b> de produire et réaliser des documentaires. À partir de ses travaux, elle cherche à <b>transformer</b> et <b>sensibiliser</b> le milieu audiovisuel aux techniques de <em>Low Production</em>.
-\t\t\t\t\t\t\t<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>. Afin de vous raconter cette histoire, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t\t\t\t<br><br>Avant d'être une association, Low Production est un projet personnel et une <b>revanche</b> sur le <b>rêve abandonné</b> de son fondateur. Finalement, il s'agit de <b>rencontres</b>, de réflexions, de déceptions, de joies et d'<b>idées</b> qui ont abouti à la <b>création</b> d'un projet <b>collectif</b>, <b>libre</b> et qui tend à être respectueux de l'<b>environnement</b>.
+\t\t\t\t\t\t\t<center style=\"padding:20px;\"><img class=\"wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\" alt=\"illustration activité associative\" src=\"{{asset('web/img/story-illustration.png')}}\"></img></center>
 \t\t\t\t</div>
 \t\t</div>
 </section>
 <!-- End Story -->
 
-<!-- Portfolio -->
-<section id=\"films\" class=\"p-top-20 p-bottom-80\">
+<!-- Start BD -->
+<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
 \t\t<div class=\"container\">
-\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
-\t\t\t\t\t\t{% for comic in comics %}
-\t\t\t\t\t\t\t\t<div class=\"pf-item\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{comic.url}}\" target=\"_blank\" class=\"pf-style\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(comic.picture, 'imageFile'))}}\" alt=\"{{comic.picture.name}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{comic.name}}</h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>
+\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
+\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
+\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t</div>
+\t\t</div>
+</section>
+<!-- End BD -->
+
+{% if comics is defined and comics is not null and comics|length > 0 %}
+\t\t<!-- BDs -->
+\t\t<section id=\"bds\" class=\"p-top-20 p-bottom-80\">
+\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
+\t\t\t\t\t\t\t\t{% for comic in comics %}
+\t\t\t\t\t\t\t\t\t\t<div class=\"pf-item wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{comic.url}}\" target=\"_blank\" class=\"pf-style\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-image\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(vich_uploader_asset(comic.picture, 'imageFile'))}}\" alt=\"{{comic.picture.name}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-caption\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"overlay-content\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pf-info white-color\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4 class=\"pf-title\">{{comic.name}}</h4>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% if comic.writers is defined and comic.writers is not null and comic.writers|length > 0 %}<p><b>Par :</b> {% for w in comic.writers %} {{w.name}}{% if w != comic.writers|last %}, {% endif %} {% endfor %}</p>{% endif %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t</div>
-</section>
-<!-- Portfolio -->
+\t\t</section>
+\t\t<!-- BDs -->
+{% endif %}
 
 {% endblock %}
 

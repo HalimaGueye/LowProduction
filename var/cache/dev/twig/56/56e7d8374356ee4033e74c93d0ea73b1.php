@@ -294,62 +294,70 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t\tIl est possible de s’engager en <b>adhérant</b>, en <b>participant</b> à nos missions, en organisant des <b>diffusions</b> chez soi ou en faisant une <b>donation</b> à l’association.
 \t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" id=\"haWidget\" allowtransparency=\"true\" scrolling=\"auto\" src=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\"></iframe>
+\t\t\t\t\t\t\t\t<span>Ouvrir la page <a target=\"_blank\" href=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\">dans un autre onglet</a>.</span>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
 </section>
 <!-- End Support 1 -->
 
-<!-- Start Members -->
-<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url(";
+";
         // line 195
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
-        echo "img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
-\t\t<!-- Section Title -->
-\t\t<div class=\"section-title text-center white-color m-bottom-40\">
-\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Paroles de membres</h2>
-\t\t\t\t<div class=\"divider-center-small divider-white wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
-\t\t</div>
-\t\t<!-- === Testimonials === -->
-\t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
-\t\t\t\t";
-        // line 203
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 203, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
-            // line 204
-            echo "\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">";
+        if (((array_key_exists("members", $context) &&  !(null === (isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 195, $this->source); })()))) && (twig_length_filter($this->env, (isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 195, $this->source); })())) > 0))) {
+            // line 196
+            echo "\t\t<!-- Start Members -->
+\t\t<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url(";
+            // line 197
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
+            echo "img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
+\t\t\t\t<!-- Section Title -->
+\t\t\t\t<div class=\"section-title text-center white-color m-bottom-40\">
+\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Paroles de membres</h2>
+\t\t\t\t\t\t<div class=\"divider-center-small divider-white wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t</div>
+\t\t\t\t<!-- === Testimonials === -->
+\t\t\t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
+\t\t\t\t\t\t";
             // line 205
-            echo twig_get_attribute($this->env, $this->source, $context["m"], "quote", [], "any", false, false, false, 205);
-            echo "</p>
-\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
-            // line 207
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["m"], "picture", [], "any", false, false, false, 207), "imageFile")), "html", null, true);
-            echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["m"], "picture", [], "any", false, false, false, 207), "name", [], "any", false, false, false, 207), "html", null, true);
-            echo "\">
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["members"]) || array_key_exists("members", $context) ? $context["members"] : (function () { throw new RuntimeError('Variable "members" does not exist.', 205, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
+                // line 206
+                echo "\t\t\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
+\t\t\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">";
+                // line 207
+                echo twig_get_attribute($this->env, $this->source, $context["m"], "quote", [], "any", false, false, false, 207);
+                echo "</p>
+\t\t\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"";
+                // line 209
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["m"], "picture", [], "any", false, false, false, 209), "imageFile")), "html", null, true);
+                echo "\" alt=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["m"], "picture", [], "any", false, false, false, 209), "name", [], "any", false, false, false, 209), "html", null, true);
+                echo "\">
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<h5 class=\"testimonial-author\">";
+                // line 211
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["m"], "name", [], "any", false, false, false, 211), "html", null, true);
+                echo "</h5>
+\t\t\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">";
+                // line 212
+                echo twig_get_attribute($this->env, $this->source, $context["m"], "description", [], "any", false, false, false, 212);
+                echo "</h5>
 \t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<h5 class=\"testimonial-author\">";
-            // line 209
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["m"], "name", [], "any", false, false, false, 209), "html", null, true);
-            echo "</h5>
-\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">";
-            // line 210
-            echo twig_get_attribute($this->env, $this->source, $context["m"], "description", [], "any", false, false, false, 210);
-            echo "</h5>
-\t\t\t\t\t\t</div>
-\t\t\t\t";
+\t\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 215
+            echo "\t\t\t\t</div>
+\t\t</section>
+\t\t<!-- End Members -->
+";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 213
-        echo "\t\t</div>
-</section>
-<!-- End Members -->
-
+        // line 219
+        echo "
 <!-- Start Support 2  -->
 <section id=\"join-us\" class=\"p-top-30 p-bottom-50\">
 \t\t<div class=\"container\">
@@ -360,7 +368,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
 \t\t\t\t\t\t\t\t\tVous souhaitez vous mobiliser à nos côtés et aller <strong>encore plus loin dans votre engagement</strong> ?
 \t\t\t\t\t\t\t\t\t<br>Les <a target=\"_blank\" href=\"";
-        // line 226
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/pdf/statuts_low_production.pdf"), "html", null, true);
         echo "\">statuts de l'association</a> prévoient plusieurs qualités de membres pour répondre à plusieurs niveaux d'investissement. Faites <b>votre choix</b> !
 \t\t\t\t\t\t\t\t\t<br><br>
@@ -368,7 +376,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t<center>
 \t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"";
-        // line 231
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/pdf/dossier_candidature_low_production.pdf"), "html", null, true);
         echo "\" class=\"btn btn-main m-top-20 btn-theme wow fadeInLeft\" href=\"#\" data-wow-duration=\"1s\" data-wow-delay=\"0.5s\">Dossier de candidature</a>
 \t\t\t\t\t\t\t\t</center>
@@ -386,7 +394,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 
     }
 
-    // line 240
+    // line 243
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -396,48 +404,48 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 241
+        // line 244
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 
 \t<!-- RS Plugin Extensions -->
 \t<script src=\"";
-        // line 244
+        // line 247
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.carousel.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 245
+        // line 248
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 246
+        // line 249
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.kenburn.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 247
+        // line 250
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/js/extensions/revolution.extension.migration.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 248
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/visible-jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Components Plugin -->
 \t<script src=\"";
-        // line 251
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/imagesloaded.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 252
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/isotope.pkgd.min.js\"></script>
 \t<script src=\"";
-        // line 253
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.tools.min.js\"></script>
 \t<script src=\"";
-        // line 254
+        // line 257
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/revolution/js/jquery.themepunch.revolution.min.js\"></script>
 
@@ -546,7 +554,7 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 
     public function getDebugInfo()
     {
-        return array (  441 => 254,  437 => 253,  433 => 252,  429 => 251,  423 => 248,  419 => 247,  415 => 246,  411 => 245,  407 => 244,  400 => 241,  390 => 240,  372 => 231,  364 => 226,  349 => 213,  340 => 210,  336 => 209,  329 => 207,  324 => 205,  321 => 204,  317 => 203,  306 => 195,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  449 => 257,  445 => 256,  441 => 255,  437 => 254,  431 => 251,  427 => 250,  423 => 249,  419 => 248,  415 => 247,  408 => 244,  398 => 243,  380 => 234,  372 => 229,  360 => 219,  354 => 215,  345 => 212,  341 => 211,  334 => 209,  329 => 207,  326 => 206,  322 => 205,  311 => 197,  308 => 196,  306 => 195,  201 => 93,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -738,34 +746,37 @@ class __TwigTemplate_1f7bcd80ace219084d07557a844f228d extends Template
 \t\t\t\t\t\t\t\t\tIl est possible de s’engager en <b>adhérant</b>, en <b>participant</b> à nos missions, en organisant des <b>diffusions</b> chez soi ou en faisant une <b>donation</b> à l’association.
 \t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t<iframe class=\"m-top-30 iframe-helloasso\" id=\"haWidget\" allowtransparency=\"true\" scrolling=\"auto\" src=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\"></iframe>
+\t\t\t\t\t\t\t\t<span>Ouvrir la page <a target=\"_blank\" href=\"https://www.helloasso.com/associations/low-production/formulaires/1/widget\">dans un autre onglet</a>.</span>
 \t\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t</div>
 </section>
 <!-- End Support 1 -->
 
-<!-- Start Members -->
-<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url({{asset('web/')}}img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
-\t\t<!-- Section Title -->
-\t\t<div class=\"section-title text-center white-color m-bottom-40\">
-\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Paroles de membres</h2>
-\t\t\t\t<div class=\"divider-center-small divider-white wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
-\t\t</div>
-\t\t<!-- === Testimonials === -->
-\t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
-\t\t\t\t{% for m in members %}
-\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
-\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">{{m.quote|raw}}</p>
-\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}\" alt=\"{{m.picture.name}}\">
+{% if members is defined and members is not null and members|length > 0 %}
+\t\t<!-- Start Members -->
+\t\t<section id=\"members\" class=\"parallax-bg overlay-dark p-top-80 p-bottom-80\" style=\"background-image:url({{asset('web/')}}img/members-bg.jpg)\" data-stellar-background-ratio=\"0.2\">
+\t\t\t\t<!-- Section Title -->
+\t\t\t\t<div class=\"section-title text-center white-color m-bottom-40\">
+\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Paroles de membres</h2>
+\t\t\t\t\t\t<div class=\"divider-center-small divider-white wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t</div>
+\t\t\t\t<!-- === Testimonials === -->
+\t\t\t\t<div id=\"owl-testimonials\" class=\"owl-carousel owl-theme testimonial text-center white-color\">
+\t\t\t\t\t\t{% for m in members %}
+\t\t\t\t\t\t\t\t<div class=\"testimonial-item text-center\">
+\t\t\t\t\t\t\t\t\t\t<p class=\"testimonial-desc\">{{m.quote|raw}}</p>
+\t\t\t\t\t\t\t\t\t\t<div class=\"testimonial-thumb\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"img-responsive\" src=\"{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}\" alt=\"{{m.picture.name}}\">
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<h5 class=\"testimonial-author\">{{m.name}}</h5>
+\t\t\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">{{m.description|raw}}</h5>
 \t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<h5 class=\"testimonial-author\">{{m.name}}</h5>
-\t\t\t\t\t\t\t\t<h5 class=\"testimonial-profession\">{{m.description|raw}}</h5>
-\t\t\t\t\t\t</div>
-\t\t\t\t{% endfor %}
-\t\t</div>
-</section>
-<!-- End Members -->
+\t\t\t\t\t\t{% endfor %}
+\t\t\t\t</div>
+\t\t</section>
+\t\t<!-- End Members -->
+{% endif %}
 
 <!-- Start Support 2  -->
 <section id=\"join-us\" class=\"p-top-30 p-bottom-50\">
