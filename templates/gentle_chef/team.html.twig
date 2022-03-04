@@ -47,7 +47,7 @@
 				<div class="portfolio portfolio-isotope col-4 gutter">
 						{% for member in members %}
 						<!-- === Item === -->
-						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}">
+						<div class="col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item {% if member.projects is defined and member.projects|length > 0 %}p {% endif %} {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}">
 								<div class="team-item">
 										<div class="team-item-image">
 												{% if member.portfolios|length != 0 %}

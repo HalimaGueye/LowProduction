@@ -183,8 +183,12 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["member"]) {
             // line 49
             echo "\t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p ";
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item ";
             // line 50
+            if ((twig_get_attribute($this->env, $this->source, $context["member"], "projects", [], "any", true, true, false, 50) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["member"], "projects", [], "any", false, false, false, 50)) > 0))) {
+                echo "p ";
+            }
+            echo " ";
             if ((twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", true, true, false, 50) &&  !(null === twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", false, false, false, 50)))) {
                 echo "mt";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["member"], "memberType", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50), "html", null, true);
@@ -340,7 +344,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 
     public function getDebugInfo()
     {
-        return array (  320 => 105,  316 => 104,  311 => 103,  301 => 102,  281 => 91,  263 => 75,  251 => 69,  245 => 66,  235 => 62,  230 => 59,  219 => 57,  215 => 56,  211 => 54,  209 => 53,  188 => 50,  185 => 49,  181 => 48,  172 => 41,  161 => 39,  157 => 38,  151 => 34,  140 => 32,  136 => 31,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  324 => 105,  320 => 104,  315 => 103,  305 => 102,  285 => 91,  267 => 75,  255 => 69,  249 => 66,  239 => 62,  234 => 59,  223 => 57,  219 => 56,  215 => 54,  213 => 53,  188 => 50,  185 => 49,  181 => 48,  172 => 41,  161 => 39,  157 => 38,  151 => 34,  140 => 32,  136 => 31,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -394,7 +398,7 @@ class __TwigTemplate_b57a651ba0342b12e475188cf39e190a extends Template
 \t\t\t\t<div class=\"portfolio portfolio-isotope col-4 gutter\">
 \t\t\t\t\t\t{% for member in members %}
 \t\t\t\t\t\t<!-- === Item === -->
-\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item p {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}\">
+\t\t\t\t\t\t<div class=\"col-md-3 col-sm-6 col-xs-6 p-bottom-30 pf-item {% if member.projects is defined and member.projects|length > 0 %}p {% endif %} {% if member.memberType is defined and member.memberType is not null %}mt{{member.memberType.id}} {% endif %} {% for p in member.projects %}p{{p.project.id}} {% endfor %}\">
 \t\t\t\t\t\t\t\t<div class=\"team-item\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"team-item-image\">
 \t\t\t\t\t\t\t\t\t\t\t\t{% if member.portfolios|length != 0 %}

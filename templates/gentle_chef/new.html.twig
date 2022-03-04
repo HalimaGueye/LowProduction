@@ -20,11 +20,11 @@
 										</div>
 										<div class="postMeta clearfix">
 												<div class="postMeta-info">
-														<span class="metaAuthor"><i class="fa fa-pencil"></i> <a href="#">{% if n.writer is defined and n.writer is not null %}{{n.writer.name}}{% endif %}</a></span>
-														<span class="metaCategory"><i class="fa fa-folder"></i> <a href="#">Actualités</a></span>
+														{% if n.writer is defined and n.writer is not null %}<span class="metaAuthor"><i class="fa fa-pencil"></i>{{n.writer.name}}</span>{% endif %}
+														{% if n.project is defined and n.project is not null %}<span class="metaAuthor"><i class="fa fa-folder"></i><a href="{{url("movie", {"id": n.project.id})}}">{{n.project.name}}<a></span>{% endif %}
 												</div>
 												<div class="postMeta-date">
-														<span class="metaDate"><i class="fa fa-calendar"></i> <a href="#">{{n.publication|date("d/m/Y")}}</a></span>
+														<span class="metaDate"><i class="fa fa-calendar"></i>{{n.publication|date("d/m/Y")}}</span>
 												</div>
 										</div>
 										<div class="postTitle">
