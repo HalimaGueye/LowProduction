@@ -25,26 +25,20 @@
 						<!-- === Contact Form === -->
 						<div class="col-md-12 col-sm-12 p-bottom-30">
 								<div class="contact-form row">
-										<form name="ajax-form" id="ajax-form" method="post">
+										<form method="post">
                       {% if error %}
                           <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                       {% endif %}
 												<div class="col-sm-6 contact-form-item wow zoomIn">
 														<input type="text" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
-														<span class="error" id="err-name">Merci de saisir votre identifiant !</span>
 												</div>
 												<div class="col-sm-6 contact-form-item wow zoomIn">
-														<input type="password" name="password" id="inputPassword"  autocomplete="current-password" required>
-														<span class="error" id="err-email">Merci de saisir votre mot de passe !</span>
+														<input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
 												</div>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 												<div class="col-sm-12 contact-form-item">
 														<button class="send_message btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Envoyer</button>
 												</div>
-												<div class="clear"></div>
-												<div class="error text-align-center" id="err-form">Il y a eu un problème avec la validation du formulaire !</div>
-												<div class="error text-align-center" id="err-timedout">La connexion avec le serveur a échoué !</div>
-												<div class="error" id="err-state"></div>
 										</form>
 
 								</div>
