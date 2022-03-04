@@ -25,6 +25,9 @@ use App\Entity\Video;
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Component\Pager\PaginatorInterface;
 use Doctrine\ORM\EntityManager;
+use App\Form\ContactType;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\MailerInterface;
 
 class GentleChefController extends AbstractController
 {
@@ -118,9 +121,25 @@ class GentleChefController extends AbstractController
   }
 
   #[Route('/contact', name: 'contact')]
-  public function showContact(EntityManagerInterface $em)
+  public function showContact(Request $request, MailerInterface $mailer)
   {
-    return $this->render('gentle_chef/contact.html.twig');
+      $form = $this->createForm(ContactType::class);
+      $form->handleRequest($request);
+      if($form->isSubmitted() && $form->isValid()) {
+          $contactFormData = $form->getData();
+
+          $message = (new Email())
+              ->from($contactFormData['email'])
+              ->to('contact@low-production.org')
+              ->subject('Message de '.$contactFormData['name'])
+              ->html('<p><b>Envoyé par :</b></p><p>'.$contactFormData['email'].'</p><p><b>Message :</b></p><p>'.$contactFormData['message'].'</p>');
+          $mailer->send($message);
+          $this->addFlash('success', 'Votre message a bien été envoyé !');
+          return $this->redirectToRoute('contact');
+      }
+      return $this->render('gentle_chef/contact.html.twig', [
+          'our_form' => $form->createView()
+      ]);
   }
 
 }

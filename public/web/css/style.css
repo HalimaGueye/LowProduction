@@ -2256,7 +2256,7 @@ blockquote {
   margin-bottom: 20px;
 }
 .contact-form-item input[type="text"],
-.contact-form-item input[type="password"],
+.contact-form-item input[type="email"],
 .contact-form-item textarea {
   background: #f5f5f5;
   border: none;
@@ -2266,9 +2266,10 @@ blockquote {
   padding: 10px 15px;
 }
 .contact-form-item input[type="text"]:focus,
-.contact-form-item input[type="password"]:focus,
+.contact-form-item input[type="email"]:focus,
 .contact-form-item textarea:focus {
   outline: none;
+  box-shadow: none;
 }
 .contact-form-item textarea {
   height: 250px;
@@ -2300,6 +2301,10 @@ blockquote {
   background: #5d5d5d;
   color: #fff;
 }
+
+.contact-form-item textarea {
+  resize: none;
+}
 .contact-info {
   padding-left: 30px;
 }
@@ -2324,6 +2329,13 @@ blockquote {
   padding-top: 5px;
   padding-left: 58px;
 }
+
+.form-control{
+    border-radius: 0px;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
+
 @media screen and (max-width: 768px) {
   .contact-info {
     padding-left: 0px;

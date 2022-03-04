@@ -14,37 +14,31 @@
 						<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s">Nous contacter</h2>
 						<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
 						<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">Pour toute question, n'hésitez pas à nous contacter !</p>
+						{% for type, messages in app.flashes %}
+								{% for message in messages %}
+										<div class="alert alert-{{ type }}">{{ message }}</div>
+								{% endfor %}
+						{% endfor %}
 				</div>
-				<div class="row">
+
+    		<div class="row">
 						<!-- === Contact Form === -->
 						<div class="col-md-7 col-sm-7 p-bottom-30">
 								<div class="contact-form row">
-										<form name="ajax-form" id="ajax-form" action="contact.php" method="post">
+										{{ form_start(our_form) }}
 												<div class="col-sm-6 contact-form-item wow zoomIn">
-														<input name="name" id="name" type="text"   placeholder="Prénom NOM"/>
-														<span class="error" id="err-name">Merci de saisir votre nom !</span>
+                            {{ form_row(our_form.name, {'attr': {'class': 'form-control'}}) }}
 												</div>
 												<div class="col-sm-6 contact-form-item wow zoomIn">
-														<input name="email" id="email" type="text"  placeholder="Courriel"/>
-														<span class="error" id="err-email">Merci de saisir votre courriel !</span>
-														<span class="error" id="err-emailvld">Votre courriel n'est pas valide !</span>
+                            {{ form_row(our_form.email, {'attr': {'class': 'form-control'}}) }}
 												</div>
 												<div class="col-sm-12 contact-form-item wow zoomIn">
-														<textarea style="resize: none;" name="message" id="message" placeholder="Message"></textarea>
+                            {{ form_row(our_form.message, {'attr': {'class': 'form-control'}}) }}
 												</div>
 												<div class="col-sm-12 contact-form-item">
 														<button class="send_message btn btn-main btn-theme wow fadeInUp" id="send" data-lang="en">Envoyer</button>
 												</div>
-												<div class="clear"></div>
-												<div class="error text-align-center" id="err-form">Il y a eu un problème avec la validation du formulaire !</div>
-												<div class="error text-align-center" id="err-timedout">La connexion avec le serveur a échoué !</div>
-												<div class="error" id="err-state"></div>
-										</form>
-
-										<div class="clearfix"></div>
-										<div id="ajaxsuccess">Message envoyé !</div>
-										<div class="clear"></div>
-
+										{{ form_end(our_form) }}
 								</div>
 						</div>
 
@@ -118,7 +112,6 @@
 														<a href="">www.instagram.com/low-production/</a>
 												</div>
 										</div>
-
 								</address>
 						</div>
 
@@ -129,7 +122,5 @@
 {% endblock %}
 
 {% block js %}
-	{{parent()}}
-	<!-- Contact Form -->
-	<script src="{{asset('web/')}}js/contact.js"></script>
+	 {{parent()}}
 {% endblock %}

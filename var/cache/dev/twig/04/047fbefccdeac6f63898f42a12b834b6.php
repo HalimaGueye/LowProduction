@@ -117,37 +117,69 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Nous contacter</h2>
 \t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Pour toute question, n'hésitez pas à nous contacter !</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t";
+        // line 17
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "flashes", [], "any", false, false, false, 17));
+        foreach ($context['_seq'] as $context["type"] => $context["messages"]) {
+            // line 18
+            echo "\t\t\t\t\t\t\t\t";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 19
+                echo "\t\t\t\t\t\t\t\t\t\t<div class=\"alert alert-";
+                echo twig_escape_filter($this->env, $context["type"], "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "</div>
+\t\t\t\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 21
+            echo "\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['type'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 22
+        echo "\t\t\t\t</div>
+
+    \t\t<div class=\"row\">
 \t\t\t\t\t\t<!-- === Contact Form === -->
 \t\t\t\t\t\t<div class=\"col-md-7 col-sm-7 p-bottom-30\">
 \t\t\t\t\t\t\t\t<div class=\"contact-form row\">
-\t\t\t\t\t\t\t\t\t\t<form name=\"ajax-form\" id=\"ajax-form\" action=\"contact.php\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t";
+        // line 28
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["our_form"]) || array_key_exists("our_form", $context) ? $context["our_form"] : (function () { throw new RuntimeError('Variable "our_form" does not exist.', 28, $this->source); })()), 'form_start');
+        echo "
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input name=\"name\" id=\"name\" type=\"text\"   placeholder=\"Prénom NOM\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-name\">Merci de saisir votre nom !</span>
+                            ";
+        // line 30
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["our_form"]) || array_key_exists("our_form", $context) ? $context["our_form"] : (function () { throw new RuntimeError('Variable "our_form" does not exist.', 30, $this->source); })()), "name", [], "any", false, false, false, 30), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input name=\"email\" id=\"email\" type=\"text\"  placeholder=\"Courriel\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-email\">Merci de saisir votre courriel !</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-emailvld\">Votre courriel n'est pas valide !</span>
+                            ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["our_form"]) || array_key_exists("our_form", $context) ? $context["our_form"] : (function () { throw new RuntimeError('Variable "our_form" does not exist.', 33, $this->source); })()), "email", [], "any", false, false, false, 33), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-12 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea style=\"resize: none;\" name=\"message\" id=\"message\" placeholder=\"Message\"></textarea>
+                            ";
+        // line 36
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["our_form"]) || array_key_exists("our_form", $context) ? $context["our_form"] : (function () { throw new RuntimeError('Variable "our_form" does not exist.', 36, $this->source); })()), "message", [], "any", false, false, false, 36), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-12 contact-form-item\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"send_message btn btn-main btn-theme wow fadeInUp\" id=\"send\" data-lang=\"en\">Envoyer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error text-align-center\" id=\"err-form\">Il y a eu un problème avec la validation du formulaire !</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error text-align-center\" id=\"err-timedout\">La connexion avec le serveur a échoué !</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error\" id=\"err-state\"></div>
-\t\t\t\t\t\t\t\t\t\t</form>
-
-\t\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>
-\t\t\t\t\t\t\t\t\t\t<div id=\"ajaxsuccess\">Message envoyé !</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"clear\"></div>
-
+\t\t\t\t\t\t\t\t\t\t";
+        // line 41
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["our_form"]) || array_key_exists("our_form", $context) ? $context["our_form"] : (function () { throw new RuntimeError('Variable "our_form" does not exist.', 41, $this->source); })()), 'form_end');
+        echo "
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 
@@ -221,7 +253,6 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.instagram.com/low-production/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
-
 \t\t\t\t\t\t\t\t</address>
 \t\t\t\t\t\t</div>
 
@@ -238,7 +269,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 
     }
 
-    // line 131
+    // line 124
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -248,15 +279,10 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 132
-        echo "\t";
+        // line 125
+        echo "\t ";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
-\t<!-- Contact Form -->
-\t<script src=\"";
-        // line 134
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
-        echo "js/contact.js\"></script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -278,7 +304,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 
     public function getDebugInfo()
     {
-        return array (  258 => 134,  252 => 132,  242 => 131,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  283 => 125,  273 => 124,  181 => 41,  173 => 36,  167 => 33,  161 => 30,  156 => 28,  148 => 22,  142 => 21,  131 => 19,  126 => 18,  122 => 17,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -299,37 +325,31 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Nous contacter</h2>
 \t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
 \t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Pour toute question, n'hésitez pas à nous contacter !</p>
+\t\t\t\t\t\t{% for type, messages in app.flashes %}
+\t\t\t\t\t\t\t\t{% for message in messages %}
+\t\t\t\t\t\t\t\t\t\t<div class=\"alert alert-{{ type }}\">{{ message }}</div>
+\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
-\t\t\t\t<div class=\"row\">
+
+    \t\t<div class=\"row\">
 \t\t\t\t\t\t<!-- === Contact Form === -->
 \t\t\t\t\t\t<div class=\"col-md-7 col-sm-7 p-bottom-30\">
 \t\t\t\t\t\t\t\t<div class=\"contact-form row\">
-\t\t\t\t\t\t\t\t\t\t<form name=\"ajax-form\" id=\"ajax-form\" action=\"contact.php\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t{{ form_start(our_form) }}
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input name=\"name\" id=\"name\" type=\"text\"   placeholder=\"Prénom NOM\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-name\">Merci de saisir votre nom !</span>
+                            {{ form_row(our_form.name, {'attr': {'class': 'form-control'}}) }}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input name=\"email\" id=\"email\" type=\"text\"  placeholder=\"Courriel\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-email\">Merci de saisir votre courriel !</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"error\" id=\"err-emailvld\">Votre courriel n'est pas valide !</span>
+                            {{ form_row(our_form.email, {'attr': {'class': 'form-control'}}) }}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-12 contact-form-item wow zoomIn\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea style=\"resize: none;\" name=\"message\" id=\"message\" placeholder=\"Message\"></textarea>
+                            {{ form_row(our_form.message, {'attr': {'class': 'form-control'}}) }}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-12 contact-form-item\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"send_message btn btn-main btn-theme wow fadeInUp\" id=\"send\" data-lang=\"en\">Envoyer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error text-align-center\" id=\"err-form\">Il y a eu un problème avec la validation du formulaire !</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error text-align-center\" id=\"err-timedout\">La connexion avec le serveur a échoué !</div>
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"error\" id=\"err-state\"></div>
-\t\t\t\t\t\t\t\t\t\t</form>
-
-\t\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>
-\t\t\t\t\t\t\t\t\t\t<div id=\"ajaxsuccess\">Message envoyé !</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"clear\"></div>
-
+\t\t\t\t\t\t\t\t\t\t{{ form_end(our_form) }}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 
@@ -403,7 +423,6 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.instagram.com/low-production/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
-
 \t\t\t\t\t\t\t\t</address>
 \t\t\t\t\t\t</div>
 
@@ -414,9 +433,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 {% endblock %}
 
 {% block js %}
-\t{{parent()}}
-\t<!-- Contact Form -->
-\t<script src=\"{{asset('web/')}}js/contact.js\"></script>
+\t {{parent()}}
 {% endblock %}
 ", "gentle_chef/contact.html.twig", "C:\\wamp64\\www\\lp\\LowProduction\\templates\\gentle_chef\\contact.html.twig");
     }
