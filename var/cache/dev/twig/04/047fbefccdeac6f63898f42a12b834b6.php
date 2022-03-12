@@ -224,7 +224,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tLinkedIn
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.linkedin.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/company/low-production/\">https://www.linkedin.com/company/low-production/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 
@@ -237,7 +237,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tFacebook
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.facebook.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/AssociationLowProduction\">https://www.facebook.com/AssociationLowProduction</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 
@@ -250,7 +250,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tInstagram
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.instagram.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/lowproduction.asso/\">https://www.instagram.com/lowproduction.asso/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</address>
@@ -394,7 +394,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tLinkedIn
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.linkedin.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.linkedin.com/company/low-production/\">https://www.linkedin.com/company/low-production/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 
@@ -407,7 +407,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tFacebook
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.facebook.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.facebook.com/AssociationLowProduction\">https://www.facebook.com/AssociationLowProduction</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 
@@ -420,7 +420,7 @@ class __TwigTemplate_4ea5a3146d0d348554f061af87af5d81 extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tInstagram
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"contact-info-text\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\">www.instagram.com/low-production/</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.instagram.com/lowproduction.asso/\">https://www.instagram.com/lowproduction.asso/</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</address>

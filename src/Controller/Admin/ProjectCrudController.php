@@ -34,13 +34,6 @@ class ProjectCrudController extends AbstractCrudController
     }
 
 
-    public function configureActions(Actions $actions): Actions
-    {
-        return $actions
-            ->add(Crud::PAGE_INDEX, Action::DETAIL)
-            ->remove(Crud::PAGE_INDEX, Action::DELETE);
-    }
-
     public function configureFilters(Filters $filters): Filters
     {
         return $filters

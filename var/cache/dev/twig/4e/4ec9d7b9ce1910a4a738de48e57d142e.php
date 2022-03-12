@@ -1173,7 +1173,7 @@ tr.status-warning td {
 .log-filter .filter-select-all-or-none {
     margin-bottom: 10px;
 }
-.log-filter .filter-select-all-or-none a + a {
+.log-filter .filter-select-all-or-none button + button {
     margin-left: 15px;
 }
 .log-filters .log-filter .log-filter-content .log-filter-option + .log-filter-option {
@@ -1198,10 +1198,10 @@ table.logs .log-timestamp {
 table.logs .log-metadata {
     margin: 8px 0 0;
 }
-table.logs .log-metadata span {
+table.logs .log-metadata > span {
     display: inline-block;
 }
-table.logs .log-metadata span + span {
+table.logs .log-metadata > span + span {
     margin-left: 10px;
 }
 table.logs .log-metadata .log-channel {
@@ -2671,7 +2671,7 @@ tr.status-warning td {
 .log-filter .filter-select-all-or-none {
     margin-bottom: 10px;
 }
-.log-filter .filter-select-all-or-none a + a {
+.log-filter .filter-select-all-or-none button + button {
     margin-left: 15px;
 }
 .log-filters .log-filter .log-filter-content .log-filter-option + .log-filter-option {
@@ -2696,10 +2696,10 @@ table.logs .log-timestamp {
 table.logs .log-metadata {
     margin: 8px 0 0;
 }
-table.logs .log-metadata span {
+table.logs .log-metadata > span {
     display: inline-block;
 }
-table.logs .log-metadata span + span {
+table.logs .log-metadata > span + span {
     margin-left: 10px;
 }
 table.logs .log-metadata .log-channel {

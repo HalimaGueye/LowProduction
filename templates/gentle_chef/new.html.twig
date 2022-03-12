@@ -21,7 +21,7 @@
 										<div class="postMeta clearfix">
 												<div class="postMeta-info">
 														{% if n.writer is defined and n.writer is not null %}<span class="metaAuthor"><i class="fa fa-pencil"></i>{{n.writer.name}}</span>{% endif %}
-														{% if n.project is defined and n.project is not null %}<span class="metaAuthor"><i class="fa fa-folder"></i><a href="{{url("movie", {"id": n.project.id})}}">{{n.project.name}}<a></span>{% endif %}
+														{% if n.project is defined and n.project is not null %}<span class="metaAuthor"><i class="fa fa-folder"></i><a href="{{url("movie", {"id": n.project.id})}}">{{n.project.name}}</a></span>{% endif %}
 												</div>
 												<div class="postMeta-date">
 														<span class="metaDate"><i class="fa fa-calendar"></i>{{n.publication|date("d/m/Y")}}</span>

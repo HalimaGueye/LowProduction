@@ -43,7 +43,7 @@ class __TwigTemplate_c5dd094fcd50a313a4d9adf39f908d54 extends Template
         echo "<form method=\"post\" id=\"delete-form\" style=\"display: none\">
     <input type=\"hidden\" name=\"token\" value=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("ea-delete"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension']->renderCsrfToken("ea-delete"), "html", null, true);
         echo "\" />
 </form>
 
@@ -106,7 +106,7 @@ class __TwigTemplate_c5dd094fcd50a313a4d9adf39f908d54 extends Template
     {
         return new Source("{# @var ea \\EasyCorp\\Bundle\\EasyAdminBundle\\Context\\AdminContext #}
 <form method=\"post\" id=\"delete-form\" style=\"display: none\">
-    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('ea-delete') }}\" />
+    <input type=\"hidden\" name=\"token\" value=\"{{ ea_csrf_token('ea-delete') }}\" />
 </form>
 
 <div id=\"modal-delete\" class=\"modal fade\" tabindex=\"-1\">

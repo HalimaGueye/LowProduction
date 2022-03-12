@@ -59,7 +59,7 @@ class Member
      *
      * @ORM\ManyToOne(targetEntity="Picture")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id", onDelete="CASCADE")
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
      * })
      */
     private $picture;
