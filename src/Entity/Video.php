@@ -45,7 +45,7 @@ class Video
     /**
      * @var string|null
      *
-     * @ORM\Column(name="licence", type="string", length=255, nullable=true)
+     * @ORM\Column(name="licence", type="text", nullable=true)
      */
     private $licence;
 

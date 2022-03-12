@@ -8,8 +8,14 @@
     <title>{% block title %}Low Production{% endblock %}</title>
 
     <meta name="description" content="Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.">
-    <meta name="keywords" content="">
-    <meta name="author" content="tabthemes">
+    <meta name="author" content="Low Production">
+
+    <!-- Balises OG -->
+    <meta property="og:title" content="{{block('title')}}"/>
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
+    <meta property="og:url" content="{{app.request.uri}}" />
+    <meta property="og:image" content="{% block og_img %}{{asset('web/img/slider/s1.jpg')}}{% endblock %}"/>
+    <meta property="og:site_name" content="Low Production"/>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('web/img/favicon/apple-touch-icon.png') }}">
@@ -139,7 +145,7 @@
             <ul>
               <li><b>Réalisé par :</b> Halima GUEYE</li>
               <li><b>Site internet :</b> <a href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a></li>
-              <li><b>Inspiration de départ :</b> </li>
+              <li><b>Inspiration de départ :</b> TabThemes</li>
               <li><b>Site internet :</b> <a href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a></li>
             </ul>
 

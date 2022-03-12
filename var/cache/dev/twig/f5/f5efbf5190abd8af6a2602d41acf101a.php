@@ -28,6 +28,8 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'og_type' => [$this, 'block_og_type'],
+            'og_img' => [$this, 'block_og_img'],
             'css' => [$this, 'block_css'],
             'home' => [$this, 'block_home'],
             'story' => [$this, 'block_story'],
@@ -65,31 +67,49 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         echo "</title>
 
     <meta name=\"description\" content=\"Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.\">
-    <meta name=\"keywords\" content=\"\">
-    <meta name=\"author\" content=\"tabthemes\">
+    <meta name=\"author\" content=\"Low Production\">
+
+    <!-- Balises OG -->
+    <meta property=\"og:title\" content=\"";
+        // line 14
+        $this->displayBlock("title", $context, $blocks);
+        echo "\"/>
+    <meta property=\"og:type\" content=\"";
+        // line 15
+        $this->displayBlock('og_type', $context, $blocks);
+        echo "\"/>
+    <meta property=\"og:url\" content=\"";
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "request", [], "any", false, false, false, 16), "uri", [], "any", false, false, false, 16), "html", null, true);
+        echo "\" />
+    <meta property=\"og:image\" content=\"";
+        // line 17
+        $this->displayBlock('og_img', $context, $blocks);
+        echo "\"/>
+    <meta property=\"og:site_name\" content=\"Low Production\"/>
 
     <!-- Favicons -->
     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
-        // line 15
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/apple-touch-icon.png"), "html", null, true);
         echo "\">
     <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
-        // line 16
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/favicon-32x32.png"), "html", null, true);
         echo "\">
     <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"";
-        // line 17
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/favicon-16x16.png"), "html", null, true);
         echo "\">
     <link rel=\"manifest\" href=\"";
-        // line 18
+        // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/favicon/site.webmanifest"), "html", null, true);
         echo "\">
 
 \t\t";
-        // line 20
+        // line 26
         $this->displayBlock('css', $context, $blocks);
-        // line 43
+        // line 49
         echo "  </head>
 
 \t<!-- Start Body -->
@@ -117,11 +137,11 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
                             <div class=\"logo-container\">
                                 <div class=\"logo-wrap local-scroll\">
                                   <a href=\"";
-        // line 69
+        // line 75
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
         echo "\">
                                     <img class=\"logo\" src=\"";
-        // line 70
+        // line 76
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/logo/logo_light.svg"), "html", null, true);
         echo "\" alt=\"logo\" data-rjs=\"2\">
                                   </a>
@@ -132,49 +152,49 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
                             <div class=\"collapse navbar-collapse\" id=\"navbar-collapse\">
                                 <ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 78
+        // line 84
         $this->displayBlock('home', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
         echo "\">Accueil</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 79
+        // line 85
         $this->displayBlock('story', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("story");
         echo "\">Histoire</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 80
+        // line 86
         $this->displayBlock('team', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("team");
         echo "\">L'équipe</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 81
+        // line 87
         $this->displayBlock('movies', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("movies");
         echo "\">Films</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- ";
-        // line 82
+        // line 88
         $this->displayBlock('studies', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("studies");
         echo "\">Études</a></li> -->
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 83
+        // line 89
         $this->displayBlock('news', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("news");
         echo "\">Actualités</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 84
+        // line 90
         $this->displayBlock('support', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("support");
         echo "\">Soutenir</a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 85
+        // line 91
         $this->displayBlock('contact', $context, $blocks);
         echo "<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("contact");
@@ -191,9 +211,9 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
 \t\t<!-- Start Body -->
 \t\t";
-        // line 97
+        // line 103
         $this->displayBlock('body', $context, $blocks);
-        // line 98
+        // line 104
         echo "\t\t<!-- End Body -->
 
     <!-- Start Footer -->
@@ -238,7 +258,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
             <ul>
               <li><b>Réalisé par :</b> Halima GUEYE</li>
               <li><b>Site internet :</b> <a href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a></li>
-              <li><b>Inspiration de départ :</b> </li>
+              <li><b>Inspiration de départ :</b> TabThemes</li>
               <li><b>Site internet :</b> <a href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a></li>
             </ul>
 
@@ -306,9 +326,9 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <!-- /Back to top -->
 
 \t\t";
-        // line 209
+        // line 215
         $this->displayBlock('js', $context, $blocks);
-        // line 227
+        // line 233
         echo "  </body>
 </html>
 ";
@@ -339,7 +359,45 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 20
+    // line 15
+    public function block_og_type($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "og_type"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "og_type"));
+
+        echo "website";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 17
+    public function block_og_img($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "og_img"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "og_img"));
+
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/slider/s1.jpg"), "html", null, true);
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 26
     public function block_css($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -349,46 +407,46 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
 
-        // line 21
+        // line 27
         echo "\t    <!-- Bootstrap CSS -->
 \t    <link href=\"";
-        // line 22
+        // line 28
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 
 \t    <!-- CSS Files For Plugin -->
 \t    <link href=\"";
-        // line 25
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/animate.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 \t    <link href=\"";
-        // line 26
+        // line 32
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/font-awesome/font-awesome.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 \t    <link href=\"";
-        // line 27
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/owlcarousel/css/owl.carousel.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
-        // line 28
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/owlcarousel/css/owl.theme.default.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
-        // line 29
+        // line 35
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/settings.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
-        // line 30
+        // line 36
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/layers.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 \t    <link href=\"";
-        // line 31
+        // line 37
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/inc/revolution/css/navigation.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 
 \t    <!-- Custom CSS -->
 \t    <link href=\"";
-        // line 34
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/css/style.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
@@ -407,7 +465,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 78
+    // line 84
     public function block_home($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -426,7 +484,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 79
+    // line 85
     public function block_story($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -445,7 +503,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 80
+    // line 86
     public function block_team($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -464,7 +522,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 81
+    // line 87
     public function block_movies($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -483,7 +541,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 82
+    // line 88
     public function block_studies($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -502,7 +560,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 83
+    // line 89
     public function block_news($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -521,7 +579,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 84
+    // line 90
     public function block_support($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -540,7 +598,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 85
+    // line 91
     public function block_contact($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -559,7 +617,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 97
+    // line 103
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -577,7 +635,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 209
+    // line 215
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -587,44 +645,44 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 210
+        // line 216
         echo "\t    <!-- jQuery -->
 \t    <script src=\"";
-        // line 211
+        // line 217
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Bootstrap -->
 \t    <script src=\"";
-        // line 214
+        // line 220
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Custom Plugin -->
 \t    <script src=\"";
-        // line 217
+        // line 223
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/custom.js"), "html", null, true);
         echo "\"></script>
 
 \t\t\t<!-- Components Plugin -->
 \t\t\t<script src=\"";
-        // line 220
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/smooth-scroll.js\"></script>
 \t\t\t<script src=\"";
-        // line 221
+        // line 227
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.appear.js\"></script>
 \t\t\t<script src=\"";
-        // line 222
+        // line 228
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.stellar.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 223
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/wow.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 224
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
@@ -649,7 +707,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     public function getDebugInfo()
     {
-        return array (  628 => 224,  624 => 223,  620 => 222,  616 => 221,  612 => 220,  606 => 217,  600 => 214,  594 => 211,  591 => 210,  581 => 209,  563 => 97,  544 => 85,  525 => 84,  506 => 83,  487 => 82,  468 => 81,  449 => 80,  430 => 79,  411 => 78,  392 => 34,  386 => 31,  382 => 30,  378 => 29,  374 => 28,  370 => 27,  366 => 26,  362 => 25,  356 => 22,  353 => 21,  343 => 20,  324 => 8,  312 => 227,  310 => 209,  197 => 98,  195 => 97,  178 => 85,  172 => 84,  166 => 83,  160 => 82,  154 => 81,  148 => 80,  142 => 79,  136 => 78,  125 => 70,  121 => 69,  93 => 43,  91 => 20,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  64 => 8,  55 => 1,);
+        return array (  686 => 230,  682 => 229,  678 => 228,  674 => 227,  670 => 226,  664 => 223,  658 => 220,  652 => 217,  649 => 216,  639 => 215,  621 => 103,  602 => 91,  583 => 90,  564 => 89,  545 => 88,  526 => 87,  507 => 86,  488 => 85,  469 => 84,  450 => 40,  444 => 37,  440 => 36,  436 => 35,  432 => 34,  428 => 33,  424 => 32,  420 => 31,  414 => 28,  411 => 27,  401 => 26,  382 => 17,  363 => 15,  344 => 8,  332 => 233,  330 => 215,  217 => 104,  215 => 103,  198 => 91,  192 => 90,  186 => 89,  180 => 88,  174 => 87,  168 => 86,  162 => 85,  156 => 84,  145 => 76,  141 => 75,  113 => 49,  111 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  87 => 17,  83 => 16,  79 => 15,  75 => 14,  66 => 8,  57 => 1,);
     }
 
     public function getSourceContext()
@@ -664,8 +722,14 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <title>{% block title %}Low Production{% endblock %}</title>
 
     <meta name=\"description\" content=\"Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.\">
-    <meta name=\"keywords\" content=\"\">
-    <meta name=\"author\" content=\"tabthemes\">
+    <meta name=\"author\" content=\"Low Production\">
+
+    <!-- Balises OG -->
+    <meta property=\"og:title\" content=\"{{block('title')}}\"/>
+    <meta property=\"og:type\" content=\"{% block og_type %}website{% endblock %}\"/>
+    <meta property=\"og:url\" content=\"{{app.request.uri}}\" />
+    <meta property=\"og:image\" content=\"{% block og_img %}{{asset('web/img/slider/s1.jpg')}}{% endblock %}\"/>
+    <meta property=\"og:site_name\" content=\"Low Production\"/>
 
     <!-- Favicons -->
     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('web/img/favicon/apple-touch-icon.png') }}\">
@@ -795,7 +859,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
             <ul>
               <li><b>Réalisé par :</b> Halima GUEYE</li>
               <li><b>Site internet :</b> <a href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a></li>
-              <li><b>Inspiration de départ :</b> </li>
+              <li><b>Inspiration de départ :</b> TabThemes</li>
               <li><b>Site internet :</b> <a href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a></li>
             </ul>
 

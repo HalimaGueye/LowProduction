@@ -36,7 +36,7 @@ class MemberProjectRepository extends ServiceEntityRepository
     public function test($id)
     {
         $sql = "
-            SELECT r.name, GROUP_CONCAT(m.name SEPARATOR ', ')
+            SELECT r.name, GROUP_CONCAT(m.name ORDER BY m.name ASC SEPARATOR ', ')
               FROM project p, member_project mp, member m, project_member_role pmr, role_project r
               WHERE mp.project_id = p.id AND mp.member_id = m.id AND pmr.project_member_id = mp.id AND pmr.role_project_id = r.id
               AND p.id = :idp

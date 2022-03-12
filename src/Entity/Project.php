@@ -89,6 +89,13 @@ class Project
     private $supportMessage;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="generalMessage", type="text", nullable=true)
+     */
+    private $generalMessage;
+
+    /**
      * @var string|null
      *
      * @ORM\Column(name="url_crowdfunding", type="string", length=255, nullable=true)
@@ -223,6 +230,18 @@ class Project
     public function setAcvMessage(string $acvMessage): self
     {
         $this->acvMessage = $acvMessage;
+
+        return $this;
+    }
+
+    public function getGeneralMessage(): ?string
+    {
+        return $this->generalMessage;
+    }
+
+    public function setGeneralMessage(string $generalMessage): self
+    {
+        $this->generalMessage = $generalMessage;
 
         return $this;
     }

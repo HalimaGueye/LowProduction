@@ -1,7 +1,6 @@
 /*--------------------------------------------------
     00. Addings
 ---------------------------------------------------*/
-
 /* BD */
 
 /* comic-neue-700italic - latin */
@@ -2767,4 +2766,15 @@ blockquote {
   .logo-container{
       width:80px;
   }
+}
+
+.cc img{
+  height: 31px;
+  width: 88px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.cc{
+  font-size:0.8em;
 }

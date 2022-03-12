@@ -430,7 +430,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t<div class=\"accordion-group \">
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup1\">
 \t\t\t\t\t\t\t\t\t\t<h5>Réaliser</h5>
-\t\t\t\t\t\t\t\t\t\t<p>Nous proposons à nos bénévoles un cadre pour travailler <b>ensemble</b> sur un projet audiovisuel <b>commun</b>. Réalisateurs, ingénieurs du son, scénaristes, photographes, vidéastes, musiciens... forment ainsi un <b>collectif</b> de <b>bénévoles</b> réunit derrière la création de <b>documentaires engagés</b> sur les thématiques <b>sociales</b> et <b>environnementales</b>.</p>
+\t\t\t\t\t\t\t\t\t\t<p>Nous proposons à nos bénévoles un cadre pour travailler <b>ensemble</b> sur un projet audiovisuel <b>commun</b>. Réalisateurs, ingénieurs du son, scénaristes, photographes, vidéastes, musiciens... forment ainsi un <b>collectif</b> de <b>bénévoles</b> réuni derrière la création de <b>documentaires engagés</b> sur les thématiques <b>sociales</b> et <b>environnementales</b>.</p>
 
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
@@ -484,12 +484,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup3\">
 \t\t\t\t\t\t\t\t\t\t<h5>Diffuser librement</h5>
-\t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous la <b>licence libre</b> Creative Commons <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">CC BY-SA 4.0</a>. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
+\t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous <b>licence libre</b> Creative Commons. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
 \t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t<h5 class='timeline-title'>#1 Diffusion</h5>
-\t\t\t\t\t\t\t\t\t\t\t\t<p>Le partage et l'adaptation de nos projets sont libres et gratuits, même à des fins commerciales.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<p>Le partage et la diffusion de nos projets sont libres et gratuits, même à des fins commerciales.</p>
 \t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t<h5 class='timeline-title'>#2 Présentation de l'association</h5>
@@ -1352,7 +1352,7 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t<div class=\"accordion-group \">
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup1\">
 \t\t\t\t\t\t\t\t\t\t<h5>Réaliser</h5>
-\t\t\t\t\t\t\t\t\t\t<p>Nous proposons à nos bénévoles un cadre pour travailler <b>ensemble</b> sur un projet audiovisuel <b>commun</b>. Réalisateurs, ingénieurs du son, scénaristes, photographes, vidéastes, musiciens... forment ainsi un <b>collectif</b> de <b>bénévoles</b> réunit derrière la création de <b>documentaires engagés</b> sur les thématiques <b>sociales</b> et <b>environnementales</b>.</p>
+\t\t\t\t\t\t\t\t\t\t<p>Nous proposons à nos bénévoles un cadre pour travailler <b>ensemble</b> sur un projet audiovisuel <b>commun</b>. Réalisateurs, ingénieurs du son, scénaristes, photographes, vidéastes, musiciens... forment ainsi un <b>collectif</b> de <b>bénévoles</b> réuni derrière la création de <b>documentaires engagés</b> sur les thématiques <b>sociales</b> et <b>environnementales</b>.</p>
 
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
@@ -1406,12 +1406,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"collapse\" id=\"myGroup3\">
 \t\t\t\t\t\t\t\t\t\t<h5>Diffuser librement</h5>
-\t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous la <b>licence libre</b> Creative Commons <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">CC BY-SA 4.0</a>. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
+\t\t\t\t\t\t\t\t\t\t<p>Les projets réalisés chez Low Production sont diffusés sous <b>licence libre</b> Creative Commons. Ils peuvent ainsi être <b>partagés</b> et <b>adaptés</b> gratuitement. En travaillant ainsi, nous assurons une <b>équité dans la distribution et la diffusion</b> de nos réalisations. Lorsque la diffusion se fait dans un cadre <b>commercial</b>, nous encourageons les diffuseurs à <b>soutenir</b> l'association afin de <b>financer</b> et <b>encourager</b> de <b>futurs projets</b>. Notre fonctionnement est semblable à un spectacle où l'entrée est à <b>prix libre</b>.</p>
 \t\t\t\t\t\t\t\t\t\t<h5 class=\"m-top-20\">Le fonctionnement</h5>
 \t\t\t\t\t\t\t\t\t\t<ul class=\"timeline\">
 \t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t<h5 class='timeline-title'>#1 Diffusion</h5>
-\t\t\t\t\t\t\t\t\t\t\t\t<p>Le partage et l'adaptation de nos projets sont libres et gratuits, même à des fins commerciales.</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<p>Le partage et la diffusion de nos projets sont libres et gratuits, même à des fins commerciales.</p>
 \t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t<h5 class='timeline-title'>#2 Présentation de l'association</h5>

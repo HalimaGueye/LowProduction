@@ -49,6 +49,7 @@ class ProjectCrudController extends AbstractCrudController
             TextEditorField::new('description', 'Description'),
             TextField::new('format', 'Format'),
             TextField::new('duration', 'Durée'),
+            TextEditorField::new('generalMessage', 'Message (général)'),
             TextEditorField::new('contributorsMessage', 'Message (contributeurs)'),
             TextEditorField::new('acvMessage', 'Message (ACV)'),
             TextEditorField::new('supportMessage', 'Message (soutient)'),

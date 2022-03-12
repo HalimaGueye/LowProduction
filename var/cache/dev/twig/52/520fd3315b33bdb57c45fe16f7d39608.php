@@ -128,24 +128,24 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 </section>
 <!-- End Story -->
 
-<!-- Start BD -->
-<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
-\t\t<div class=\"container\">
-\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
-\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
-\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
-\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
-\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
-\t\t\t\t</div>
-\t\t</div>
-</section>
-<!-- End BD -->
-
 ";
-        // line 38
-        if (((array_key_exists("comics", $context) &&  !(null === (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 38, $this->source); })()))) && (twig_length_filter($this->env, (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 38, $this->source); })())) > 0))) {
-            // line 39
-            echo "\t\t<!-- BDs -->
+        // line 25
+        if (((array_key_exists("comics", $context) &&  !(null === (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 25, $this->source); })()))) && (twig_length_filter($this->env, (isset($context["comics"]) || array_key_exists("comics", $context) ? $context["comics"] : (function () { throw new RuntimeError('Variable "comics" does not exist.', 25, $this->source); })())) > 0))) {
+            // line 26
+            echo "\t\t<!-- Start BD -->
+\t\t<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
+\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
+\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
+\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t</section>
+\t\t<!-- End BD -->
+
+\t\t<!-- BDs -->
 \t\t<section id=\"bds\" class=\"p-top-20 p-bottom-80\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t\t<div class=\"portfolio portfolio-isotope col-3\">
@@ -275,7 +275,7 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 
     public function getDebugInfo()
     {
-        return array (  245 => 73,  239 => 71,  229 => 70,  218 => 67,  211 => 62,  198 => 54,  180 => 53,  176 => 52,  166 => 47,  161 => 45,  158 => 44,  154 => 43,  148 => 39,  146 => 38,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  245 => 73,  239 => 71,  229 => 70,  218 => 67,  211 => 62,  198 => 54,  180 => 53,  176 => 52,  166 => 47,  161 => 45,  158 => 44,  154 => 43,  135 => 26,  133 => 25,  124 => 19,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -304,20 +304,20 @@ class __TwigTemplate_c4b6af2b7188e60ecd0408f7a1f2c71b extends Template
 </section>
 <!-- End Story -->
 
-<!-- Start BD -->
-<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
-\t\t<div class=\"container\">
-\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
-\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
-\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
-\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
-\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
-\t\t\t\t</div>
-\t\t</div>
-</section>
-<!-- End BD -->
-
 {% if comics is defined and comics is not null and comics|length > 0 %}
+\t\t<!-- Start BD -->
+\t\t<section id=\"bd\" class=\"p-top-20 p-bottom-20\">
+\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t<div class=\"section-title text-center m-bottom-50\">
+\t\t\t\t\t\t\t\t<h2 class=\"wow fadeInDown\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">Bande dessinée</h2>
+\t\t\t\t\t\t\t\t<div class=\"divider-center-small wow zoomIn\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\"></div>
+\t\t\t\t\t\t\t\t<p class=\"section-subtitle wow fadeInUp\" data-wow-duration=\"1s\" data-wow-delay=\"0.6s\">
+\t\t\t\t\t\t\t\t\tAfin de vous raconter l'histoire de l'association, des bénévoles ont travaillé sur une bande dessinée. Nous vous invitons à <b>plonger</b> dans les <b>fondements</b> et les <b>origines</b> de l'association.</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t</section>
+\t\t<!-- End BD -->
+
 \t\t<!-- BDs -->
 \t\t<section id=\"bds\" class=\"p-top-20 p-bottom-80\">
 \t\t\t\t<div class=\"container\">
