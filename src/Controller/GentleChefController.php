@@ -129,7 +129,8 @@ class GentleChefController extends AbstractController
           $contactFormData = $form->getData();
 
           $message = (new Email())
-              ->from($contactFormData['email'])
+              ->from('website@low-production.org')
+              ->replyTo($contactFormData['email'])
               ->to('contact@low-production.org')
               ->subject('Message de '.$contactFormData['name'])
               ->html('<p><b>Envoyé par :</b></p><p>'.$contactFormData['email'].'</p><p><b>Message :</b></p><p>'.$contactFormData['message'].'</p>');
