@@ -7,15 +7,15 @@
 
     <title>{% block title %}Low Production{% endblock %}</title>
 
-    <meta name="description" content="Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.">
+    <meta name="description" content="{% block description %}Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.{% endblock %}">
     <meta name="author" content="Low Production">
 
     <!-- Balises OG -->
     <meta property="og:title" content="{{block('title')}}"/>
     <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
     <meta property="og:url" content="{{app.request.uri}}" />
-    <meta property="og:image" content="{% block og_img %}{{asset('web/img/slider/s1.jpg')}}{% endblock %}"/>
-    <meta property="og:site_name" content="Low Production"/>
+    <meta property="og:image" content="{% block og_img %}{{asset('web/img/og.JPG')}}{% endblock %}"/>
+    <meta property="og:site_name" content="{{block('title')}}"/>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('web/img/favicon/apple-touch-icon.png') }}">
