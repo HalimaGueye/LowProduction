@@ -1,0 +1,11 @@
+#librairies
+vendor/
+
+#variables
+.env
+
+#cache
+var/
+
+#uploads
+public/uploads/
