@@ -555,8 +555,8 @@
 														</div>
 														<div class="blog-post-body">
 																<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
-																<p class="p-bottom-20">{{new.article|striptags|slice(0, 50)}}...</p>
-																<a href="{{url("new", {"id": new.id})}}" class="read-more">En savoir plus >></a>
+																<p class="p-bottom-20">{{ new.article|striptags > 50 ? new.article|striptags|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
+																<a href="{{url("new", {"id": new.id})}}" class="read-more">Lire la suite</a>
 														</div>
 												</div>
 										{% endfor %}
@@ -690,6 +690,18 @@
 						});
 				}
 		}); /*ready*/
+
+		//update owl-carousel / stop rewinding news
+		$(document).ready(function() {
+			var $carousel = jQuery('#owl-blog');
+			var carouselData = $carousel.data();
+			var carouselOptions = carouselData['owl.carousel'].options;
+			carouselOptions.rewindNav = false;
+			carouselOptions.loop = false;
+			carouselOptions.rewind = false;
+			$carousel.trigger('refresh.owl.carousel');
+		});
+
 	</script>
 
 {% endblock %}

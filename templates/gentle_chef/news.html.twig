@@ -22,7 +22,7 @@
 								<div class="col-xs-12 m-bottom-20">
 										<div class="blog wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
 												<div class="blog-media">
-														<a  href="{{url("new", {"id": new.id})}}"><img src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt="{{new.picture.name}}"></a>
+														<a href="{{url("new", {"id": new.id})}}"><img class="blog-img-height" src="{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}" alt="{{new.picture.name}}"></a>
 												</div>
 												<div class="blog-post-info clearfix">
 														<span class="time"><i class="fa fa-calendar"></i>{{new.publication|date("d/m/Y")}}</span>
@@ -30,13 +30,12 @@
 												</div>
 												<div class="blog-post-body">
 														<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
-														<p class="p-bottom-20">{{new.article|striptags|slice(0, 50)}}...</p>
-														<a href="{{url("new", {"id": new.id})}}" class="read-more">En savoir plus >></a>
+														<p class="p-bottom-20">{{ new.article|striptags > 100 ? new.article|striptags|slice(0, 101)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
+														<a href="{{url("new", {"id": new.id})}}" class="read-more">Lire la suite</a>
 												</div>
 										</div>
 								</div>
 						{% endfor %}
-						<!-- PAGINATION A AJOUTER :) -->
 				</div>
 		</div>
 		<br>

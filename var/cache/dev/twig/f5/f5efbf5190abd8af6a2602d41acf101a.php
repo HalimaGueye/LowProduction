@@ -28,6 +28,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'description' => [$this, 'block_description'],
             'og_type' => [$this, 'block_og_type'],
             'og_img' => [$this, 'block_og_img'],
             'css' => [$this, 'block_css'],
@@ -66,7 +67,10 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
 
-    <meta name=\"description\" content=\"Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.\">
+    <meta name=\"description\" content=\"";
+        // line 10
+        $this->displayBlock('description', $context, $blocks);
+        echo "\">
     <meta name=\"author\" content=\"Low Production\">
 
     <!-- Balises OG -->
@@ -86,7 +90,10 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         // line 17
         $this->displayBlock('og_img', $context, $blocks);
         echo "\"/>
-    <meta property=\"og:site_name\" content=\"Low Production\"/>
+    <meta property=\"og:site_name\" content=\"";
+        // line 18
+        $this->displayBlock("title", $context, $blocks);
+        echo "\"/>
 
     <!-- Favicons -->
     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
@@ -219,11 +226,14 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <!-- Start Footer -->
     <footer class=\"site-footer\">
         <div class=\"container\">
-            <small class=\"copyright pull-left\"><a data-toggle=\"modal\" data-target=\"#mentions\">Mentions légales</a><br>Copyrights © 2022 Low Production - Made by <a target=\"_blank\" href=\"https://www.halima-gueye.online/\">Halima</a> & inspired by <a target=\"_blank\" href=\"http://www.tabthemes.com/\">tabthemes</a>.</small>
+            <small class=\"copyright pull-left\"><a data-toggle=\"modal\" data-target=\"#mentions\">Mentions légales</a><br>Copyrights © ";
+        // line 109
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
+        echo " - Low Production.</small>
             <div class=\"social-icon pull-right\">
-              <a href=\"#\"><i class=\"fa fa-facebook\"></i></a>
-              <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a>
-              <a href=\"#\"><i class=\"fa fa-instagram\"></i></a>
+              <a target=\"_blank\" href=\"https://www.facebook.com/AssociationLowProduction\"><i class=\"fa fa-facebook\"></i></a>
+              <a target=\"_blank\" href=\"https://www.linkedin.com/company/low-production/\"><i class=\"fa fa-linkedin\"></i></a>
+              <a target=\"_blank\" href=\"https://www.instagram.com/lowproduction.asso/\"><i class=\"fa fa-instagram\"></i></a>
             </div>
         </div>
     </footer>
@@ -250,16 +260,14 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Hébergement</h5>
             <ul>
-              <li><b>Dénomination :</b> XXX</li>
-              <li><b>Adresse :</b> XXX</li>
+              <li><b>Dénomination : </b>IKOULA</li>
+              <li><b>Adresse : </b>175/177 rue d'Aguesseau, 92100, Boulogne Billancourt, FRANCE</li>
             </ul>
 
             <h5>Design et développement</h5>
             <ul>
-              <li><b>Réalisé par :</b> Halima GUEYE</li>
-              <li><b>Site internet :</b> <a href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a></li>
-              <li><b>Inspiration de départ :</b> TabThemes</li>
-              <li><b>Site internet :</b> <a href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a></li>
+              <li><b>Réalisé par :</b> William BOFFY & Halima GUEYE (<a target=\"_blank\" href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a>)</li>
+              <li><b>Inspiration de départ :</b> TabThemes (<a target=\"_blank\" href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a>)</li>
             </ul>
 
             <h5>Identité visuelle</h5>
@@ -269,12 +277,20 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Conditions d’accès et d’utilisation</h5>
             <ul>
-              <li>Toute consultation et utilisation du site <a href=\"www.low-production.org\">www.low-production.org</a> implique l’acceptation sans restriction des termes de la réglementation présente dans les mentions légales ci-dessous. Par conséquent, tout accès au site <a href=\"www.low-production.org\">www.low-production.org</a> est soumis à cette réglementation ainsi qu’aux lois en vigueur.</li>
+              <li>Toute consultation et utilisation du site <a href=\"";
+        // line 157
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> implique l’acceptation sans restriction des termes de la réglementation présente dans les mentions légales ci-dessous. Par conséquent, tout accès au site <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> est soumis à cette réglementation ainsi qu’aux lois en vigueur.</li>
             </ul>
 
             <h5>Contenu</h5>
             <ul>
-              <li>Le site <a href=\"www.low-production.org\">www.low-production.org</a> contient des informations relatives à Low Production.</li>
+              <li>Le site <a href=\"";
+        // line 162
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> contient des informations relatives à Low Production.</li>
               <li>Toute information fournie sur ce site l’est exclusivement à titre indicatif. L’information contenue sur ce site est conçue pour être aussi exhaustive que possible.</li>
               <li>Low Production se réserve le droit d’apporter, à tout moment et sans préavis, des modifications.</li>
             </ul>
@@ -292,12 +308,24 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Hyperliens</h5>
             <ul>
-              <li>Le site <a href=\"www.low-production.org\">www.low-production.org</a> peut contenir des liens hypertextes menant à d’autres sites Internet totalement indépendants du site <a href=\"www.low-production.org\">www.low-production.org</a>. Dès lors, tout accès à un autre site Internet lié au site <a href=\"www.low-production.org\">www.low-production.org</a> s’effectue sous la propre responsabilité, pleine et entière, de l’utilisateur.</li>
+              <li>Le site <a href=\"";
+        // line 180
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> peut contenir des liens hypertextes menant à d’autres sites Internet totalement indépendants du site <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a>. Dès lors, tout accès à un autre site Internet lié au site <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> s’effectue sous la propre responsabilité, pleine et entière, de l’utilisateur.</li>
             </ul>
 
             <h5>Responsabilité limitée</h5>
             <ul>
-              <li>Low Production décline spécifiquement toute responsabilité pour les éventuels préjudices directs, indirects, accidentels, consécutifs ou spéciaux liés à l’accès ou à l’utilisation du site <a href=\"www.low-production.org\">www.low-production.org</a> ou subis en conséquence de ceux-ci, y compris, mais sans s’y limiter, à toute perte ou dommage provoqués par des virus affectant l’équipement informatique de l’utilisateur ou résultant du crédit accordé à une information obtenue par le biais du site <a href=\"www.low-production.org\">www.low-production.org</a>.</li>
+              <li>Low Production décline spécifiquement toute responsabilité pour les éventuels préjudices directs, indirects, accidentels, consécutifs ou spéciaux liés à l’accès ou à l’utilisation du site <a href=\"";
+        // line 185
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a> ou subis en conséquence de ceux-ci, y compris, mais sans s’y limiter, à toute perte ou dommage provoqués par des virus affectant l’équipement informatique de l’utilisateur ou résultant du crédit accordé à une information obtenue par le biais du site <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("home");
+        echo "\">www.low-production.org</a>.</li>
               <li>De même, l’éditeur du présent site ne peut être tenu responsable en cas de mauvaise utilisation du site par l’utilisateur ou en cas d’indisponibilité temporaire du site (cas de force majeure, de période de maintenance ou d’incident technique, quel qu’il soit).</li>
               <li>L’utilisateur est le seul et unique responsable de l’usage des informations figurant sur le présent site et des conséquences qui pourraient en découler, notamment quant aux décisions prises et aux actions entreprises sur la base de ces informations.</li>
             </ul>
@@ -326,9 +354,9 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <!-- /Back to top -->
 
 \t\t";
-        // line 215
+        // line 213
         $this->displayBlock('js', $context, $blocks);
-        // line 233
+        // line 231
         echo "  </body>
 </html>
 ";
@@ -351,6 +379,25 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         echo "Low Production";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 10
+    public function block_description($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "description"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "description"));
+
+        echo "Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -388,7 +435,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "og_img"));
 
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/slider/s1.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/img/og.JPG"), "html", null, true);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -635,7 +682,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     }
 
-    // line 215
+    // line 213
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -645,44 +692,44 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 216
+        // line 214
         echo "\t    <!-- jQuery -->
 \t    <script src=\"";
-        // line 217
+        // line 215
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Bootstrap -->
 \t    <script src=\"";
-        // line 220
+        // line 218
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
 \t    <!-- Custom Plugin -->
 \t    <script src=\"";
-        // line 223
+        // line 221
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/js/custom.js"), "html", null, true);
         echo "\"></script>
 
 \t\t\t<!-- Components Plugin -->
 \t\t\t<script src=\"";
-        // line 226
+        // line 224
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/smooth-scroll.js\"></script>
 \t\t\t<script src=\"";
-        // line 227
+        // line 225
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.appear.js\"></script>
 \t\t\t<script src=\"";
-        // line 228
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/jquery.stellar.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 229
+        // line 227
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "js/wow.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 230
+        // line 228
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("web/"), "html", null, true);
         echo "inc/owlcarousel/js/owl.carousel.min.js\"></script>
 
@@ -707,7 +754,7 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     public function getDebugInfo()
     {
-        return array (  686 => 230,  682 => 229,  678 => 228,  674 => 227,  670 => 226,  664 => 223,  658 => 220,  652 => 217,  649 => 216,  639 => 215,  621 => 103,  602 => 91,  583 => 90,  564 => 89,  545 => 88,  526 => 87,  507 => 86,  488 => 85,  469 => 84,  450 => 40,  444 => 37,  440 => 36,  436 => 35,  432 => 34,  428 => 33,  424 => 32,  420 => 31,  414 => 28,  411 => 27,  401 => 26,  382 => 17,  363 => 15,  344 => 8,  332 => 233,  330 => 215,  217 => 104,  215 => 103,  198 => 91,  192 => 90,  186 => 89,  180 => 88,  174 => 87,  168 => 86,  162 => 85,  156 => 84,  145 => 76,  141 => 75,  113 => 49,  111 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  87 => 17,  83 => 16,  79 => 15,  75 => 14,  66 => 8,  57 => 1,);
+        return array (  733 => 228,  729 => 227,  725 => 226,  721 => 225,  717 => 224,  711 => 221,  705 => 218,  699 => 215,  696 => 214,  686 => 213,  668 => 103,  649 => 91,  630 => 90,  611 => 89,  592 => 88,  573 => 87,  554 => 86,  535 => 85,  516 => 84,  497 => 40,  491 => 37,  487 => 36,  483 => 35,  479 => 34,  475 => 33,  471 => 32,  467 => 31,  461 => 28,  458 => 27,  448 => 26,  429 => 17,  410 => 15,  391 => 10,  372 => 8,  360 => 231,  358 => 213,  325 => 185,  313 => 180,  292 => 162,  282 => 157,  231 => 109,  224 => 104,  222 => 103,  205 => 91,  199 => 90,  193 => 89,  187 => 88,  181 => 87,  175 => 86,  169 => 85,  163 => 84,  152 => 76,  148 => 75,  120 => 49,  118 => 26,  113 => 24,  109 => 23,  105 => 22,  101 => 21,  95 => 18,  91 => 17,  87 => 16,  83 => 15,  79 => 14,  72 => 10,  67 => 8,  58 => 1,);
     }
 
     public function getSourceContext()
@@ -721,15 +768,15 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
     <title>{% block title %}Low Production{% endblock %}</title>
 
-    <meta name=\"description\" content=\"Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.\">
+    <meta name=\"description\" content=\"{% block description %}Low Production est une association de production audiovisuelle libre, collaborative et engagée dans la transition environnementale.{% endblock %}\">
     <meta name=\"author\" content=\"Low Production\">
 
     <!-- Balises OG -->
     <meta property=\"og:title\" content=\"{{block('title')}}\"/>
     <meta property=\"og:type\" content=\"{% block og_type %}website{% endblock %}\"/>
     <meta property=\"og:url\" content=\"{{app.request.uri}}\" />
-    <meta property=\"og:image\" content=\"{% block og_img %}{{asset('web/img/slider/s1.jpg')}}{% endblock %}\"/>
-    <meta property=\"og:site_name\" content=\"Low Production\"/>
+    <meta property=\"og:image\" content=\"{% block og_img %}{{asset('web/img/og.JPG')}}{% endblock %}\"/>
+    <meta property=\"og:site_name\" content=\"{{block('title')}}\"/>
 
     <!-- Favicons -->
     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('web/img/favicon/apple-touch-icon.png') }}\">
@@ -820,11 +867,11 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
     <!-- Start Footer -->
     <footer class=\"site-footer\">
         <div class=\"container\">
-            <small class=\"copyright pull-left\"><a data-toggle=\"modal\" data-target=\"#mentions\">Mentions légales</a><br>Copyrights © 2022 Low Production - Made by <a target=\"_blank\" href=\"https://www.halima-gueye.online/\">Halima</a> & inspired by <a target=\"_blank\" href=\"http://www.tabthemes.com/\">tabthemes</a>.</small>
+            <small class=\"copyright pull-left\"><a data-toggle=\"modal\" data-target=\"#mentions\">Mentions légales</a><br>Copyrights © {{ 'now' | date('Y') }} - Low Production.</small>
             <div class=\"social-icon pull-right\">
-              <a href=\"#\"><i class=\"fa fa-facebook\"></i></a>
-              <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a>
-              <a href=\"#\"><i class=\"fa fa-instagram\"></i></a>
+              <a target=\"_blank\" href=\"https://www.facebook.com/AssociationLowProduction\"><i class=\"fa fa-facebook\"></i></a>
+              <a target=\"_blank\" href=\"https://www.linkedin.com/company/low-production/\"><i class=\"fa fa-linkedin\"></i></a>
+              <a target=\"_blank\" href=\"https://www.instagram.com/lowproduction.asso/\"><i class=\"fa fa-instagram\"></i></a>
             </div>
         </div>
     </footer>
@@ -851,16 +898,14 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Hébergement</h5>
             <ul>
-              <li><b>Dénomination :</b> XXX</li>
-              <li><b>Adresse :</b> XXX</li>
+              <li><b>Dénomination : </b>IKOULA</li>
+              <li><b>Adresse : </b>175/177 rue d'Aguesseau, 92100, Boulogne Billancourt, FRANCE</li>
             </ul>
 
             <h5>Design et développement</h5>
             <ul>
-              <li><b>Réalisé par :</b> Halima GUEYE</li>
-              <li><b>Site internet :</b> <a href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a></li>
-              <li><b>Inspiration de départ :</b> TabThemes</li>
-              <li><b>Site internet :</b> <a href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a></li>
+              <li><b>Réalisé par :</b> William BOFFY & Halima GUEYE (<a target=\"_blank\" href='https://www.halima-gueye.online/'>https://www.halima-gueye.online/</a>)</li>
+              <li><b>Inspiration de départ :</b> TabThemes (<a target=\"_blank\" href='http://www.tabthemes.com/'>http://www.tabthemes.com/</a>)</li>
             </ul>
 
             <h5>Identité visuelle</h5>
@@ -870,12 +915,12 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Conditions d’accès et d’utilisation</h5>
             <ul>
-              <li>Toute consultation et utilisation du site <a href=\"www.low-production.org\">www.low-production.org</a> implique l’acceptation sans restriction des termes de la réglementation présente dans les mentions légales ci-dessous. Par conséquent, tout accès au site <a href=\"www.low-production.org\">www.low-production.org</a> est soumis à cette réglementation ainsi qu’aux lois en vigueur.</li>
+              <li>Toute consultation et utilisation du site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> implique l’acceptation sans restriction des termes de la réglementation présente dans les mentions légales ci-dessous. Par conséquent, tout accès au site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> est soumis à cette réglementation ainsi qu’aux lois en vigueur.</li>
             </ul>
 
             <h5>Contenu</h5>
             <ul>
-              <li>Le site <a href=\"www.low-production.org\">www.low-production.org</a> contient des informations relatives à Low Production.</li>
+              <li>Le site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> contient des informations relatives à Low Production.</li>
               <li>Toute information fournie sur ce site l’est exclusivement à titre indicatif. L’information contenue sur ce site est conçue pour être aussi exhaustive que possible.</li>
               <li>Low Production se réserve le droit d’apporter, à tout moment et sans préavis, des modifications.</li>
             </ul>
@@ -893,12 +938,12 @@ class __TwigTemplate_6e506fd2c024ed1d1d6dc0df6d13cc0f extends Template
 
             <h5>Hyperliens</h5>
             <ul>
-              <li>Le site <a href=\"www.low-production.org\">www.low-production.org</a> peut contenir des liens hypertextes menant à d’autres sites Internet totalement indépendants du site <a href=\"www.low-production.org\">www.low-production.org</a>. Dès lors, tout accès à un autre site Internet lié au site <a href=\"www.low-production.org\">www.low-production.org</a> s’effectue sous la propre responsabilité, pleine et entière, de l’utilisateur.</li>
+              <li>Le site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> peut contenir des liens hypertextes menant à d’autres sites Internet totalement indépendants du site <a href=\"{{url(\"home\")}}\">www.low-production.org</a>. Dès lors, tout accès à un autre site Internet lié au site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> s’effectue sous la propre responsabilité, pleine et entière, de l’utilisateur.</li>
             </ul>
 
             <h5>Responsabilité limitée</h5>
             <ul>
-              <li>Low Production décline spécifiquement toute responsabilité pour les éventuels préjudices directs, indirects, accidentels, consécutifs ou spéciaux liés à l’accès ou à l’utilisation du site <a href=\"www.low-production.org\">www.low-production.org</a> ou subis en conséquence de ceux-ci, y compris, mais sans s’y limiter, à toute perte ou dommage provoqués par des virus affectant l’équipement informatique de l’utilisateur ou résultant du crédit accordé à une information obtenue par le biais du site <a href=\"www.low-production.org\">www.low-production.org</a>.</li>
+              <li>Low Production décline spécifiquement toute responsabilité pour les éventuels préjudices directs, indirects, accidentels, consécutifs ou spéciaux liés à l’accès ou à l’utilisation du site <a href=\"{{url(\"home\")}}\">www.low-production.org</a> ou subis en conséquence de ceux-ci, y compris, mais sans s’y limiter, à toute perte ou dommage provoqués par des virus affectant l’équipement informatique de l’utilisateur ou résultant du crédit accordé à une information obtenue par le biais du site <a href=\"{{url(\"home\")}}\">www.low-production.org</a>.</li>
               <li>De même, l’éditeur du présent site ne peut être tenu responsable en cas de mauvaise utilisation du site par l’utilisateur ou en cas d’indisponibilité temporaire du site (cas de force majeure, de période de maintenance ou d’incident technique, quel qu’il soit).</li>
               <li>L’utilisateur est le seul et unique responsable de l’usage des informations figurant sur le présent site et des conséquences qui pourraient en découler, notamment quant aux décisions prises et aux actions entreprises sur la base de ces informations.</li>
             </ul>

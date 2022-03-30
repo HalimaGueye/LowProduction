@@ -130,10 +130,10 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
             echo "\t\t\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-20\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 25
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            echo "\"><img src=\"";
+            echo "\"><img class=\"blog-img-height\" src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(twig_get_attribute($this->env, $this->source, $context["new"], "picture", [], "any", false, false, false, 25), "imageFile")), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["new"], "picture", [], "any", false, false, false, 25), "name", [], "any", false, false, false, 25), "html", null, true);
@@ -160,12 +160,12 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
             echo "</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">";
             // line 33
-            echo twig_escape_filter($this->env, twig_slice($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 33)), 0, 100), "html", null, true);
-            echo "...</p>
+            echo twig_escape_filter($this->env, (((twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 33)) > 100)) ? ((twig_join_filter(twig_slice($this->env, twig_split_filter($this->env, twig_slice($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 33)), 0, 101), " "), 0,  -1), " ") . "…")) : (twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 33)))), "html", null, true);
+            echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
             // line 34
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "\" class=\"read-more\">En savoir plus >></a>
+            echo "\" class=\"read-more\">Lire la suite</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -175,15 +175,14 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['new'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 39
-        echo "\t\t\t\t\t\t<!-- PAGINATION A AJOUTER :) -->
-\t\t\t\t</div>
+        echo "\t\t\t\t</div>
 \t\t</div>
 \t\t<br>
 \t\t<center>
 \t\t\t<div class=\"navigation\">
 \t\t\t    ";
-        // line 45
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 45, $this->source); })()));
+        // line 44
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 44, $this->source); })()));
         echo "
 \t\t\t</div>
 \t\t</center>
@@ -198,7 +197,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     }
 
-    // line 52
+    // line 51
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -208,7 +207,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 53
+        // line 52
         echo "\t";
         $this->displayParentBlock("js", $context, $blocks);
         echo "
@@ -233,7 +232,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 
     public function getDebugInfo()
     {
-        return array (  212 => 53,  202 => 52,  186 => 45,  178 => 39,  167 => 34,  163 => 33,  157 => 32,  149 => 29,  145 => 28,  135 => 25,  130 => 22,  126 => 21,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  211 => 52,  201 => 51,  185 => 44,  178 => 39,  167 => 34,  163 => 33,  157 => 32,  149 => 29,  145 => 28,  135 => 25,  130 => 22,  126 => 21,  113 => 10,  103 => 9,  84 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -262,7 +261,7 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 \t\t\t\t\t\t\t\t<div class=\"col-xs-12 m-bottom-20\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"blog wow zoomIn\" data-wow-duration=\"0.8s\" data-wow-delay=\"0.2s\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-media\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a  href=\"{{url(\"new\", {\"id\": new.id})}}\"><img src=\"{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}\" alt=\"{{new.picture.name}}\"></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\"><img class=\"blog-img-height\" src=\"{{asset(vich_uploader_asset(new.picture, 'imageFile'))}}\" alt=\"{{new.picture.name}}\"></a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-info clearfix\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"time\"><i class=\"fa fa-calendar\"></i>{{new.publication|date(\"d/m/Y\")}}</span>
@@ -270,13 +269,12 @@ class __TwigTemplate_77671b75685263121d8ee963565833bf extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\", {\"id\": new.id})}}\">{{new.name}}</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{new.article|striptags|slice(0, 100)}}...</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\" class=\"read-more\">En savoir plus >></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{ new.article|striptags > 100 ? new.article|striptags|slice(0, 101)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\" class=\"read-more\">Lire la suite</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% endfor %}
-\t\t\t\t\t\t<!-- PAGINATION A AJOUTER :) -->
 \t\t\t\t</div>
 \t\t</div>
 \t\t<br>

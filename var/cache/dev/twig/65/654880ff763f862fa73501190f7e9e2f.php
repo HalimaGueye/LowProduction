@@ -787,12 +787,12 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
                 echo "</a></h4>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">";
                 // line 558
-                echo twig_escape_filter($this->env, twig_slice($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 558)), 0, 50), "html", null, true);
-                echo "...</p>
+                echo twig_escape_filter($this->env, (((twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 558)) > 50)) ? ((twig_join_filter(twig_slice($this->env, twig_split_filter($this->env, twig_slice($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 558)), 0, 51), " "), 0,  -1), " ") . "…")) : (twig_striptags(twig_get_attribute($this->env, $this->source, $context["new"], "article", [], "any", false, false, false, 558)))), "html", null, true);
+                echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                 // line 559
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("new", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 559)]), "html", null, true);
-                echo "\" class=\"read-more\">En savoir plus >></a>
+                echo "\" class=\"read-more\">Lire la suite</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t";
@@ -1004,6 +1004,18 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t});
 \t\t\t\t}
 \t\t}); /*ready*/
+
+\t\t//update owl-carousel / stop rewinding news
+\t\t\$(document).ready(function() {
+\t\t\tvar \$carousel = jQuery('#owl-blog');
+\t\t\tvar carouselData = \$carousel.data();
+\t\t\tvar carouselOptions = carouselData['owl.carousel'].options;
+\t\t\tcarouselOptions.rewindNav = false;
+\t\t\tcarouselOptions.loop = false;
+\t\t\tcarouselOptions.rewind = false;
+\t\t\t\$carousel.trigger('refresh.owl.carousel');
+\t\t});
+
 \t</script>
 
 ";
@@ -1589,8 +1601,8 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"blog-post-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4><a class=\"title\" href=\"{{url(\"new\", {\"id\": new.id})}}\">{{new.name}}</a></h4>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{new.article|striptags|slice(0, 50)}}...</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\" class=\"read-more\">En savoir plus >></a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"p-bottom-20\">{{ new.article|striptags > 50 ? new.article|striptags|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{url(\"new\", {\"id\": new.id})}}\" class=\"read-more\">Lire la suite</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t{% endfor %}
@@ -1724,6 +1736,18 @@ class __TwigTemplate_8fc0dc16a8b56beceba70d7a77696f3d extends Template
 \t\t\t\t\t\t});
 \t\t\t\t}
 \t\t}); /*ready*/
+
+\t\t//update owl-carousel / stop rewinding news
+\t\t\$(document).ready(function() {
+\t\t\tvar \$carousel = jQuery('#owl-blog');
+\t\t\tvar carouselData = \$carousel.data();
+\t\t\tvar carouselOptions = carouselData['owl.carousel'].options;
+\t\t\tcarouselOptions.rewindNav = false;
+\t\t\tcarouselOptions.loop = false;
+\t\t\tcarouselOptions.rewind = false;
+\t\t\t\$carousel.trigger('refresh.owl.carousel');
+\t\t});
+
 \t</script>
 
 {% endblock %}
