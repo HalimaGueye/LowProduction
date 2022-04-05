@@ -16,6 +16,16 @@ class ContactType extends AbstractType
                 'attr' => array('placeholder' => 'John DOE'),
                 'required'   => true
             ])
+            ->add('object', TextType::class, [
+                'label' => 'Objet',
+                'attr' => array('placeholder' => 'Lorem ipsum.'),
+                'required' => true
+            ])
+            ->add('captcha', TextType::class, [
+                'label' => '2 + 3 = ?',
+                'attr' => array('placeholder' => '?'),
+                'required' => true
+            ])
             ->add('email',EmailType::class, [
                 'label' => 'Courriel',
                 'attr' => array('placeholder' => 'john.doe@example.org'),

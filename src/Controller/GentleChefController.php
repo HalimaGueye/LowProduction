@@ -126,17 +126,22 @@ class GentleChefController extends AbstractController
       $form = $this->createForm(ContactType::class);
       $form->handleRequest($request);
       if($form->isSubmitted() && $form->isValid()) {
-          $contactFormData = $form->getData();
-
+        $contactFormData = $form->getData();
+        if($contactFormData['captcha'] == '5' OR $contactFormData['captcha'] == 'cinq' OR $contactFormData['captcha'] == 5){
+          //captcha valide
           $message = (new Email())
               ->from('website@low-production.org')
               ->replyTo($contactFormData['email'])
               ->to('contact@low-production.org')
-              ->subject('Message de '.$contactFormData['name'])
-              ->html('<p><b>Envoyé par :</b></p><p>'.$contactFormData['email'].'</p><p><b>Message :</b></p><p>'.$contactFormData['message'].'</p>');
+              ->subject($contactFormData['object'])
+              ->html('<p><b>Envoyé par :</b></p><p>'.$contactFormData['email'].'</p><p><b>Objet :</b></p><p>'.$contactFormData['object'].'</p><p><b>Message :</b></p><p>'.$contactFormData['message'].'</p>');
           $mailer->send($message);
           $this->addFlash('success', 'Votre message a bien été envoyé !');
           return $this->redirectToRoute('contact');
+        }else{
+          //captcha non valide
+          $this->addFlash('danger', 'Captcha non valide ! Merci de bien répondre à la question.');
+        }
       }
       return $this->render('gentle_chef/contact.html.twig', [
           'our_form' => $form->createView()
