@@ -20,7 +20,7 @@
  * MODAL RESPONSIVE ?
  */
 #mentions .modal-body{
-    height: 250px;
+    height: 60vh;
     overflow-y: auto;
 }
 
@@ -29,13 +29,6 @@
     padding-right:0 !important;
 }
 
-@media (min-height: 500px) {
-    #mentions .modal-body { height: 400px; }
-}
-
-@media (min-height: 800px) {
-    #mentions .modal-body { height: 600px; }
-}
 
 /*
  * FIN MODAL
