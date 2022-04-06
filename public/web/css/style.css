@@ -16,6 +16,30 @@
        url('./fonts/Comic/comic-neue-v6-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('./fonts/Comic/comic-neue-v6-latin-700italic.svg#ComicNeue') format('svg'); /* Legacy iOS */
 }
+/*
+ * MODAL RESPONSIVE ?
+ */
+#mentions .modal-body{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.modal-open{
+    overflow: auto;
+    padding-right:0 !important;
+}
+
+@media (min-height: 500px) {
+    #mentions .modal-body { height: 400px; }
+}
+
+@media (min-height: 800px) {
+    #mentions .modal-body { height: 600px; }
+}
+
+/*
+ * FIN MODAL
+ */
 
 #cover-touch-protection{
   opacity:0;
@@ -530,7 +554,7 @@ overlay-light .YTPOverlay:before {
   position: fixed;
   bottom: 20px;
   right: 40px;
-  z-index: 9999;
+  z-index: 1;
   text-align: center;
   cursor: pointer;
   border: 0;
