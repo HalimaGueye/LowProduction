@@ -6,6 +6,8 @@
 	{{parent()}} | {{m.name}}
 {% endblock %}
 
+{% block og_img  %}{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}{% endblock %}
+
 {% block movies %}<li class="active">{% endblock %}
 
 {% block body %}
@@ -34,9 +36,6 @@
 										</div>
 										<!-- Synopsis -->
 										<p>{{m.generalMessage|raw}}</p>
-										{% if m.showSupport %}
-												<p>Vous pouvez <b>soutenir</b> ce projet et les suivants en <a target="_blank" href="https://www.helloasso.com/associations/low-production/formulaires/1/widget">faisant un don</a> à l'association.</p>
-										{% endif %}
 										<br>
 
 										<div class="dropdown" {% if m.videos|length == 0 %} style="cursor: not-allowed;" {% endif %}>
@@ -138,6 +137,13 @@
 																		<div class="divider-small"></div>
 																</div>
 																<p>{{m.supportMessage|raw}}</p>
+																{% if m.showSupport %}
+																	{% if m.getUrlCrowdfunding is defined and m.getUrlCrowdfunding is not null %}
+																		<p>Vous pouvez <b>soutenir la réalisation de ce projet documentaire</b> en participant à la <a target="_blank" href="{{m.getUrlCrowdfunding}}">campagne de crowdfunding</a> en cours.</p>
+																	{% else %}
+																		<p>Vous pouvez <b>soutenir la réalisation de nos documentaires</b> en <a target="_blank" href="https://www.helloasso.com/associations/low-production/formulaires/1/widget">faisant un don</a> à l'association.</p>
+																	{% endif %}
+																{% endif %}
 															</div>
 														</div>
 													{% endif %}

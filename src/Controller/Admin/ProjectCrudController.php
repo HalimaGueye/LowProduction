@@ -64,8 +64,8 @@ class ProjectCrudController extends AbstractCrudController
         // soutient
         TextEditorField::new('supportMessage', 'Texte (SOUTENIR)'),
         BooleanField::new('showSupportSection', 'Affichage de la section SOUTENIR ?'),
-        BooleanField::new('showSupport', 'Affichage du bouton/lien de donation HELLOASSO ?'),
         UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
+        BooleanField::new('showSupport', 'Affichage du bouton/lien de donation ?'),
         // associations bdd
         AssociationField::new('picture', 'Image liée'),
         AssociationField::new('state', 'État'),
