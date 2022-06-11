@@ -45,7 +45,6 @@ class Project
      */
     private $format;
 
-
     /**
      * @var bool
      *
@@ -75,6 +74,27 @@ class Project
     private $acvMessage;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="showAcvSection", type="boolean", nullable=true)
+     */
+    private $showAcvSection;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="educationMessage", type="text", nullable=true)
+     */
+    private $educationMessage;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="showEducationSection", type="boolean", nullable=true)
+     */
+    private $showEducationSection;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="contributorsMessage", type="text", nullable=true)
@@ -82,11 +102,25 @@ class Project
     private $contributorsMessage;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="showContributorsSection", type="boolean", nullable=true)
+     */
+    private $showContributorsSection;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="supportMessage", type="text", nullable=true)
      */
     private $supportMessage;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="showSupportSection", type="boolean", nullable=true)
+     */
+    private $showSupportSection;
 
     /**
      * @var string
@@ -126,7 +160,6 @@ class Project
      * @ORM\OneToMany(targetEntity=Video::class, mappedBy="project")
      */
     private $videos;
-
 
     /**
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="project")
@@ -203,6 +236,50 @@ class Project
         return $this->showSupport;
     }
 
+    public function setShowContributorsSection(bool $b): self
+    {
+        $this->showContributorsSection = $b;
+        return $this;
+    }
+
+    public function getShowContributorsSection(): ?bool
+    {
+        return $this->showContributorsSection;
+    }
+
+    public function setShowEducationSection(bool $b): self
+    {
+        $this->showEducationSection = $b;
+        return $this;
+    }
+
+    public function getShowEducationSection(): ?bool
+    {
+        return $this->showEducationSection;
+    }
+
+    public function setShowAcvSection(bool $b): self
+    {
+        $this->showAcvSection = $b;
+        return $this;
+    }
+
+    public function getShowAcvSection(): ?bool
+    {
+        return $this->showAcvSection;
+    }
+
+    public function setShowSupportSection(bool $b): self
+    {
+        $this->showSupportSection = $b;
+        return $this;
+    }
+
+    public function getShowSupportSection(): ?bool
+    {
+        return $this->showSupportSection;
+    }
+
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -218,6 +295,18 @@ class Project
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getEducationMessage(): ?string
+    {
+        return $this->educationMessage;
+    }
+
+    public function setEducationMessage(string $educationMessage): self
+    {
+        $this->educationMessage = $educationMessage;
 
         return $this;
     }

@@ -24,7 +24,7 @@
 														<span class="metaComment"><i class="fa fa-clock-o"></i>{{m.duration}}</span>
 												</div>
 												<div class="postMeta-date">
-														<span class="metaDate"><i class="fa fa-calendar"></i>{{m.publication|date("d/m/Y")}}</span>
+														<span class="metaDate"><i class="fa fa-calendar"></i>{% if m.publication is defined and m.publication is not null %} {{m.publication|date("d/m/Y")}} {% else %} en cours de réalisation {% endif %}</span>
 												</div>
 										</div>
 										<div class="postTitle">
@@ -34,6 +34,9 @@
 										</div>
 										<!-- Synopsis -->
 										<p>{{m.generalMessage|raw}}</p>
+										{% if m.showSupport %}
+												<p>Vous pouvez <b>soutenir</b> ce projet et les suivants en <a target="_blank" href="https://www.helloasso.com/associations/low-production/formulaires/1/widget">faisant un don</a> à l'association.</p>
+										{% endif %}
 										<br>
 
 										<div class="dropdown" {% if m.videos|length == 0 %} style="cursor: not-allowed;" {% endif %}>
@@ -45,9 +48,10 @@
 											</div>
 										</div>
 
-										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-informations" aria-expanded="false" aria-controls="p{{m.id}}-informations" class="btn btn-main btn-transparent m-5">Informations</a>
-										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-acv" aria-expanded="false" aria-controls="p{{m.id}}-acv" class="btn btn-main btn-transparent m-5">Étude environnementale</a>
-										<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-soutenir" aria-expanded="false" aria-controls="p{{m.id}}-soutenir" class="btn btn-main btn-transparent m-5">Soutenir</a>
+										{% if m.showContributorsSection %}<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-informations" aria-expanded="false" aria-controls="p{{m.id}}-informations" class="btn btn-main btn-transparent m-5">Informations</a> {% endif %}
+										{% if m.showAcvSection %}<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-acv" aria-expanded="false" aria-controls="p{{m.id}}-acv" class="btn btn-main btn-transparent m-5">Étude environnementale</a> {% endif %}
+										{% if m.showEducationSection %}<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-education" aria-expanded="false" aria-controls="p{{m.id}}-education" class="btn btn-main btn-transparent m-5">Malette pédagogique</a> {% endif %}
+										{% if m.showSupportSection %}<a data-toggle="collapse" data-parent="#myProject" data-target="#p{{m.id}}-soutenir" aria-expanded="false" aria-controls="p{{m.id}}-soutenir" class="btn btn-main btn-transparent m-5">Soutenir</a> {% endif %}
 
 										<div class="p-bottom-20 postTags clearfix">
 												<h4><i class="fa fa-tags"></i>Catégories :</h4>
@@ -76,21 +80,32 @@
 																	</div>
 																</div>
 														{% endfor %}
-														<div class="collapse" id="p{{m.id}}-informations">
-															<div class="postTitle p-top-20">
-																	<!-- title -->
-																	<h1>Contributeurs</h1>
-																	<div class="divider-small"></div>
+														{% if m.showContributorsSection %}
+															<div class="collapse" id="p{{m.id}}-informations">
+																<div class="postTitle p-top-20">
+																		<!-- title -->
+																		<h1>Informations</h1>
+																		<div class="divider-small"></div>
+																</div>
+																<div class="card card-body">
+																	<p>{{m.contributorsMessage|raw}}</p>
+																	<b>CONTRIBUTEURS</b> :
+																	<ul>
+																		{% for c in contributors %}
+																		<li><strong>{{c[0]}}</strong> : {{c[1]|raw}}</li>
+																		{% endfor %}
+																	</ul>
+
+																	<b>PARTENAIRES DU PROJET</b> :
+																	<ul>
+																		{% for p in m.getPartners %}
+																			<li>{{p.getName}} : <a target='_blank' href='{{p.getUrl}}'>{{ p.getUrl }}</a></li>
+																		{% endfor %}
+																	</ul>
+																</div>
 															</div>
-															<div class="card card-body">
-																<p>{{m.contributorsMessage|raw}}</p>
-																<ul>
-																	{% for c in contributors %}
-																	<li><strong>{{c[0]}}</strong> : {{c[1]|raw}}</li>
-																	{% endfor %}
-																</ul>
-															</div>
-														</div>
+														{% endif %}
+														{% if m.showAcvSection %}
 														<div class="collapse" id="p{{m.id}}-acv">
 															<div class="card card-body">
 																<div class="postTitle">
@@ -101,6 +116,20 @@
 																<p>{{m.acvMessage|raw}}</p>
 															</div>
 														</div>
+													{% endif %}
+													{% if m.showEducationSection %}
+														<div class="collapse" id="p{{m.id}}-education">
+															<div class="card card-body">
+																<div class="postTitle">
+																		<!-- title -->
+																		<h1>Malette pédagogique</h1>
+																		<div class="divider-small"></div>
+																</div>
+																<p>{{m.educationMessage|raw}}</p>
+															</div>
+														</div>
+													{% endif %}
+													{% if m.showSupportSection %}
 														<div class="collapse" id="p{{m.id}}-soutenir">
 															<div class="card card-body">
 																<div class="postTitle">
@@ -109,14 +138,11 @@
 																		<div class="divider-small"></div>
 																</div>
 																<p>{{m.supportMessage|raw}}</p>
-																{% if m.showSupport %}
-																		<p>Vous pouvez soutenir ce projet en <a target="_blank" href="https://www.helloasso.com/associations/low-production/formulaires/1/widget">faisant un don</a> à l'association.</p>
-																{% endif %}
 															</div>
 														</div>
+													{% endif %}
 												</div>
 										</div>
-
 								</div>
 						</div>
 				</div>

@@ -44,23 +44,34 @@ class ProjectCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-         return [
-            TextField::new('name', 'Nom'),
-            TextEditorField::new('description', 'Description'),
-            TextField::new('format', 'Format'),
-            TextField::new('duration', 'Durée'),
-            TextEditorField::new('generalMessage', 'Message (général)'),
-            TextEditorField::new('contributorsMessage', 'Message (contributeurs)'),
-            TextEditorField::new('acvMessage', 'Message (ACV)'),
-            TextEditorField::new('supportMessage', 'Message (soutient)'),
-            BooleanField::new('showSupport', 'Affichage du bouton de donation HelloAsso'),
-            DateField::new('publication', 'Publié le')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
-            UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
-            AssociationField::new('picture', 'Image liée'),
-            AssociationField::new('state', 'État'),
-            AssociationField::new('categories', 'Catégories')->setFormTypeOption('by_reference', false),
-            AssociationField::new('articles', 'Articles liés')->setFormTypeOption('by_reference', false),
-            AssociationField::new('partners', 'Partenaires associés')->setFormTypeOption('by_reference', false)
-        ];
+      return [
+        // généralités
+        TextField::new('name', 'Nom'),
+        TextEditorField::new('description', 'Description (courte)'),
+        TextField::new('format', 'Format'),
+        TextField::new('duration', 'Durée'),
+        DateField::new('publication', 'Publié le')->setFormat('Y-MM-dd')->renderAsNativeWidget(),
+        TextEditorField::new('generalMessage', 'Texte (GÉNÉRAL)'),
+        // éducation
+        TextEditorField::new('educationMessage', 'Texte (MALETTE PÉDAGOGIQUE)'),
+        BooleanField::new('showEducationSection', 'Affichage de la section MALETTE PÉDAGOGIQUE ?'),
+        // contributions et informations
+        TextEditorField::new('contributorsMessage', 'Texte (INFORMATIONS)'),
+        BooleanField::new('showContributorsSection', 'Affichage de la section INFORMATIONS ?'),
+        // acv
+        TextEditorField::new('acvMessage', 'Texte (ÉTUDES ENVIRONNEMENTALES)'),
+        BooleanField::new('showAcvSection', 'Affichage de la section ÉTUDES ENVIRONNEMENTALES ?'),
+        // soutient
+        TextEditorField::new('supportMessage', 'Texte (SOUTENIR)'),
+        BooleanField::new('showSupportSection', 'Affichage de la section SOUTENIR ?'),
+        BooleanField::new('showSupport', 'Affichage du bouton/lien de donation HELLOASSO ?'),
+        UrlField::new('urlCrowdfunding', 'URL Crowdfunding'),
+        // associations bdd
+        AssociationField::new('picture', 'Image liée'),
+        AssociationField::new('state', 'État'),
+        AssociationField::new('categories', 'Catégories')->setFormTypeOption('by_reference', false),
+        AssociationField::new('articles', 'Articles liés')->setFormTypeOption('by_reference', false),
+        AssociationField::new('partners', 'Partenaires associés')->setFormTypeOption('by_reference', false)
+      ];
     }
 }
