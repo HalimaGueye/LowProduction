@@ -555,7 +555,7 @@
 														</div>
 														<div class="blog-post-body">
 																<h4><a class="title" href="{{url("new", {"id": new.id})}}">{{new.name}}</a></h4>
-																<p class="p-bottom-20">{{ new.article|striptags > 50 ? new.article|striptags|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
+																<p class="p-bottom-20">{{ new.article|striptags > 30 ? new.article|striptags|slice(0, 31)|split(' ')|slice(0, -1)|join(' ') ~ '…' : new.article|striptags }}</p>
 																<a href="{{url("new", {"id": new.id})}}" class="read-more">Lire la suite</a>
 														</div>
 												</div>
