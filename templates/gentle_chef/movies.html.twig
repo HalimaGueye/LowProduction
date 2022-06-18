@@ -9,16 +9,16 @@
 {% block body %}
 
 <!-- Start Films -->
-<section id="films" class="p-top-40 p-bottom-80">
+<section id="films" class="p-top-40 p-bottom-40">
 		<div class="container">
 
 			<div class="row p-bottom-40">
 					<div class="col-md-8 col-md-offset-2">
 							<div class="section-title text-center m-bottom-40">
-									<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s"><strong>Nos projets</strong></h2>
+									<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s"><strong>Nos films</strong></h2>
 									<div class="divider-center-small wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"></div>
 									<p class="section-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-										Retrouvez l'ensemble des projets documentaires <b>produits, réalisés et diffusés</b> par Low Production.</p>
+										Retrouvez ci-dessous l'ensemble des projets documentaires <b>produits, réalisés et diffusés</b> par Low Production.</p>
 									</p>
 							</div>
 					</div>
@@ -62,6 +62,28 @@
 </section>
 <!-- End Films -->
 
+<!-- Start Map -->
+<section id="films" class="p-top-40">
+		<div class="container">
+			<div class="row p-bottom-20">
+					<div class="col-md-8 col-md-offset-2">
+							<div class="section-title text-center m-bottom-40">
+									<h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s"><strong>Diffusion décentralisée</strong></h2>
+									<div class="divider-center-small wow zoomIn" data-wow-duration="0.5s" data-wow-delay="0.6s"></div>
+									<p class="section-subtitle wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+										Tous les projets documentaires réalisés par Low Production sont diffusés <b>librement et gratuitement</b>. Lorsque vous organisez une projection, n'hésitez pas à la partager sur notre carte interactive !</p>
+									</p>
+							</div>
+					</div>
+			</div>
+		</div>
+		<div class="map-container">
+			<iframe id="iframe-gogocarto" data-wow-duration="0.8s" data-wow-delay="0.6s" class="wow fadeInUp" src="https://low-production.gogocarto.fr/map?iframe=1&fullTaxonomy=0&noheader=1#/carte/@21.11,41.84,2z?cat=all" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+			<center><p>Ouvrir la carte sur <a target="_blank" href="https://low-production.gogocarto.fr/map#/carte/@21.11,41.84,2z?cat=all">gogocarto.fr</a>.</p></center>
+		</div>
+</section>
+<!-- End Map -->
+
 <!-- Start Call to Action -->
 <section class="light-bg p-top-60 p-bottom-60">
 		<div class="container">
@@ -86,5 +108,11 @@
 	{{parent()}}
 	<script src="{{asset('web/')}}js/imagesloaded.pkgd.min.js"></script>
 	<script src="{{asset('web/')}}js/isotope.pkgd.min.js"></script>
-
+	<script>
+	$('.map-container')
+		.click(function(){
+				$(this).find('iframe').addClass('clicked')})
+		.mouseleave(function(){
+				$(this).find('iframe').removeClass('clicked')});
+	</script>
 {% endblock %}

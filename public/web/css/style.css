@@ -29,7 +29,6 @@
     padding-right:0 !important;
 }
 
-
 /*
  * FIN MODAL
  */
@@ -2800,4 +2799,26 @@ blockquote {
 
 .cc{
   font-size:0.8em;
+}
+
+
+/*
+ * IFRAME GOGOCARTO
+ */
+
+ .map-container {
+ 	width: 100%;
+ }
+ .map-container iframe{
+ 	width: 100%;
+ 	display: block;
+ 	pointer-events: none;
+ }
+ .map-container iframe.clicked{
+ 	pointer-events: auto;
+ }
+
+#iframe-gogocarto{
+    width:100% !important;
+    height: 60vh !important;
 }
