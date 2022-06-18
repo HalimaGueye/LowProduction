@@ -12,6 +12,7 @@
 
     <!-- Balises OG -->
     <meta property="og:title" content="{{block('title')}}"/>
+    <meta property="og:description" content="{{block('description')}}"/>
     <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
     <meta property="og:url" content="{{app.request.uri}}" />
     <meta property="og:image" itemprop="image" content="{% block og_img %}{{absolute_url(asset('web/img/og_image.png'))}}{% endblock %}"/>
