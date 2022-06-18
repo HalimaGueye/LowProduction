@@ -6,7 +6,7 @@
 	{{parent()}} | {{m.name}}
 {% endblock %}
 
-{% block og_img  %}{{asset(vich_uploader_asset(m.picture, 'imageFile'))}}{% endblock %}
+{% block og_img  %}{{absolute_url(asset(vich_uploader_asset(m.picture, 'imageFile')))}}{% endblock %}
 
 {% block movies %}<li class="active">{% endblock %}
 
