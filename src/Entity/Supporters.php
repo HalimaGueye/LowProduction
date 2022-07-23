@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Supporters
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\SupportersRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Supporters

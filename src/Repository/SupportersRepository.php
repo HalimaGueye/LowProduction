@@ -36,6 +36,18 @@ class SupportersRepository extends ServiceEntityRepository
     }
     */
 
+    /**
+     * @return Supporters[] Returns an array of $limit Supporters objects
+     */
+    public function findAll()
+    {
+        return $this->createQueryBuilder('n')
+          ->orderBy('n.id', 'DESC')
+          ->getQuery()
+          ->getResult()
+        ;
+    }
+
     /*
     public function findOneBySomeField($value): ?Supporters
     {

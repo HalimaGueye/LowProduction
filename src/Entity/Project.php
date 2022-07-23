@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Project
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Project
