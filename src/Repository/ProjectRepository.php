@@ -96,8 +96,7 @@ class ProjectRepository extends ServiceEntityRepository
     {
         $sql = "
             SELECT partner.name AS 'name',
-                   partner.url AS 'url',
-                   partner.isMoneyPartner
+                   partner.url AS 'url'
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
               WHERE project.id = :idp AND (isMoneyPartner IS NULL OR NOT isMoneyPartner)
@@ -106,6 +105,7 @@ class ProjectRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
         $stmt->bindValue("idp", $id);
+        $stmt->execute();
         return $stmt->executeQuery()
         ->fetchAll();
     }
@@ -114,8 +114,7 @@ class ProjectRepository extends ServiceEntityRepository
     {
         $sql = "
             SELECT partner.name AS 'name',
-                   partner.url AS 'url',
-                   partner.isMoneyPartner
+                   partner.url AS 'url'
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
               WHERE project.id = :idp AND isMoneyPartner
@@ -124,6 +123,7 @@ class ProjectRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
         $stmt->bindValue("idp", $id);
+        $stmt->execute();
         return $stmt->executeQuery()
         ->fetchAll();
     }
