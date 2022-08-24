@@ -98,8 +98,9 @@ class ProjectRepository extends ServiceEntityRepository
         $sql = "
             SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
-              FROM project_partner JOIN partner ON project_partner.partner_id = :idp
+              FROM project_partner JOIN partner ON project_partner.project_id = partner.id
               WHERE isMoneyPartner IS NULL OR NOT isMoneyPartner
+              AND project_partner.partner_id = :idp
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
@@ -115,8 +116,9 @@ class ProjectRepository extends ServiceEntityRepository
         $sql = "
             SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
-              FROM project_partner JOIN partner ON project_partner.partner_id = :idp
+              FROM project_partner JOIN partner ON project_partner.project_id = partner.id 
               WHERE isMoneyPartner
+              AND project_partner.partner_id = :idp
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
