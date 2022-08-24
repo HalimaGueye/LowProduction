@@ -95,7 +95,7 @@ class ProjectRepository extends ServiceEntityRepository
     public function getPartnersFromFilmId($id)
     {
         $sql = "
-            SELECT partner.name AS 'name',
+            SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
@@ -112,7 +112,7 @@ class ProjectRepository extends ServiceEntityRepository
     public function getMoneyPartnersFromFilmId($id)
     {
         $sql = "
-            SELECT partner.name AS 'name',
+            SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
