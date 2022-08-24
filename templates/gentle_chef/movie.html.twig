@@ -88,26 +88,32 @@
 																</div>
 																<div class="card card-body">
 																	<p>{{m.contributorsMessage|raw}}</p>
-																	<b>CONTRIBUTEURS</b> :
-																	<ul class="list-perso">
-																		{% for c in contributors %}
-																		<li><strong>{{c[0]}}</strong> : {{c[1]|raw}}</li>
-																		{% endfor %}
-																	</ul>
+																	{% if contributors is defined and contributors is not null and contributors|length > 0 %}
+																		<b>CONTRIBUTEURS</b> :
+																		<ul class="list-perso">
+																			{% for c in contributors %}
+																			<li><strong>{{c[0]}}</strong> : {{c[1]|raw}}</li>
+																			{% endfor %}
+																		</ul>
+																	{% endif %}
 
-																	<b>PARTIES PRENANTES DU PROJET</b> :
-																	<ul class="list-perso">
-																		{% for p in partners %}
-																			<li>{{p.name}} : <a target='_blank' href='{{p.url}}'>{{ p.url }}</a></li>
-																		{% endfor %}
-																	</ul>
+																	{% if partners is defined and partners is not null and partners|length > 0 %}
+																		<b>PARTIES PRENANTES DU PROJET</b> :
+																		<ul class="list-perso">
+																			{% for p in partners %}
+																				<li>{{p.name}} : <a target='_blank' href='{{p.url}}'>{{ p.url }}</a></li>
+																			{% endfor %}
+																		</ul>
+																	{% endif %}
 
-																	<b>PARTENAIRES DU PROJET</b> :
-																	<ul class="list-perso">
-																		{% for p in money_partners %}
-																			<li>{{p.name}} : <a target='_blank' href='{{p.url}}'>{{ p.url }}</a></li>
-																		{% endfor %}
-																	</ul>
+																	{% if money_partners is defined and money_partners is not null and money_partners|length > 0 %}
+																		<b>PARTENAIRES DU PROJET</b> :
+																		<ul class="list-perso">
+																			{% for p in money_partners %}
+																				<li>{{p.name}} : <a target='_blank' href='{{p.url}}'>{{ p.url }}</a></li>
+																			{% endfor %}
+																		</ul>
+																	{% endif %}
 
 																</div>
 															</div>
