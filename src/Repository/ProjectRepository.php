@@ -92,6 +92,44 @@ class ProjectRepository extends ServiceEntityRepository
     }
     */
 
+    public function getPartnersFromFilmId($id)
+    {
+        $sql = "
+            SELECT partner.name AS 'name',
+                   partner.url AS 'url',
+                   partner.isMoneyPartner
+              FROM project JOIN project_partner ON project.id = project_partner.partner_id
+              JOIN partner ON project_partner.partner_id = project.id
+              WHERE project.id = :idp AND (isMoneyPartner IS NULL OR NOT isMoneyPartner)
+            GROUP BY 1
+            ";
+        $em = $this->getEntityManager();
+        $stmt = $em->getConnection()->prepare($sql);
+        $stmt->bindValue("idp", $id);
+        $stmt->execute();
+        return $stmt->executeQuery()
+        ->fetchAll();
+    }
+
+    public function getMoneyPartnersFromFilmId($id)
+    {
+        $sql = "
+            SELECT partner.name AS 'name',
+                   partner.url AS 'url',
+                   partner.isMoneyPartner
+              FROM project JOIN project_partner ON project.id = project_partner.partner_id
+              JOIN partner ON project_partner.partner_id = project.id
+              WHERE project.id = :idp AND isMoneyPartner
+            GROUP BY 1
+            ";
+        $em = $this->getEntityManager();
+        $stmt = $em->getConnection()->prepare($sql);
+        $stmt->bindValue("idp", $id);
+        $stmt->execute();
+        return $stmt->executeQuery()
+        ->fetchAll();
+    }
+
     public static function getEntityFqcn(): string
     {
         return Project::class;

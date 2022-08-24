@@ -33,7 +33,7 @@ class MemberProjectRepository extends ServiceEntityRepository
         ;
     }
 
-    public function test($id)
+    public function getContributorsFromFilmId($id)
     {
         $sql = "
             SELECT r.name, GROUP_CONCAT(m.name ORDER BY m.name ASC SEPARATOR ', ')

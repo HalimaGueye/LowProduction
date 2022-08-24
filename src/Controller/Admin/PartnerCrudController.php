@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 
 class PartnerCrudController extends AbstractCrudController
 {
@@ -30,6 +31,7 @@ class PartnerCrudController extends AbstractCrudController
         return [
             TextField::new('name', 'Nom'),
             UrlField::new('url', 'URL'),
+            BooleanField::new('isMoneyPartner', 'Partenaire financier ?'),
             AssociationField::new('picture', 'Illustration')
         ];
     }

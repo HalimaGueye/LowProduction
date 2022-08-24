@@ -79,7 +79,9 @@ class GentleChefController extends AbstractController
   {
     return $this->render('gentle_chef/movie.html.twig',[
         'movie' => $em->getRepository(Project::class)->findById($id),
-        'contributors' => $em->getRepository(MemberProject::class)->test($id)
+        'contributors' => $em->getRepository(MemberProject::class)->getContributorsFromFilmId($id),
+        'partners' => $em->getRepository(Project::class)->getPartnersFromFilmId($id),
+        'money_partners' => $em->getRepository(Project::class)->getMoneyPartnersFromFilmId($id)
     ]);
   }
 

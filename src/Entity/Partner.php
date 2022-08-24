@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Partner
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PartnerRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Partner
@@ -40,6 +40,13 @@ class Partner
      * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="isMoneyPartner", type="boolean", nullable=true)
+     */
+    private $isMoneyPartner;
 
     /**
      * @var \Picture
@@ -121,6 +128,18 @@ class Partner
     public function setUrl(?string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getIsMoneyPartner(): ?bool
+    {
+        return $this->isMoneyPartner;
+    }
+
+    public function setIsMoneyPartner(?bool $imp): self
+    {
+        $this->isMoneyPartner = $imp;
 
         return $this;
     }
