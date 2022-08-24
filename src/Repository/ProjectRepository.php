@@ -106,7 +106,6 @@ class ProjectRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
         $stmt->bindValue("idp", $id);
-        $stmt->execute();
         return $stmt->executeQuery()
         ->fetchAll();
     }
@@ -125,7 +124,6 @@ class ProjectRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
         $stmt->bindValue("idp", $id);
-        $stmt->execute();
         return $stmt->executeQuery()
         ->fetchAll();
     }
