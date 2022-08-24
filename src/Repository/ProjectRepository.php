@@ -100,7 +100,6 @@ class ProjectRepository extends ServiceEntityRepository
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
               WHERE project.id = :idp AND (isMoneyPartner IS NULL OR NOT isMoneyPartner)
-            GROUP BY 1
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
@@ -118,7 +117,6 @@ class ProjectRepository extends ServiceEntityRepository
               FROM project JOIN project_partner ON project.id = project_partner.partner_id
               JOIN partner ON project_partner.partner_id = project.id
               WHERE project.id = :idp AND isMoneyPartner
-            GROUP BY 1
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
