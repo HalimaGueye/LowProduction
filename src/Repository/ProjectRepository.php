@@ -94,12 +94,12 @@ class ProjectRepository extends ServiceEntityRepository
 
     public function getPartnersFromFilmId($id)
     {
+      //problème de nommage en BDD : inversion de partner et project dans la table project_partner
         $sql = "
             SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
-              FROM project JOIN project_partner ON project.id = project_partner.partner_id
-              JOIN partner ON project_partner.partner_id = project.id
-              WHERE project.id = :idp AND (isMoneyPartner IS NULL OR NOT isMoneyPartner)
+              FROM project_partner JOIN partner ON project_partner.partner_id = :idp
+              WHERE isMoneyPartner IS NULL OR NOT isMoneyPartner
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
@@ -111,12 +111,12 @@ class ProjectRepository extends ServiceEntityRepository
 
     public function getMoneyPartnersFromFilmId($id)
     {
+      //problème de nommage en BDD : inversion de partner et project dans la table project_partner
         $sql = "
             SELECT DISTINCT partner.name AS 'name',
                    partner.url AS 'url'
-              FROM project JOIN project_partner ON project.id = project_partner.partner_id
-              JOIN partner ON project_partner.partner_id = project.id
-              WHERE project.id = :idp AND isMoneyPartner
+              FROM project_partner JOIN partner ON project_partner.partner_id = :idp
+              WHERE isMoneyPartner
             ";
         $em = $this->getEntityManager();
         $stmt = $em->getConnection()->prepare($sql);
